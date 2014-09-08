@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.3.20)  13 AUG 2014 11:10
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.3.20)  29 AUG 2014 19:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**outline.tex
-(./outline.tex
+**thesis.tex
+(./thesis.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, ge
 rman-x-2011-07-01, ngerman-x-2011-07-01, afrikaans, ancientgreek, ibycus, arabi
@@ -73,8 +73,9 @@ Package graphics Info: Driver file: pdftex.def on input line 91.
 )
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
-) (./definitions.tex) (./outline.aux)
-\openout1 = `outline.aux'.
+) (./definitions.tex) (./thesis.aux (./abstract.aux) (./acknowledgments.aux) (.
+/RFI_testing.aux))
+\openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
 LaTeX Font Info:    ... okay on input line 54.
@@ -88,7 +89,8 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 54.
 LaTeX Font Info:    ... okay on input line 54.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 54.
 LaTeX Font Info:    ... okay on input line 54.
- (/usr/share/texmf-dist/tex/context/base/supp-pdf.mkii
+
+(/usr/share/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count89
 \scratchdimen=\dimen105
@@ -146,30 +148,179 @@ Package grfext Info: Graphics extension search list:
 (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
-)) [1
+))
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 58.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 58.
+ [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
+
+]
+\openout2 = `abstract.aux'.
+
+ (./abstract.tex [1
+
+]) [2
+
+
+]
+\openout2 = `acknowledgments.aux'.
+
+
+No file acknowledgments.tex.
+(./thesis.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 186.
+(Font)              <12> on input line 2.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 186.
+(Font)              <8> on input line 2.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 186.
- [2] [3] (./outline.aux) ) 
+(Font)              <6> on input line 2.
+
+Overfull \hbox (2.28255pt too wide) in paragraph at lines 7--7
+ [][] []\OT1/cmr/m/n/12 Algonquin Ra-dio Ob-ser-va-tory (ARO) Al-go-nquin, On-t
+ario, Canada [][]  
+ []
+
+)
+\tf@toc=\write3
+\openout3 = `thesis.toc'.
+
+ [1
+
+
+
+] (./thesis.lot)
+\tf@lot=\write4
+\openout4 = `thesis.lot'.
+
+ [2
+
+] (./thesis.lof)
+\tf@lof=\write5
+\openout5 = `thesis.lof'.
+
+ [3
+
+]
+\openout2 = `RFI_testing.aux'.
+
+ (./RFI_testing.tex
+Chapter 1.
+[1
+
+
+
+] <large_scale_site_map.jpg, id=30, 854.19125pt x 683.55376pt>
+File: large_scale_site_map.jpg Graphic file (type jpg)
+
+<use large_scale_site_map.jpg>
+Package pdftex.def Info: large_scale_site_map.jpg used on input line 21.
+(pdftex.def)             Requested size: 411.93767pt x 329.64574pt.
+ [2 <./large_scale_site_map.jpg>]
+<Pittsburgh_test.png, id=34, 578.16pt x 433.62pt>
+File: Pittsburgh_test.png Graphic file (type png)
+ <use Pittsburgh_test.png>
+Package pdftex.def Info: Pittsburgh_test.png used on input line 39.
+(pdftex.def)             Requested size: 411.93767pt x 308.95084pt.
+
+Overfull \hbox (5.68279pt too wide) in paragraph at lines 45--45
+[]\OT1/cmr/bx/n/14.4 National Ra-dio As-tron-omy Ob-ser-va-tory (NRAO) Green
+ []
+
+<National_Radio_Quiet_Zone.png, id=36, 642.4pt x 712.6625pt>
+File: National_Radio_Quiet_Zone.png Graphic file (type png)
+
+<use National_Radio_Quiet_Zone.png>
+Package pdftex.def Info: National_Radio_Quiet_Zone.png used on input line 49.
+(pdftex.def)             Requested size: 411.93767pt x 457.00502pt.
+ [3 <./Pittsburgh_test.png>]
+<GBT_subtract.png, id=41, 578.16pt x 433.62pt>
+File: GBT_subtract.png Graphic file (type png)
+ <use GBT_subtract.png>
+Package pdftex.def Info: GBT_subtract.png used on input line 61.
+(pdftex.def)             Requested size: 411.93767pt x 308.95084pt.
+
+Underfull \vbox (badness 8038) has occurred while \output is active []
+
+ [4 <./National_Radio_Quiet_Zone.png>] <DRAO_subtract.png, id=47, 578.16pt x 43
+3.62pt>
+File: DRAO_subtract.png Graphic file (type png)
+
+<use DRAO_subtract.png>
+Package pdftex.def Info: DRAO_subtract.png used on input line 73.
+(pdftex.def)             Requested size: 411.93767pt x 308.95084pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5 <./GBT_subtract.png>] <ALG_subtract.png, id=52, 578.16pt x 433.62pt>
+File: ALG_subtract.png Graphic file (type png)
+
+<use ALG_subtract.png>
+Package pdftex.def Info: ALG_subtract.png used on input line 86.
+(pdftex.def)             Requested size: 411.93767pt x 308.95084pt.
+ [6 <./DRAO_subtract.png>]
+<ZdS_entrance_subtract.png, id=58, 578.16pt x 433.62pt>
+File: ZdS_entrance_subtract.png Graphic file (type png)
+
+<use ZdS_entrance_subtract.png>
+Package pdftex.def Info: ZdS_entrance_subtract.png used on input line 113.
+(pdftex.def)             Requested size: 411.93767pt x 308.95084pt.
+
+<ZdS_halfway_in_subtract.png, id=59, 578.16pt x 433.62pt>
+File: ZdS_halfway_in_subtract.png Graphic file (type png)
+
+<use ZdS_halfway_in_subtract.png>
+Package pdftex.def Info: ZdS_halfway_in_subtract.png used on input line 121.
+(pdftex.def)             Requested size: 411.93767pt x 308.95084pt.
+
+<Zds_central_subtract.png, id=60, 578.16pt x 433.62pt>
+File: Zds_central_subtract.png Graphic file (type png)
+
+<use Zds_central_subtract.png>
+Package pdftex.def Info: Zds_central_subtract.png used on input line 129.
+(pdftex.def)             Requested size: 411.93767pt x 308.95084pt.
+
+<GI_3__subtract.png, id=61, 578.16pt x 433.62pt>
+File: GI_3__subtract.png Graphic file (type png)
+ <use GI_3__subtract.png>
+Package pdftex.def Info: GI_3__subtract.png used on input line 146.
+(pdftex.def)             Requested size: 411.93767pt x 308.95084pt.
+
+[7 <./ALG_subtract.png>] <GI_1__subtract.png, id=66, 578.16pt x 433.62pt>
+File: GI_1__subtract.png Graphic file (type png)
+
+<use GI_1__subtract.png>
+Package pdftex.def Info: GI_1__subtract.png used on input line 154.
+(pdftex.def)             Requested size: 411.93767pt x 308.95084pt.
+ <GI_2__subtract.png, id=67, 578.16pt x 433.62pt>
+File: GI_2__subtract.png Graphic file (type png)
+
+<use GI_2__subtract.png>
+Package pdftex.def Info: GI_2__subtract.png used on input line 162.
+(pdftex.def)             Requested size: 411.93767pt x 308.95084pt.
+) [8 <./ZdS_entrance_subtract.png>] [9 <./ZdS_halfway_in_subtract.png>] [10 <./
+Zds_central_subtract.png>] [11 <./GI_3__subtract.png>]
+[12 <./GI_1__subtract.png>] [13 <./GI_2__subtract.png>] (./thesis.aux
+(./abstract.aux) (./acknowledgments.aux) (./RFI_testing.aux)) ) 
 Here is how much of TeX's memory you used:
- 1517 strings out of 493629
- 21093 string characters out of 3148778
- 80822 words of memory out of 3000000
- 4827 multiletter control sequences out of 15000+200000
- 6376 words of font info for 23 fonts, out of 3000000 for 9000
+ 1639 strings out of 493629
+ 23392 string characters out of 3148778
+ 79698 words of memory out of 3000000
+ 4906 multiletter control sequences out of 15000+200000
+ 9721 words of font info for 34 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 37i,5n,23p,233b,326s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmr12.pfb>
-Output written on outline.pdf (3 pages, 24282 bytes).
+ 37i,6n,23p,596b,269s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.
+pfb>
+Output written on thesis.pdf (20 pages, 1277127 bytes).
 PDF statistics:
- 18 PDF objects out of 1000 (max. 8388607)
- 11 compressed objects within 1 object stream
+ 108 PDF objects out of 1000 (max. 8388607)
+ 59 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 

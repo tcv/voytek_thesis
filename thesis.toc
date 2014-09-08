@@ -1,0 +1,19 @@
+\contentsline {chapter}{\numberline {1}Radio Frequency Interference (RFI) and Site Testing}{1}
+\contentsline {section}{\numberline {1.1}Overview}{1}
+\contentsline {section}{\numberline {1.2}Existing Site Evaluations}{2}
+\contentsline {subsection}{\numberline {1.2.1}Carnegie Mellon University Pittsburgh, PA, USA}{3}
+\contentsline {subsection}{\numberline {1.2.2}National Radio Astronomy Observatory (NRAO) Green Bank, WV, USA}{3}
+\contentsline {subsection}{\numberline {1.2.3}Dominion Radio Astrophysical Observatory (DRAO) Penticton, BC, Canada}{5}
+\contentsline {subsection}{\numberline {1.2.4}Algonquin Radio Observatory (ARO) Algonquin, Ontario, Canada}{6}
+\contentsline {section}{\numberline {1.3}New Site Evaluations}{6}
+\contentsline {subsection}{\numberline {1.3.1}La Zona de Silencio Mapimi, Mexico}{7}
+\contentsline {subsubsection}{Logistics and Current Infrastructure}{7}
+\contentsline {subsubsection}{Weather}{7}
+\contentsline {subsubsection}{Measurements}{8}
+\contentsline {subsection}{\numberline {1.3.2}Isla Guadalupe Baja California, Mexico}{8}
+\contentsline {subsubsection}{Logistics and Current Infrastructure}{8}
+\contentsline {subsubsection}{Weather}{8}
+\contentsline {subsubsection}{Measurements}{8}
+\contentsline {section}{\numberline {1.4}Future Sites}{8}
+\contentsline {subsection}{\numberline {1.4.1}Isla Socorro and Isla Clarion, Mexico}{8}
+\contentsline {subsection}{\numberline {1.4.2}Marion and Gough Islands, South Africa}{8}
