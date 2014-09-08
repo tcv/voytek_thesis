@@ -77,7 +77,7 @@ Using the 21-cm Hydrogen Line to Probe the History of the Intergalactic Medium
 
 \pagenumbering{arabic}
 
-\include{RFI_testing/RFI_testing}
+\include{RFI_testing}
 
 %\include{chapter_01}
 

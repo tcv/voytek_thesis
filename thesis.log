@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.3.20)  29 AUG 2014 19:44
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.3.20)  8 SEP 2014 17:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -73,8 +73,8 @@ Package graphics Info: Driver file: pdftex.def on input line 91.
 )
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
-) (./definitions.tex) (./thesis.aux (./abstract.aux) (./acknowledgments.aux) (.
-/RFI_testing.aux))
+) (./definitions.tex) (./thesis.aux (./abstract.aux) (./acknowledgments.aux)
+(./RFI_testing/RFI_testing.aux))
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
@@ -204,123 +204,135 @@ ario, Canada [][]
  [3
 
 ]
-\openout2 = `RFI_testing.aux'.
+\openout2 = `RFI_testing/RFI_testing.aux'.
 
- (./RFI_testing.tex
+ (./RFI_testing/RFI_testing.tex
 Chapter 1.
 [1
 
 
 
-] <large_scale_site_map.jpg, id=30, 854.19125pt x 683.55376pt>
-File: large_scale_site_map.jpg Graphic file (type jpg)
-
-<use large_scale_site_map.jpg>
-Package pdftex.def Info: large_scale_site_map.jpg used on input line 21.
+]
+<RFI_testing/figures/large_scale_site_map.jpg, id=30, 854.19125pt x 683.55376pt
+>
+File: RFI_testing/figures/large_scale_site_map.jpg Graphic file (type jpg)
+ <use RFI_testing/figures/large_scale_site_map.jpg>
+Package pdftex.def Info: RFI_testing/figures/large_scale_site_map.jpg used on i
+nput line 21.
 (pdftex.def)             Requested size: 411.93767pt x 329.64574pt.
- [2 <./large_scale_site_map.jpg>]
-<Pittsburgh_test.png, id=34, 578.16pt x 433.62pt>
-File: Pittsburgh_test.png Graphic file (type png)
- <use Pittsburgh_test.png>
-Package pdftex.def Info: Pittsburgh_test.png used on input line 39.
+ [2 <./RFI_testing/figures/large_scale_site_map.jpg>]
+<RFI_testing/figures/Pittsburgh_test.png, id=34, 578.16pt x 433.62pt>
+File: RFI_testing/figures/Pittsburgh_test.png Graphic file (type png)
+
+<use RFI_testing/figures/Pittsburgh_test.png>
+Package pdftex.def Info: RFI_testing/figures/Pittsburgh_test.png used on input 
+line 39.
 (pdftex.def)             Requested size: 411.93767pt x 308.95084pt.
 
 Overfull \hbox (5.68279pt too wide) in paragraph at lines 45--45
 []\OT1/cmr/bx/n/14.4 National Ra-dio As-tron-omy Ob-ser-va-tory (NRAO) Green
  []
 
-<National_Radio_Quiet_Zone.png, id=36, 642.4pt x 712.6625pt>
-File: National_Radio_Quiet_Zone.png Graphic file (type png)
 
-<use National_Radio_Quiet_Zone.png>
-Package pdftex.def Info: National_Radio_Quiet_Zone.png used on input line 49.
-(pdftex.def)             Requested size: 411.93767pt x 457.00502pt.
- [3 <./Pittsburgh_test.png>]
-<GBT_subtract.png, id=41, 578.16pt x 433.62pt>
-File: GBT_subtract.png Graphic file (type png)
- <use GBT_subtract.png>
-Package pdftex.def Info: GBT_subtract.png used on input line 61.
-(pdftex.def)             Requested size: 411.93767pt x 308.95084pt.
+<RFI_testing/figures/National_Radio_Quiet_Zone.png, id=36, 642.4pt x 712.6625pt
+>
+File: RFI_testing/figures/National_Radio_Quiet_Zone.png Graphic file (type png)
 
-Underfull \vbox (badness 8038) has occurred while \output is active []
+ <use RFI_testing/figures/National_Radio_Quiet_Zone.png>
+Package pdftex.def Info: RFI_testing/figures/National_Radio_Quiet_Zone.png used
+ on input line 49.
+(pdftex.def)             Requested size: 346.89731pt x 384.8429pt.
+ [3 <./RFI_testing/figures/Pittsburgh_test.png>]
+<RFI_testing/figures/GBT_test.png, id=41, 578.16pt x 433.62pt>
+File: RFI_testing/figures/GBT_test.png Graphic file (type png)
 
- [4 <./National_Radio_Quiet_Zone.png>] <DRAO_subtract.png, id=47, 578.16pt x 43
-3.62pt>
-File: DRAO_subtract.png Graphic file (type png)
-
-<use DRAO_subtract.png>
-Package pdftex.def Info: DRAO_subtract.png used on input line 73.
+<use RFI_testing/figures/GBT_test.png>
+Package pdftex.def Info: RFI_testing/figures/GBT_test.png used on input line 61
+.
 (pdftex.def)             Requested size: 411.93767pt x 308.95084pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [5 <./GBT_subtract.png>] <ALG_subtract.png, id=52, 578.16pt x 433.62pt>
-File: ALG_subtract.png Graphic file (type png)
+ [4 <./RFI_testing/figures/National_Radio_Quiet_Zone.png>]
+<RFI_testing/figures/DRAO_test.png, id=47, 578.16pt x 433.62pt>
+File: RFI_testing/figures/DRAO_test.png Graphic file (type png)
 
-<use ALG_subtract.png>
-Package pdftex.def Info: ALG_subtract.png used on input line 86.
+<use RFI_testing/figures/DRAO_test.png>
+Package pdftex.def Info: RFI_testing/figures/DRAO_test.png used on input line 7
+3.
 (pdftex.def)             Requested size: 411.93767pt x 308.95084pt.
- [6 <./DRAO_subtract.png>]
-<ZdS_entrance_subtract.png, id=58, 578.16pt x 433.62pt>
-File: ZdS_entrance_subtract.png Graphic file (type png)
+ [5 <./RFI_testing/figures/GBT_test.png>] <RFI_testing/figures/ALG_test.png, id
+=52, 578.16pt x 433.62pt>
+File: RFI_testing/figures/ALG_test.png Graphic file (type png)
 
-<use ZdS_entrance_subtract.png>
-Package pdftex.def Info: ZdS_entrance_subtract.png used on input line 113.
+<use RFI_testing/figures/ALG_test.png>
+Package pdftex.def Info: RFI_testing/figures/ALG_test.png used on input line 86
+.
 (pdftex.def)             Requested size: 411.93767pt x 308.95084pt.
+ [6 <./RFI_testing/figures/DRAO_test.png>] <RFI_testing/figures/ZdS_entrance_te
+st.png, id=58, 578.16pt x 433.62pt>
+File: RFI_testing/figures/ZdS_entrance_test.png Graphic file (type png)
 
-<ZdS_halfway_in_subtract.png, id=59, 578.16pt x 433.62pt>
-File: ZdS_halfway_in_subtract.png Graphic file (type png)
-
-<use ZdS_halfway_in_subtract.png>
-Package pdftex.def Info: ZdS_halfway_in_subtract.png used on input line 121.
-(pdftex.def)             Requested size: 411.93767pt x 308.95084pt.
-
-<Zds_central_subtract.png, id=60, 578.16pt x 433.62pt>
-File: Zds_central_subtract.png Graphic file (type png)
-
-<use Zds_central_subtract.png>
-Package pdftex.def Info: Zds_central_subtract.png used on input line 129.
+<use RFI_testing/figures/ZdS_entrance_test.png>
+Package pdftex.def Info: RFI_testing/figures/ZdS_entrance_test.png used on inpu
+t line 113.
 (pdftex.def)             Requested size: 411.93767pt x 308.95084pt.
 
-<GI_3__subtract.png, id=61, 578.16pt x 433.62pt>
-File: GI_3__subtract.png Graphic file (type png)
- <use GI_3__subtract.png>
-Package pdftex.def Info: GI_3__subtract.png used on input line 146.
+<RFI_testing/figures/ZdS_halfway_in_test.png, id=59, 578.16pt x 433.62pt>
+File: RFI_testing/figures/ZdS_halfway_in_test.png Graphic file (type png)
+
+<use RFI_testing/figures/ZdS_halfway_in_test.png>
+Package pdftex.def Info: RFI_testing/figures/ZdS_halfway_in_test.png used on in
+put line 121.
 (pdftex.def)             Requested size: 411.93767pt x 308.95084pt.
 
-[7 <./ALG_subtract.png>] <GI_1__subtract.png, id=66, 578.16pt x 433.62pt>
-File: GI_1__subtract.png Graphic file (type png)
+<RFI_testing/figures/Zds_central_test.png, id=60, 578.16pt x 433.62pt>
+File: RFI_testing/figures/Zds_central_test.png Graphic file (type png)
 
-<use GI_1__subtract.png>
-Package pdftex.def Info: GI_1__subtract.png used on input line 154.
+<use RFI_testing/figures/Zds_central_test.png>
+Package pdftex.def Info: RFI_testing/figures/Zds_central_test.png used on input
+ line 129.
 (pdftex.def)             Requested size: 411.93767pt x 308.95084pt.
- <GI_2__subtract.png, id=67, 578.16pt x 433.62pt>
-File: GI_2__subtract.png Graphic file (type png)
 
-<use GI_2__subtract.png>
-Package pdftex.def Info: GI_2__subtract.png used on input line 162.
+<RFI_testing/figures/GI_3__test.png, id=61, 578.16pt x 433.62pt>
+File: RFI_testing/figures/GI_3__test.png Graphic file (type png)
+
+<use RFI_testing/figures/GI_3__test.png>
+Package pdftex.def Info: RFI_testing/figures/GI_3__test.png used on input line 
+146.
 (pdftex.def)             Requested size: 411.93767pt x 308.95084pt.
-) [8 <./ZdS_entrance_subtract.png>] [9 <./ZdS_halfway_in_subtract.png>] [10 <./
-Zds_central_subtract.png>] [11 <./GI_3__subtract.png>]
-[12 <./GI_1__subtract.png>] [13 <./GI_2__subtract.png>] (./thesis.aux
-(./abstract.aux) (./acknowledgments.aux) (./RFI_testing.aux)) ) 
+
+<RFI_testing/figures/GI_2__test.png, id=62, 578.16pt x 433.62pt>
+File: RFI_testing/figures/GI_2__test.png Graphic file (type png)
+
+<use RFI_testing/figures/GI_2__test.png>
+Package pdftex.def Info: RFI_testing/figures/GI_2__test.png used on input line 
+154.
+(pdftex.def)             Requested size: 411.93767pt x 308.95084pt.
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7 <./RFI_testing/figures/ALG_test.png>] [8 <./RFI_testing/figures/ZdS_entranc
+e_test.png>] [9 <./RFI_testing/figures/ZdS_halfway_in_test.png>] [10 <./RFI_tes
+ting/figures/Zds_central_test.png>] [11 <./RFI_testing/figures/GI_3__test.png>]
+ [12 <./RFI_testing/figures/GI_2__test.png>] (./thesis.aux (./abstract.aux)
+(./acknowledgments.aux) (./RFI_testing/RFI_testing.aux)) ) 
 Here is how much of TeX's memory you used:
- 1639 strings out of 493629
- 23392 string characters out of 3148778
- 79698 words of memory out of 3000000
- 4906 multiletter control sequences out of 15000+200000
+ 1635 strings out of 493629
+ 24101 string characters out of 3148778
+ 79686 words of memory out of 3000000
+ 4901 multiletter control sequences out of 15000+200000
  9721 words of font info for 34 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 37i,6n,23p,596b,269s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.
-pfb>
-Output written on thesis.pdf (20 pages, 1277127 bytes).
+ 37i,6n,23p,608b,269s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb>
+Output written on thesis.pdf (19 pages, 1157666 bytes).
 PDF statistics:
- 108 PDF objects out of 1000 (max. 8388607)
- 59 compressed objects within 1 object stream
+ 103 PDF objects out of 1000 (max. 8388607)
+ 57 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

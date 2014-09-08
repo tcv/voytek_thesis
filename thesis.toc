@@ -4,10 +4,10 @@
 \contentsline {subsection}{\numberline {1.2.1}Carnegie Mellon University Pittsburgh, PA, USA}{3}
 \contentsline {subsection}{\numberline {1.2.2}National Radio Astronomy Observatory (NRAO) Green Bank, WV, USA}{3}
 \contentsline {subsection}{\numberline {1.2.3}Dominion Radio Astrophysical Observatory (DRAO) Penticton, BC, Canada}{5}
-\contentsline {subsection}{\numberline {1.2.4}Algonquin Radio Observatory (ARO) Algonquin, Ontario, Canada}{6}
+\contentsline {subsection}{\numberline {1.2.4}Algonquin Radio Observatory (ARO) Algonquin, Ontario, Canada}{5}
 \contentsline {section}{\numberline {1.3}New Site Evaluations}{6}
-\contentsline {subsection}{\numberline {1.3.1}La Zona de Silencio Mapimi, Mexico}{7}
-\contentsline {subsubsection}{Logistics and Current Infrastructure}{7}
+\contentsline {subsection}{\numberline {1.3.1}La Zona de Silencio Mapimi, Mexico}{6}
+\contentsline {subsubsection}{Logistics and Current Infrastructure}{6}
 \contentsline {subsubsection}{Weather}{7}
 \contentsline {subsubsection}{Measurements}{8}
 \contentsline {subsection}{\numberline {1.3.2}Isla Guadalupe Baja California, Mexico}{8}

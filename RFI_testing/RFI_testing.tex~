@@ -18,7 +18,7 @@ In the following sections, I am going to evaluate both existing telescope sites 
 
 \begin{figure}[htb]
 \begin{center}
-\includegraphics[width=0.95\textwidth]{RFI_testing/figures/large_scale_site_map.jpg}
+\includegraphics[width=0.95\textwidth]{large_scale_site_map.jpg}
 \caption{Map of evaluated sites in North America.}
 \label{Fig:site_map}
 \end{center}
@@ -36,7 +36,7 @@ Carnegie Mellon University is located in the city of Pittsburgh, home to several
 
 \begin{figure}[htb]
 \begin{center}
-\includegraphics[width=0.95\textwidth]{RFI_testing/figures/Pittsburgh_test.png}
+\includegraphics[width=0.95\textwidth]{Pittsburgh_test.png}
 \caption{RFI measurement in Pittsburgh, PA.}
 \label{Fig:pghrfi}
 \end{center}
@@ -46,7 +46,7 @@ Carnegie Mellon University is located in the city of Pittsburgh, home to several
 
 \begin{figure}[htb]
 \begin{center}
-\includegraphics[width=0.8\textwidth]{RFI_testing/figures/National_Radio_Quiet_Zone.png}
+\includegraphics[width=0.8\textwidth]{National_Radio_Quiet_Zone.png}
 \caption{Extent of the US National Radio Quiet Zone around the Green Bank Site.}
 \label{Fig:nrqz}
 \end{center}
@@ -58,32 +58,32 @@ The size of the radio quiet zone (about 34,000 $km^2$) is sufficient for the hig
 
 \begin{figure}[htb]
 \begin{center}
-\includegraphics[width=0.95\textwidth]{RFI_testing/figures/GBT_test.png}
+\includegraphics[width=0.95\textwidth]{GBT_subtract.png}
 \caption{RFI measurement at the NRAO Green Bank site. }
 \label{Fig:gbtrfi}
 \end{center}
 \end{figure}
 
-\subsection{Dominion Radio Astrophysical Observatory (DRAO)}
+\subsection{Dominion Radio Astrophysical Observatory (DRAO) Penticton, BC, Canada}
 
 The Dominion Radio Astrophysical Observatory (DRAO) is a Canadian radio astronomy site located near Penticton, British Columbia in the south-central part of the province. It has a number of radio telescopes on site, including the Canadian Hydrogen Intensity Mapping Experiment (CHIME) system. Like the NRAO Green Bank site, the isolation is insufficient for the lower frequencies. There is significant RFI contamination for most frequencies below 500 MHz at this site (see Figure \ref{Fig:draorfi}). 
 
 \begin{figure}[htb]
 \begin{center}
-\includegraphics[width=0.95\textwidth]{RFI_testing/figures/DRAO_test.png}
+\includegraphics[width=0.95\textwidth]{DRAO_subtract.png}
 \caption{RFI measurement at the DRAO Penticton site. }
 \label{Fig:draorfi}
 \end{center}
 \end{figure}
 
 
-\subsection{Algonquin Radio Observatory (ARO)}
+\subsection{Algonquin Radio Observatory (ARO) Algonquin, Ontario, Canada}
 
 The Algonquin Radio Observatory (ARO) is a single instrument Canadian radio astronomy site locaed in the center of Algonquin Provincial Park in Ontario. Accessible only by logging roads, this is a fairly remote site with excellent radio quiet properties. However, Algonquin is still relatively close (about 200-250 km) to the major Canadian metropolitan areas of Toronto and Ottawa. This means that although the rest of the spectrum is quite clean, there is still significant RFI below 300 MHz (see Figure \ref{Fig:arorfi}). 
 
 \begin{figure}[htb]
 \begin{center}
-\includegraphics[width=0.95\textwidth]{RFI_testing/figures/ALG_test.png}
+\includegraphics[width=0.95\textwidth]{ALG_subtract.png}
 \caption{RFI measurement at the ARO Algonquin site.}
 \label{Fig:arorfi}
 \end{center}
@@ -95,8 +95,6 @@ The Algonquin Radio Observatory (ARO) is a single instrument Canadian radio astr
 Evaluation of these existing radio quiet sites demonstrates a clear need for sites whose RFI environments are clean to lower frequencies. However, locating such sites can be difficult as the distances required begin to grow large. I will report on a couple of potential sites in Mexico that have significant improvement in their low frequency RFI strength compared to the existing sites. 
 
 \subsection{La Zona de Silencio Mapimi, Mexico}
-
-''La Zona de Silencio'' is a radio quiet region in the Mapimi desert in Northern Mexico. Its current radio quiet status is a feature of geography as it is surrounded by mountains and has no major metropolitan areas in the local region. It is also a protected biological reserve. 
 
 \subsubsection{Logistics and Current Infrastructure}
 
@@ -112,7 +110,7 @@ Northern mexico is quite hot in summer (desert).
 
 \begin{figure}[htb]
 \begin{center}
-\includegraphics[width=0.95\textwidth]{RFI_testing/figures/ZdS_entrance_test.png}
+\includegraphics[width=0.95\textwidth]{ZdS_entrance_subtract.png}
 \caption{RFI measurement at the entrance to the Zona de Silencio. Note that the FM band is already much cleaner than current sites.}
 \label{Fig:zdsentrfi}
 \end{center}
@@ -120,7 +118,7 @@ Northern mexico is quite hot in summer (desert).
 
 \begin{figure}[htb]
 \begin{center}
-\includegraphics[width=0.95\textwidth]{RFI_testing/figures/ZdS_halfway_in_test.png}
+\includegraphics[width=0.95\textwidth]{ZdS_halfway_in_subtract.png}
 \caption{RFI measurement part of the way into the Zona de Silencio deployment site. Note that the FM band is still pretty quiet, although it has slightly different structure due to the change of location. }
 \label{Fig:zdsmidrfi}
 \end{center}
@@ -128,7 +126,7 @@ Northern mexico is quite hot in summer (desert).
 
 \begin{figure}[htb]
 \begin{center}
-\includegraphics[width=0.95\textwidth]{RFI_testing/figures/Zds_central_test.png}
+\includegraphics[width=0.95\textwidth]{Zds_central_subtract.png}
 \caption{RFI measurement at the Zona de Silencio deployment site. At this location there are no strong FM signals, but there is some geneneral low level noise across the band.}
 \label{Fig:zdsendrfi}
 \end{center}
@@ -145,7 +143,7 @@ Northern mexico is quite hot in summer (desert).
 
 \begin{figure}[htb]
 \begin{center}
-\includegraphics[width=0.95\textwidth]{RFI_testing/figures/GI_3__test.png}
+\includegraphics[width=0.95\textwidth]{GI_3__subtract.png}
 \caption{RFI measurement at the summit of Guadalupe Island. At this high elevation the FM signals from the mainland are quite strong and there is generally more RFI signals.}
 \label{Fig:guadsumrfi}
 \end{center}
@@ -153,7 +151,15 @@ Northern mexico is quite hot in summer (desert).
 
 \begin{figure}[htb]
 \begin{center}
-\includegraphics[width=0.95\textwidth]{RFI_testing/figures/GI_2__test.png}
+\includegraphics[width=0.95\textwidth]{GI_1__subtract.png}
+\caption{RFI measurement near the southern part of Guadalupe Island. This location had a direct line toward the south so picked up some transmissions from FM stations in southern Baja California. }
+\label{Fig:guadsouthrfi}
+\end{center}
+\end{figure}
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=0.95\textwidth]{GI_2__subtract.png}
 \caption{RFI measurement from the western side of Guadalupe Island. The peaks of Guadalupe are between this location and the mainland of Baja California, minimizing the RFI environment.}
 \label{Fig:guadfishrfi}
 \end{center}
