@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.3.20)  5 NOV 2014 12:35
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.3.20)  6 NOV 2014 14:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -150,11 +150,11 @@ e
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 185.
+(Font)              <12> on input line 175.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 185.
+(Font)              <8> on input line 175.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 185.
+(Font)              <6> on input line 175.
  [2] [3] (./outline.aux) ) 
 Here is how much of TeX's memory you used:
  1517 strings out of 493629
@@ -166,7 +166,7 @@ Here is how much of TeX's memory you used:
  37i,5n,23p,233b,324s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmr12.pfb>
-Output written on outline.pdf (3 pages, 23109 bytes).
+Output written on outline.pdf (3 pages, 23062 bytes).
 PDF statistics:
  18 PDF objects out of 1000 (max. 8388607)
  11 compressed objects within 1 object stream

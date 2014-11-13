@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.3.20)  4 NOV 2014 22:11
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.3.20)  12 NOV 2014 18:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -74,7 +74,8 @@ Package graphics Info: Driver file: pdftex.def on input line 91.
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
 ) (./definitions.tex) (./thesis.aux (./abstract.aux) (./acknowledgments.aux)
-(./RFI_testing/RFI_testing.aux))
+(./Introduction/Introduction.aux) (./SCIHI_system/SCIHI_system.aux)
+(./RFI_testing/RFI_testing.aux) (./Data_analysis/SCIHI_data.aux))
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
@@ -177,22 +178,22 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 2.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 2.
-)
-\tf@toc=\write3
-\openout3 = `thesis.toc'.
-
  [1
 
 
 
-] (./thesis.lot)
+])
+\tf@toc=\write3
+\openout3 = `thesis.toc'.
+
+ [2] (./thesis.lot)
 \tf@lot=\write4
 \openout4 = `thesis.lot'.
 
- [2
+ [3
 
 ] (./thesis.lof
-Overfull \hbox (3.21593pt too wide) in paragraph at lines 18--18
+Overfull \hbox (3.21593pt too wide) in paragraph at lines 23--23
  [][] []\OT1/cmr/m/n/12 RFI mea-sure-ment from the ecol-ogy camp at the sum-mit
  of Isla Guadalupe. [][]  
  []
@@ -201,262 +202,344 @@ Overfull \hbox (3.21593pt too wide) in paragraph at lines 18--18
 \tf@lof=\write5
 \openout5 = `thesis.lof'.
 
- [3
+ [4
 
 ]
+\openout2 = `Introduction/Introduction.aux'.
+
+ (./Introduction/Introduction.tex
+Chapter 1.
+) [1
+
+
+
+]
+\openout2 = `SCIHI_system/SCIHI_system.aux'.
+
+ (./SCIHI_system/SCIHI_system.tex
+Chapter 2.
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2
+
+
+
+]
+Overfull \vbox (76.68835pt too high) has occurred while \output is active []
+
+
+[3]
 \openout2 = `RFI_testing/RFI_testing.aux'.
 
  (./RFI_testing/RFI_testing.tex
-Chapter 1.
-[1
+Chapter 3.
+[4
 
 
 
 ]
-<RFI_testing/figures/large_scale_site_map.jpg, id=30, 854.19125pt x 683.55376pt
+<RFI_testing/figures/site_testing_kit.jpg, id=42, 3105.6025pt x 4285.00874pt>
+File: RFI_testing/figures/site_testing_kit.jpg Graphic file (type jpg)
+
+<use RFI_testing/figures/site_testing_kit.jpg>
+Package pdftex.def Info: RFI_testing/figures/site_testing_kit.jpg used on input
+ line 23.
+(pdftex.def)             Requested size: 193.6112pt x 267.09317pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--29
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--29
+
+ []
+
+
+<RFI_testing/figures/voytek_site_test_alg.jpg, id=43, 2025.5675pt x 2774.365pt>
+File: RFI_testing/figures/voytek_site_test_alg.jpg Graphic file (type jpg)
+<use RFI_testing/figures/voytek_site_test_alg.jpg>
+Package pdftex.def Info: RFI_testing/figures/voytek_site_test_alg.jpg used on i
+nput line 32.
+(pdftex.def)             Requested size: 193.6112pt x 265.17609pt.
+
+<RFI_testing/figures/50Ohm_cal.png, id=44, 578.16pt x 433.62pt>
+File: RFI_testing/figures/50Ohm_cal.png Graphic file (type png)
+
+<use RFI_testing/figures/50Ohm_cal.png>
+Package pdftex.def Info: RFI_testing/figures/50Ohm_cal.png used on input line 4
+0.
+(pdftex.def)             Requested size: 390.25534pt x 292.68748pt.
+ [5 <./RFI_testing/figures/site_testing_kit.jpg> <./RFI_testing/figures/voytek_
+site_test_alg.jpg>] [6 <./RFI_testing/figures/50Ohm_cal.png>]
+<RFI_testing/figures/large_scale_site_map.jpg, id=59, 854.19125pt x 683.55376pt
 >
 File: RFI_testing/figures/large_scale_site_map.jpg Graphic file (type jpg)
  <use RFI_testing/figures/large_scale_site_map.jpg>
 Package pdftex.def Info: RFI_testing/figures/large_scale_site_map.jpg used on i
-nput line 21.
+nput line 70.
 (pdftex.def)             Requested size: 411.93767pt x 329.64574pt.
- [2 <./RFI_testing/figures/large_scale_site_map.jpg>]
-<RFI_testing/figures/Pittsburgh_cal.png, id=34, 578.16pt x 433.62pt>
+
+<RFI_testing/figures/Pittsburgh_cal.png, id=60, 578.16pt x 433.62pt>
 File: RFI_testing/figures/Pittsburgh_cal.png Graphic file (type png)
 
 <use RFI_testing/figures/Pittsburgh_cal.png>
 Package pdftex.def Info: RFI_testing/figures/Pittsburgh_cal.png used on input l
-ine 53.
-(pdftex.def)             Requested size: 411.93767pt x 308.95084pt.
-
-Overfull \hbox (5.68279pt too wide) in paragraph at lines 60--60
-[]\OT1/cmr/bx/n/14.4 National Ra-dio As-tron-omy Ob-ser-va-tory (NRAO) Green
- []
-
-
-<RFI_testing/figures/National_Radio_Quiet_Zone.png, id=36, 642.4pt x 712.6625pt
+ine 85.
+(pdftex.def)             Requested size: 390.25534pt x 292.68748pt.
+ [7 <./RFI_testing/figures/large_scale_site_map.jpg>]
+<RFI_testing/figures/National_Radio_Quiet_Zone.png, id=64, 642.4pt x 712.6625pt
 >
 File: RFI_testing/figures/National_Radio_Quiet_Zone.png Graphic file (type png)
 
  <use RFI_testing/figures/National_Radio_Quiet_Zone.png>
 Package pdftex.def Info: RFI_testing/figures/National_Radio_Quiet_Zone.png used
- on input line 67.
-(pdftex.def)             Requested size: 193.6112pt x 214.78996pt.
+ on input line 103.
+(pdftex.def)             Requested size: 152.85144pt x 169.56358pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--73
+Underfull \hbox (badness 10000) in paragraph at lines 108--109
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--73
+Underfull \hbox (badness 10000) in paragraph at lines 108--109
 
  []
 
+<RFI_testing/figures/gbt_site.jpg, id=65, 2268.475pt x 1996.45876pt>
+File: RFI_testing/figures/gbt_site.jpg Graphic file (type jpg)
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+<use RFI_testing/figures/gbt_site.jpg>
+Package pdftex.def Info: RFI_testing/figures/gbt_site.jpg used on input line 11
+2.
+(pdftex.def)             Requested size: 193.6112pt x 170.38217pt.
 
- [3 <./RFI_testing/figures/Pittsburgh_cal.png>]
-<RFI_testing/figures/GBT_cal.png, id=41, 578.16pt x 433.62pt>
+<RFI_testing/figures/GBT_cal.png, id=66, 578.16pt x 433.62pt>
 File: RFI_testing/figures/GBT_cal.png Graphic file (type png)
 
 <use RFI_testing/figures/GBT_cal.png>
-Package pdftex.def Info: RFI_testing/figures/GBT_cal.png used on input line 84.
+Package pdftex.def Info: RFI_testing/figures/GBT_cal.png used on input line 120
+.
+(pdftex.def)             Requested size: 390.25534pt x 292.68748pt.
 
-(pdftex.def)             Requested size: 411.93767pt x 308.95084pt.
- [4 <./RFI_testing/figures/National_Radio_Quiet_Zone.png>]
-<RFI_testing/figures/DRAO_cal.png, id=47, 578.16pt x 433.62pt>
-File: RFI_testing/figures/DRAO_cal.png Graphic file (type png)
+Overfull \hbox (5.68279pt too wide) in paragraph at lines 126--126
+[]\OT1/cmr/bx/n/14.4 National Ra-dio As-tron-omy Ob-ser-va-tory (NRAO) Green
+ []
 
-<use RFI_testing/figures/DRAO_cal.png>
-Package pdftex.def Info: RFI_testing/figures/DRAO_cal.png used on input line 10
-3.
-(pdftex.def)             Requested size: 411.93767pt x 308.95084pt.
+[8 <./RFI_testing/figures/Pittsburgh_cal.png>]
+Overfull \vbox (32.03938pt too high) has occurred while \output is active []
 
-<RFI_testing/figures/penticton_rect.jpg, id=48, 3468.96pt x 2312.64pt>
+
+[9 <./RFI_testing/figures/National_Radio_Quiet_Zone.png> <./RFI_testing/figures
+/gbt_site.jpg> <./RFI_testing/figures/GBT_cal.png>]
+<RFI_testing/figures/penticton_rect.jpg, id=76, 3468.96pt x 2312.64pt>
 File: RFI_testing/figures/penticton_rect.jpg Graphic file (type jpg)
 
 <use RFI_testing/figures/penticton_rect.jpg>
 Package pdftex.def Info: RFI_testing/figures/penticton_rect.jpg used on input l
-ine 121.
-(pdftex.def)             Requested size: 193.6112pt x 129.0482pt.
+ine 136.
+(pdftex.def)             Requested size: 390.25534pt x 260.14313pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 126--127
-[]
- []
+<RFI_testing/figures/DRAO_cal.png, id=77, 578.16pt x 433.62pt>
+File: RFI_testing/figures/DRAO_cal.png Graphic file (type png)
 
+<use RFI_testing/figures/DRAO_cal.png>
+Package pdftex.def Info: RFI_testing/figures/DRAO_cal.png used on input line 14
+4.
+(pdftex.def)             Requested size: 390.25534pt x 292.68748pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 126--127
-
- []
-
-
-<RFI_testing/figures/voytek_site_test_alg.jpg, id=49, 2025.5675pt x 2774.365pt>
-File: RFI_testing/figures/voytek_site_test_alg.jpg Graphic file (type jpg)
-<use RFI_testing/figures/voytek_site_test_alg.jpg>
-Package pdftex.def Info: RFI_testing/figures/voytek_site_test_alg.jpg used on i
-nput line 130.
-(pdftex.def)             Requested size: 193.6112pt x 265.17609pt.
-
-<RFI_testing/figures/ALG_cal.png, id=50, 578.16pt x 433.62pt>
+<RFI_testing/figures/ALG_cal.png, id=78, 578.16pt x 433.62pt>
 File: RFI_testing/figures/ALG_cal.png Graphic file (type png)
 
 <use RFI_testing/figures/ALG_cal.png>
-Package pdftex.def Info: RFI_testing/figures/ALG_cal.png used on input line 140
+Package pdftex.def Info: RFI_testing/figures/ALG_cal.png used on input line 152
 .
-(pdftex.def)             Requested size: 411.93767pt x 308.95084pt.
- [5 <./RFI_testing/figures/GBT_cal.png>]
-Underfull \vbox (badness 2158) has occurred while \output is active []
-
- [6 <./RFI_testing/figures/DRAO_cal.png>]
-<RFI_testing/figures/zds_overview_shot.jpg, id=61, 3104.59875pt x 1855.93375pt>
+(pdftex.def)             Requested size: 390.25534pt x 292.68748pt.
+ [10 <./RFI_testing/figures/penticton_rect.jpg>] [11 <./RFI_testing/figures/DRA
+O_cal.png>]
+<RFI_testing/figures/zds_overview_shot.jpg, id=87, 3104.59875pt x 1855.93375pt>
 File: RFI_testing/figures/zds_overview_shot.jpg Graphic file (type jpg)
 <use RFI_testing/figures/zds_overview_shot.jpg>
 Package pdftex.def Info: RFI_testing/figures/zds_overview_shot.jpg used on inpu
-t line 169.
-(pdftex.def)             Requested size: 411.93767pt x 246.23572pt.
+t line 176.
+(pdftex.def)             Requested size: 390.25534pt x 233.29384pt.
 
-<RFI_testing/figures/ZdS_halfway_in_cal.png, id=62, 578.16pt x 433.62pt>
+<RFI_testing/figures/ZdS_halfway_in_cal.png, id=88, 578.16pt x 433.62pt>
 File: RFI_testing/figures/ZdS_halfway_in_cal.png Graphic file (type png)
 
 <use RFI_testing/figures/ZdS_halfway_in_cal.png>
 Package pdftex.def Info: RFI_testing/figures/ZdS_halfway_in_cal.png used on inp
 ut line 184.
-(pdftex.def)             Requested size: 411.93767pt x 308.95084pt.
- [7 <./RFI_testing/figures/penticton_rect.jpg> <./RFI_testing/figures/voytek_si
-te_test_alg.jpg>]
-<RFI_testing/figures/isla_guadalupe_site_map.jpg, id=66, 516.93124pt x 673.5162
-5pt>
+(pdftex.def)             Requested size: 390.25534pt x 292.68748pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12 <./RFI_testing/figures/ALG_cal.png>]
+Underfull \vbox (badness 3128) has occurred while \output is active []
+
+ [13 <./RFI_testing/figures/zds_overview_shot.jpg>] [14 <./RFI_testing/figures/
+ZdS_halfway_in_cal.png>]
+<RFI_testing/figures/isla_guadalupe_site_map.jpg, id=100, 516.93124pt x 673.516
+25pt>
 File: RFI_testing/figures/isla_guadalupe_site_map.jpg Graphic file (type jpg)
  <use RFI_testing/figures/isla_guadalupe_site_map.jpg>
 Package pdftex.def Info: RFI_testing/figures/isla_guadalupe_site_map.jpg used o
-n input line 210.
+n input line 222.
 (pdftex.def)             Requested size: 193.6112pt x 252.25966pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 215--216
+Underfull \hbox (badness 10000) in paragraph at lines 227--228
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 215--216
+Underfull \hbox (badness 10000) in paragraph at lines 227--228
 
  []
 
 
-<RFI_testing/figures/omar_site_test_guad.jpg, id=67, 2454.16875pt x 3139.73pt>
+<RFI_testing/figures/omar_site_test_guad.jpg, id=101, 2454.16875pt x 3139.73pt>
 File: RFI_testing/figures/omar_site_test_guad.jpg Graphic file (type jpg)
-
 <use RFI_testing/figures/omar_site_test_guad.jpg>
 Package pdftex.def Info: RFI_testing/figures/omar_site_test_guad.jpg used on in
-put line 219.
+put line 231.
 (pdftex.def)             Requested size: 193.6112pt x 247.68622pt.
 
-Underfull \hbox (badness 3579) in paragraph at lines 220--220
-[]\OT1/cmr/m/n/12 Figure 1.12: Col-lect-ing data with
+Underfull \hbox (badness 3579) in paragraph at lines 232--232
+[]\OT1/cmr/m/n/12 Figure 3.15: Col-lect-ing data with
  []
 
 
-Underfull \hbox (badness 3354) in paragraph at lines 220--220
+Underfull \hbox (badness 3354) in paragraph at lines 232--232
 \OT1/cmr/m/n/12 the site test-ing equip-ment on Isla
  []
 
-[8 <./RFI_testing/figures/ALG_cal.png>]
-<RFI_testing/figures/guad_plane.jpg, id=72, 4015.0pt x 3011.25pt>
+<RFI_testing/figures/guad_plane.jpg, id=102, 4015.0pt x 3011.25pt>
 File: RFI_testing/figures/guad_plane.jpg Graphic file (type jpg)
 
 <use RFI_testing/figures/guad_plane.jpg>
 Package pdftex.def Info: RFI_testing/figures/guad_plane.jpg used on input line 
-233.
+242.
 (pdftex.def)             Requested size: 193.6112pt x 145.1954pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 238--239
+Underfull \hbox (badness 10000) in paragraph at lines 247--248
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 238--239
+Underfull \hbox (badness 10000) in paragraph at lines 247--248
 
  []
 
 
-<RFI_testing/figures/guad_plateau_plane.jpg, id=73, 3678.74374pt x 2586.66376pt
->
+<RFI_testing/figures/guad_plateau_plane.jpg, id=103, 3678.74374pt x 2586.66376p
+t>
 File: RFI_testing/figures/guad_plateau_plane.jpg Graphic file (type jpg)
  <use RFI_testing/figures/guad_plateau_plane.jpg>
 Package pdftex.def Info: RFI_testing/figures/guad_plateau_plane.jpg used on inp
-ut line 242.
+ut line 251.
 (pdftex.def)             Requested size: 193.6112pt x 136.12947pt.
- [9 <./RFI_testing/figures/zds_overview_shot.jpg>] [10 <./RFI_testing/figures/Z
-dS_halfway_in_cal.png>]
-Underfull \vbox (badness 1596) has occurred while \output is active []
 
- [11 <./RFI_testing/figures/isla_guadalupe_site_map.jpg> <./RFI_testing/figures
-/omar_site_test_guad.jpg> <./RFI_testing/figures/guad_plane.jpg> <./RFI_testing
-/figures/guad_plateau_plane.jpg>]
-<RFI_testing/figures/mex_navy_arrival.jpg, id=84, 1927.2pt x 1569.865pt>
+<RFI_testing/figures/mex_navy_arrival.jpg, id=104, 1927.2pt x 1569.865pt>
 File: RFI_testing/figures/mex_navy_arrival.jpg Graphic file (type jpg)
 
 <use RFI_testing/figures/mex_navy_arrival.jpg>
 Package pdftex.def Info: RFI_testing/figures/mex_navy_arrival.jpg used on input
- line 264.
+ line 265.
 (pdftex.def)             Requested size: 193.6112pt x 157.69037pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 269--270
+Underfull \hbox (badness 10000) in paragraph at lines 270--271
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 269--270
+Underfull \hbox (badness 10000) in paragraph at lines 270--271
 
  []
 
-<RFI_testing/figures/mex_navy_onboard.jpg, id=85, 3518.14375pt x 2463.2025pt>
+
+<RFI_testing/figures/mex_navy_onboard.jpg, id=105, 3518.14375pt x 2463.2025pt>
 File: RFI_testing/figures/mex_navy_onboard.jpg Graphic file (type jpg)
 
 <use RFI_testing/figures/mex_navy_onboard.jpg>
 Package pdftex.def Info: RFI_testing/figures/mex_navy_onboard.jpg used on input
- line 273.
+ line 274.
 (pdftex.def)             Requested size: 193.6112pt x 135.53293pt.
 
-<RFI_testing/figures/GI_3__cal.png, id=86, 578.16pt x 433.62pt>
+Underfull \vbox (badness 3746) has occurred while \output is active []
+
+ [15 <./RFI_testing/figures/isla_guadalupe_site_map.jpg> <./RFI_testing/figures
+/omar_site_test_guad.jpg>] [16 <./RFI_testing/figures/guad_plane.jpg> <./RFI_te
+sting/figures/guad_plateau_plane.jpg> <./RFI_testing/figures/mex_navy_arrival.j
+pg> <./RFI_testing/figures/mex_navy_onboard.jpg>]
+<RFI_testing/figures/GI_3__cal.png, id=112, 578.16pt x 433.62pt>
 File: RFI_testing/figures/GI_3__cal.png Graphic file (type png)
 
 <use RFI_testing/figures/GI_3__cal.png>
 Package pdftex.def Info: RFI_testing/figures/GI_3__cal.png used on input line 2
-92.
-(pdftex.def)             Requested size: 411.93767pt x 308.95084pt.
- [12 <./RFI_testing/figures/mex_navy_arrival.jpg> <./RFI_testing/figures/mex_na
-vy_onboard.jpg>]
-<RFI_testing/figures/GI_2__cal.png, id=91, 578.16pt x 433.62pt>
+96.
+(pdftex.def)             Requested size: 390.25534pt x 292.68748pt.
+ [17]
+<RFI_testing/figures/GI_2__cal.png, id=117, 578.16pt x 433.62pt>
 File: RFI_testing/figures/GI_2__cal.png Graphic file (type png)
 
 <use RFI_testing/figures/GI_2__cal.png>
 Package pdftex.def Info: RFI_testing/figures/GI_2__cal.png used on input line 3
-07.
-(pdftex.def)             Requested size: 411.93767pt x 308.95084pt.
- [13 <./RFI_testing/figures/GI_3__cal.png>]
-Underfull \vbox (badness 4595) has occurred while \output is active []
+11.
+(pdftex.def)             Requested size: 390.25534pt x 292.68748pt.
+ [18 <./RFI_testing/figures/GI_3__cal.png>]
+<RFI_testing/figures/site_testing_south.jpg, id=122, 850.17625pt x 903.375pt>
+File: RFI_testing/figures/site_testing_south.jpg Graphic file (type jpg)
 
- [14 <./RFI_testing/figures/GI_2__cal.png>]) [15] (./thesis.aux (./abstract.aux
+<use RFI_testing/figures/site_testing_south.jpg>
+Package pdftex.def Info: RFI_testing/figures/site_testing_south.jpg used on inp
+ut line 327.
+(pdftex.def)             Requested size: 390.25534pt x 414.67535pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [19 <./RFI_testing/figures/GI_2__cal.png>]
+Underfull \vbox (badness 1360) has occurred while \output is active []
+
+ [20 <./RFI_testing/figures/site_testing_south.jpg>]) [21]
+\openout2 = `Data_analysis/SCIHI_data.aux'.
+
+ (./Data_analysis/SCIHI_data.tex
+Chapter 4.
 )
-(./acknowledgments.aux) (./RFI_testing/RFI_testing.aux)) ) 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [22
+
+
+
+]
+Overfull \vbox (148.65503pt too high) has occurred while \output is active []
+
+
+[23] (./thesis.aux (./abstract.aux) (./acknowledgments.aux)
+(./Introduction/Introduction.aux) (./SCIHI_system/SCIHI_system.aux)
+(./RFI_testing/RFI_testing.aux) (./Data_analysis/SCIHI_data.aux)) ) 
 Here is how much of TeX's memory you used:
- 1680 strings out of 493629
- 25620 string characters out of 3148778
- 80769 words of memory out of 3000000
- 4939 multiletter control sequences out of 15000+200000
+ 1734 strings out of 493629
+ 27132 string characters out of 3148778
+ 82596 words of memory out of 3000000
+ 4965 multiletter control sequences out of 15000+200000
  9721 words of font info for 34 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  37i,8n,23p,1102b,286s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><
-/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on thesis.pdf (22 pages, 36622998 bytes).
+</usr/share/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
+/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmsy8.pfb>
+Output written on thesis.pdf (31 pages, 47153242 bytes).
 PDF statistics:
- 125 PDF objects out of 1000 (max. 8388607)
- 69 compressed objects within 1 object stream
+ 167 PDF objects out of 1000 (max. 8388607)
+ 95 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 91 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 111 words of extra memory for PDF output out of 10000 (max. 10000000)
 
