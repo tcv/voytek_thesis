@@ -1,18 +1,18 @@
-\chapter{Radio Frequency Interference (RFI) and Site Testing}
+\chapter{Radio Frequency Interference (RFI) and Site Testing} \label{Ch:RFI_test}
 
 \section{Overview}
 
-One of the challenges of radio astronomy is locating sites that meet the environmental and atmospheric requirements of a particular set of observations. Potential sites must be assessed for their viability prior to significant experiment development and observation at those sites. Site assessment must include four elements, each of which must be addressed to evaluate the site quality. 
+One of the challenges of radio astronomy is locating observatory sites that meet the environmental, atmospheric, and ionospheric requirements of a particular set of observations. Potential sites must be assessed for their viability prior to significant experiment development and observation at those sites. Site assessment must include four elements, each of which must be addressed to evaluate the site quality. 
 
-First, does the site have any nearby man-made sources of regular radio frequency interference (RFI) in the frequency band of the observations. Evaluation of this requirement can be done using a simple broadband antenna and spectrum analyzer on site at multiple locations. Deployment of an identical system at different sites allows a much more reliable comparison than can be made with independent systems. 
+First, does the site have any nearby man-made sources of time independent or continual radio frequency interference (RFI) in the frequency band of the observations? Initial evaluation of this requirement can be done using a simple broadband antenna and spectrum analyzer on site at multiple locations. Deployment of an identical system at different sites allows a much more reliable comparison than can be made with independent systems. 
 
-Second, is the site logistically accessible for the type of equipment needed for a set of observations. Some important considerations include the availability of power, transport into/out of the location, housing and other observer requirements and site access permissions (such as permits). Assessment of these considerations often requires an in-person visit and careful documentation. 
+Second, is the site logistically accessible for the type of equipment needed for a set of observations? Some important considerations include the availability of power, roads or other transport into/out of the location, housing and other observer requirements and site access permissions (such as permits). Assessment of these considerations often requires an in-person visit and an ongoing relationship with the agencies controlling the site.
 
-Third, are there atmospheric effects that must be considered in assessing the viability of a site (eg meteor scatter, thickness of ionosphere, inclement weather). Tracking data may be available from external sources such weather surveys, but it is often limited to broad trends instead of local details. 
+Third, are there atmospheric effects that must be considered in assessing the viability of a site (eg contributions of meteor scatter, thickness of ionosphere, inclement weather). Tracking data may be available from external sources such weather surveys, but it is often limited to broad trends instead of local details. 
 
-Fourth, are there sources of intermittent or highly time-variable RFI visible from the site. This can be more difficult to evaluate as it requires a long period of data collection. In cases where time-variable RFI is expected to play a significant role in the data collection, semi-permanent systems may need to be installed to track the RFI environment over time. 
+Fourth, are there sources of time variable RFI visible from the site. This can be more difficult to evaluate as it requires a long period of data collection. In cases where time-variable RFI is expected to play a significant role in the data collection, semi-permanent systems may need to be installed to track the RFI environment over time. 
 
-In the following sections, I am going to evaluate both existing telescope sites and new sites based upon the requirements listed above. I will set a baseline using Pittsburgh, Pennsylvania; which as a major metropolitan area is not expected to be a suitable radio astronomy site. I will then look at several existing radio telescope sites and examine their strengths and weaknesses. Finally, I will report on several new radio sites, comparing them to the existing sites to demonstrate viability. 
+In the following sections, I evaluate both existing telescope sites and new sites based upon the requirements listed above. Using data collected in Pittsburgh, Pennsylvania, which as a major metropolitan area is not expected to be a suitable radio astronomy site, I demonstrate the site testing system. I then look at several existing radio telescope sites and examine their strengths and weaknesses. Finally, I report on several new radio sites, comparing them to the existing sites to demonstrate viability. 
 
 \subsection{Site Testing Kit}
 
@@ -30,7 +30,7 @@ In the following sections, I am going to evaluate both existing telescope sites 
 \begin{minipage}[b]{0.47\textwidth}
 \centering
 \includegraphics[width=0.95\linewidth]{RFI_testing/figures/voytek_site_test_alg.jpg}
-\caption{Collecting data with the site testing equipment at the ARO site.}
+\caption{Collecting RFI data with the site testing equipment while at the ARO site.}
 \label{Fig:aroant}
 \end{minipage}
 \end{figure}
@@ -38,28 +38,30 @@ In the following sections, I am going to evaluate both existing telescope sites 
 \begin{figure}[htb]
 \begin{center}
 \includegraphics[width=0.9\linewidth]{RFI_testing/figures/50Ohm_cal.png}
-\caption{50 Ohm resistor as measured with site testing kit. FM spikes are RF leakage due to the measurement being made in the lab in Pittsburgh.}
+\caption{50 Ohm resistor as measured with site testing kit. FM spikes are RF leakage due to the measurement being made in the lab in Pittsburgh.Red line is the expected signal level of a 50 Ohm resistor. Variance between the expected signal and actual signal can be attributed to the limitations of the Spectrum Analyzer.}
 \label{Fig:resflux}
 \end{center}
 \end{figure}
 
-One major element of site evaluations was a short time-scale measurement of the RFI over a wide frequency band at each site. In order to do this, a sit testing kit was assembled. The kit includes a broadband antenna, amplifiers, and a portable spectrum analyzer for data collection. 
+One major element of site evaluations was a set of single time sweep measurements of the RFI over a wide frequency band at each site. To do this, a sit testing kit was assembled. The kit includes a broadband antenna, amplifiers, and a portable spectrum analyzer for data collection. 
 
-RFI signals are picked up by the antenna, a Workman $T-601$ discone antenna with a vertical polarization and a 3 meter plastic mast (see Figure \ref{Fig:aroant}). From the antenna, the signal is sent through a 1 meter cable to a set of amplifiers (Minicircuits $ZX60-33LN$ and $ZX60-4016E$) powered by a DC battery pack. The signal is then sent down a $\sim$7 meter cable to the spectrum analyzer. The spectrum analyzer (Anritsu $MS2711$) was enclosed in a brass mesh bag (Faraday Cage) to minimize self-generated RFI contamination. 
+RFI signals are picked up by the antenna, a Workman $T-601$ discone antenna with a vertical polarization and a 3 meter PVC pipe mast (see Figure \ref{Fig:aroant}). From the antenna, the signal is sent through a 50 cm cable to a set of amplifiers (Minicircuits $ZX60-33LN$ followed by $ZX60-4016E$) powered by a DC battery pack. The signal is then sent down a $\sim$7 meter cable to the spectrum analyzer. The spectrum analyzer (Anritsu $MS2711$) was enclosed in a brass mesh bag (Faraday Cage) to minimize self-generated RFI contamination. 
 
-Data was collected in 200 MHz bands from $\sim$1 MHz to 1600 MHz, with a collection resolution of 10 kHz (although data is stored at a much lower resolution due to the limitations of the spectrum analyzer) and recorded in dBm. In order to convert the data to flux density (S in $dBW/m^2Hz$), Equation \ref{eq:fluxdens} was applied to the data. In the equation, $G$ is the amplifier gain in dB, $BW$ is the effective spectrum analyzer bandwidth in Hz and $G_{ant}$ is the antenna gain in dB. 
+Data was collected by sweeping individual 200 MHz bands from $\sim$1 MHz to 1600 MHz, with a video and resolution bandwidth of 10 kHz. Only 400 data points are saved by the spectrum analyzer, requiring the data to be rebinned down to 500 kHz resolution. The highest peak of the $\sim50$ data points within each 500 kHz band is stored, which can be accounted for by changing the resolution bandwidth to an effective bandwidth of 30 kHz. 
+
+In order to convert the data to flux density (S in $dBW/m^2Hz$), Equation \ref{eq:fluxdens} was applied to the data. In the equation, $G$ is the amplifier gain in dB, $BW$ is the effective spectrum analyzer bandwidth in Hz and $G_{ant}$ is the antenna gain in dB. 
 
 \begin{equation}\label{eq:fluxdens}
 S \Bigg( \frac{dBW}{m^2 Hz} \Bigg) = P_{meas} (dBm) - 30 \Bigg( \frac{dBW}{dBm} \Bigg) - G - 10log_{10} [BW] - G_{ant}
 \end{equation}
 
-Amplifier gain ($G$) was measured in the lab using a noise figure meter and antenna gain ($G_{ant}$) can be calulated using Equation \ref{eq:gant}, where $\nu$ is the frequency in Hz, and $A_g$ is the isotropic antenna gain in $m^2$. We used the typical discone antenna value here, which is $1 dBi$ or $10^(1dBi/10) m^2$. 
+Amplifier gain ($G$) was measured in the lab using a noise figure meter and antenna gain ($G_{ant}$) can be calulated using Equation \ref{eq:gant}, where $\nu$ is the frequency in Hz, and $A_g$ is the isotropic antenna gain in $m^2$. We used the typical discone antenna value here, which is $1 dBi$ or $10^{1dBi/10} m^2$. 
 
 \begin{equation}\label{eq:gant}
 G_{ant}= 10 log_{10} \Bigg[ \Bigg(\frac{c}{\nu} \Bigg)^2 \Bigg( \frac{A_g}{4 \pi} \Bigg) \Bigg]
 \end{equation}
 
-To test the conversion equation, we replaced the antenna with a $50 \Omega$ resistor. That resistor should see a flux density as shown in Equation \ref{eq:resflux}, where k is the Boltzmann Constant T is the room temperature in Kelvin and NF is the amplifier noise as measured by the noise figure meter. 
+To test the conversion equation, we replaced the antenna with a $50 \Omega$ resistor. That resistor should see a flux density as shown in Equation \ref{eq:resflux}, where k is the Boltzmann Constant T is the room temperature in Kelvin and NF is the amplifier noise as measured using a noise figure meter. 
 
 \begin{equation}\label{eq:resflux}
 S \Bigg( \frac{dBW}{m^2 Hz} \Bigg) = 10 log_{10} [k T] + NF 
@@ -75,8 +77,7 @@ S \Bigg( \frac{dBW}{m^2 Hz} \Bigg) = 10 log_{10} [k T] + NF
 
 The results of this measurement are shown in Figure \ref{Fig:resflux}. The measured signal was slightly higher than expected signal. Some of this difference was tied to the effective spectrum analyzer bandwidth (30 kHz rather than the expected 10 kHz). The remainder of the difference may come from additional noise in the system or uncertainty in the noise figure meter values and appears to be roughly flat in frequency. 
 
-
-Because we use the same kit at all the sites, any systematic noise contribution such as the uncertainty in the 50 Ohm data found in Figure \ref{Fig:resflux} is constant across all datasets and can be ignored in our data. 
+Because we use the same kit at all the sites, any systematic noise contribution such as the uncertainty in the 50 Ohm data found in Figure \ref{Fig:resflux} is constant across all datasets. 
 
 \section{Existing Site Evaluations}
 
@@ -95,6 +96,8 @@ Using the site testing kit discussed in the previous section, data was taken at 
 
 Carnegie Mellon University is located in the city of Pittsburgh ($40^\circ 26'30''$ N, $80^\circ 00' 00''$ W), home to several such universities and possessing a population of over 300,000. As should be expected, the radio environment in Pittsburgh is full of RFI with signals of such magnitude that they overload test equipment. Figure \ref{Fig:pghcal} shows the RFI environment in Pittsburgh as measured with the site testing kit. In order to not overload the spectrum analyzer with the high RFI levels at some frequencies, it was necessary to remove one stage of amplification from the system. 
 
+Removing amplification is particularly important because when there are RFI signals larger than $-170 \frac{dBW}{m^2 Hz}$, intermodulation begins to corrupt frequencies beyond the RFI signal frequencies. 
+
 
 \begin{figure}[htb]
 \centering
@@ -110,26 +113,28 @@ Carnegie Mellon University is located in the city of Pittsburgh ($40^\circ 26'30
 \begin{minipage}[b]{0.47\textwidth}
 \centering
 \includegraphics[width=0.95\linewidth]{RFI_testing/figures/gbt_site.jpg}
-\caption{Robert C. Byrd Green Bank Radio Telescope. }
+\caption{Robert C. Byrd Green Bank Radio Telescope as viewed from the site observation deck. }
 \label{Fig:gbt}
 \end{minipage}
 \end{figure}
 
 \begin{figure}[htb]
 \begin{center}
-\includegraphics[width=0.9\linewidth]{RFI_testing/figures/GBT_cal.png}
-\caption{RFI measurement at the NRAO Green Bank site. }
+\includegraphics[width=0.9\linewidth]{RFI_testing/figures/GBT_bands.png}
+\caption{RFI measurement at the NRAO Green Bank site. Colored bands indicate well known RFI source frequencies.}
 \label{Fig:gbtrfi}
 \end{center}
 \end{figure}
 
-\subsection{National Radio Astronomy Observatory (NRAO) Green Bank, WV, USA}
+\subsection{National Radio Astronomy Observatory (NRAO) Green Bank}
 
 The National Radio Astronomy Observatory (NRAO) is a research center funded by the United States National Science Foundation (NSF). It maintains several telesopes in radio quiet locations. One of these locations is in Green Bank, West Virginia inside the United States National Radio Quiet Zone in Virginia and West Virginia (see Figure \ref{Fig:nrqz}). Within this zone radio broadcasts at all frequencies are extremely limited, allowing for a relatively quiet RFI environment. 
 
 The Green Bank site ($38^\circ 25' 59''$ N, $79^\circ 50' 23''$ W) hosts a number of radio telescopes including the 100 m Robert C. Byrd Green Bank Radio Telescope (see Figure \ref{Fig:gbt}). As an NRAO facility, the site has a full staff and facilities including housing, power, and other amenities. Located off a local highway, the site is a simple 4-5 hour drive from Pittsburgh. 
 
-Looking at the data from the site testing kit, we found that the size of the radio quiet zone (about 34,000 $km^2$) is sufficient for higher frequencies but becomes to small at lower frequencies. As you can see in Figure \ref{Fig:gbtrfi}, there are specific bands of frequencies below 600 MHz where there is a great deal of RFI. One of these highly contaminated bands is the FM radio band. 
+Looking at the data from the site testing kit, we find that the size of the radio quiet zone (about 34,000 $km^2$) is sufficient for higher frequencies but becomes too small at lower frequencies. As you can see in Figure \ref{Fig:gbtrfi}, there are specific bands of frequencies below 600 MHz where there is a great deal of RFI. Some of these bands are indicated with colored boxes (red is the FM band, magenta is an orbcom satellite band and cyan is a military satellite band). 
+
+Beyond the RFI, one of the other features of the site test data is a large scale sinusoidal variation (or ringing) in frequency. This variation is caused by reflections in the 50 cm cable between the antenna and first stage amplifier. One of the useful things about this ringing is that it provides a check that the system is working, because if one or more of the amplifiers has blown there is no ringing present in the data. Such a cross check is particularly useful in radio quiet areas, where there may not be much of a difference in the spectrum if the amplifier is malfunctioning. 
 
 \begin{figure}[htb]
 \begin{center}
@@ -141,7 +146,7 @@ Looking at the data from the site testing kit, we found that the size of the rad
 
 \begin{figure}[htb]
 \begin{center}
-\includegraphics[width=0.9\linewidth]{RFI_testing/figures/DRAO_cal.png}
+\includegraphics[width=0.9\linewidth]{RFI_testing/figures/DRAO_bands.png}
 \caption{RFI measurement at the DRAO Penticton site. }
 \label{Fig:draorfi}
 \end{center}
@@ -149,7 +154,7 @@ Looking at the data from the site testing kit, we found that the size of the rad
 
 \begin{figure}[tb]
 \begin{center}
-\includegraphics[width=0.9\linewidth]{RFI_testing/figures/ALG_cal.png}
+\includegraphics[width=0.9\linewidth]{RFI_testing/figures/ALG_bands.png}
 \caption{RFI measurement at the ARO Algonquin site.}
 \label{Fig:arorfi}
 %\end{minipage}
@@ -162,11 +167,11 @@ The Dominion Radio Astrophysical Observatory (DRAO) is a Canadian radio astronom
 
 The site can be easily accessed by car, with on-site facilities available for researchers. It is also a $\sim$30 minute drive from Penticton, a town with a population of over 30,000. 
 
-Like the NRAO Green Bank site, the DRAO site has insufficient isolation from civilization to provide a radio quiet environment at the lower frequencies. There is significant RFI contamination for most frequencies below 500 MHz at this site (see Figure \ref{Fig:draorfi}).  
+Like the NRAO Green Bank site, the DRAO site has insufficient isolation from civilization to provide a radio quiet environment at the lower frequencies. There is significant RFI contamination for most frequencies below 500 MHz at this site (see Figure \ref{Fig:draorfi}). Given DRAO's location close to Penticton, some of the signals in the FM band are loud enough to cause intermodulation of signals into some of the frequencies that are actually clean. This can be seen in the band between 108-136 MHz, the dedicated aerospace band, which should be clear of RFI everywhere in the world. 
 
 \subsection{Algonquin Radio Observatory (ARO)}
 
-The Algonquin Radio Observatory (ARO) is a single instrument Canadian radio astronomy site ($45^\circ 57' 19.8''$ N, $78^\circ 4' 23''$ W). Located in the center of Algonquin Provincial Park in Ontario, Canada; the site is only accessible by logging roads, which are gravel but can be driven by most vehicles during the summer. ARO does have power and full amenities on site including housing for researchers. 
+The Algonquin Radio Observatory (ARO) is a single instrument Canadian radio astronomy site ($45^\circ 57' 19.8''$ N, $78^\circ 4' 23''$ W). Located in the center of Algonquin Provincial Park in Ontario, Canada; the site is only accessible by logging roads, which are gravel but can be driven by most vehicles during the summer. ARO is also accessible in an emergency via helicopter, but this mode of transportation is not commonly used. ARO does have power and full amenities on site including housing for researchers. 
 
 Although the site has excellent radio quiet properties at higher frequencies, it is still relatively close (about 200-250 km) to the major Canadian metropolitan areas of Toronto and Ottawa. When we set up our site test at ARO (see Figure \ref{Fig:arorfi}, we found that although the rest of the spectrum is quite clean there is still significant RFI below 300 MHz (see Figure \ref{Fig:arorfi}), including in the FM radio band. 
 
@@ -181,7 +186,7 @@ Although the site has excellent radio quiet properties at higher frequencies, it
 
 \begin{figure}[htb]
 \begin{center}
-\includegraphics[width=0.9\linewidth]{RFI_testing/figures/ZdS_halfway_in_cal.png}
+\includegraphics[width=0.9\linewidth]{RFI_testing/figures/ZdS_halfway_in_bands.png}
 \caption{RFI measurement near the ecologist's camp in the Zona del Silencio.}
 \label{Fig:zdsendrfi}
 \end{center}
@@ -189,13 +194,13 @@ Although the site has excellent radio quiet properties at higher frequencies, it
 
 \section{New Site Evaluations}
 
-Evaluation of these existing radio quiet sites demonstrated a clear need for sites whose RFI environments are clean to lower frequencies. However, locating such sites can be difficult as the distances required begin to grow large. I will report on a couple of potential sites in Mexico that have significant improvement in their low frequency RFI strength compared to the existing sites. 
+Evaluation of these existing radio quiet sites demonstrated a clear need for sites whose RFI environments are cleaner at frequencies below 500 MHz. However, locating such sites can be difficult as the distances required begin to grow large. Here, I report on a couple of potential sites in Mexico that have significant improvement in their low frequency RFI strength compared to the existing sites. 
 
-\subsection{La Zona de Silencio Mapimi, Mexico}
-$''$Zona del Silencio$''$ ($26^\circ 41' 10.3''$ N, $103^\circ 44' 50.9''$ W) is a radio quiet region in the Mapimi part of the Chihuahuan desert in Northern Mexico. Its current radio quiet status is a feature of geography as it is surrounded by mountains and has no major metropolitan areas in the local region. It is also a protected biosphere reserve maintaned by Mexcio's $''$Comisi\'{o}n Nacional de \'{A}reas Naturales Protegidas$''$ (CONANP). 
+\subsection{La Zona del Silencio}
+$''$Zona del Silencio$''$ ($26^\circ 41' 10.3''$ N, $103^\circ 44' 50.9''$ W) is a radio quiet region in the Mapimi part of the Chihuahuan desert in Northern Mexico. It has a reputation as a mysterious radio quiet zone due to historic events similar to the Bermuda Triangle, but in a desert setting. Some of its radio quiet status may be due to the local geography as the desert is a flat plateau, but there are mountains between it and any significant civilization. The closest major metropolitan area is Torre\'{o}n, over 150 km south of the zone center. The zone is also a protected biosphere reserve maintaned by Mexcio's $''$Comisi\'{o}n Nacional de \'{A}reas Naturales Protegidas$''$ (CONANP). 
 
 \subsubsection{Logistics and Current Infrastructure}
-While major highways can be found along the outside of the region, the only roads in and out of the site are poorly maintained dirt roads that require 4-wheel drive at a minimum. 
+While major highways can be found along the outside of the region, the only roads in and out of the site are poorly maintained dirt roads that require 4-wheel drive.
 
 Permanent settlements are not allowed within the biosphere reserve. However, at the center of the site is a camp for ecologists studying the biosphere found in the reserve. The site has minimal housing with solar cells charging batteries for power but all water on site has to be brought in from outside. 
 
@@ -217,16 +222,16 @@ Further testing at this site should include a survey of a wide range of location
 
 \begin{figure}[htb]
 \centering
-\begin{minipage}[b]{0.47\textwidth}
+\begin{minipage}[b]{0.48\textwidth}
 \centering
 \includegraphics[width=0.95\linewidth]{RFI_testing/figures/isla_guadalupe_site_map.jpg}
-\caption{Map of Isla Guadalupe with the relevant sites indicated.}
+\caption{Map of Isla Guadalupe with the sites of interest on the island indicated.}
 \label{Fig:guadmap}
 \end{minipage}%
 \begin{minipage}[b]{0.02\textwidth}
 \hspace{1cm}
 \end{minipage}%
-\begin{minipage}[b]{0.47\textwidth}
+\begin{minipage}[b]{0.46\textwidth}
 \centering
 \includegraphics[width=0.95\linewidth]{RFI_testing/figures/omar_site_test_guad.jpg}
 \caption{Collecting data with the site testing equipment on Isla Guadalupe.}
@@ -237,16 +242,16 @@ Further testing at this site should include a survey of a wide range of location
 
 \begin{figure}[tb]
 \centering
-\begin{minipage}[b]{0.47\textwidth}
+\begin{minipage}[b]{0.44\textwidth}
 \centering
 \includegraphics[width=0.95\linewidth]{RFI_testing/figures/guad_plane.jpg}
-\caption{Airplane used for access to Isla Guadalupe after landing on the island.}
+\caption{Airplane used for access to Isla Guadalupe.}
 \label{Fig:guadplane}
 \end{minipage}%
 \begin{minipage}[b]{0.02\textwidth}
 \hspace{1cm}
 \end{minipage}%
-\begin{minipage}[b]{0.47\textwidth}
+\begin{minipage}[b]{0.50\textwidth}
 \centering
 \includegraphics[width=0.95\linewidth]{RFI_testing/figures/guad_plateau_plane.jpg}
 \caption{View of the plateau with the fishing village from the airplane.}
@@ -254,34 +259,34 @@ Further testing at this site should include a survey of a wide range of location
 \end{minipage}
 \end{figure}
 
-\subsection{Isla Guadalupe Baja California, Mexico}
+\subsection{Isla Guadalupe}
 
-Isla Guadalupe ($29^\circ 1' 51''$ N, $118^\circ 16' 48''$ W) is a small volcanic island located about 250 $km$ west of Baja California in Mexico. The island is about 250 $km^2$, with two significant peaks along the north-south axis of the island. A biosphere reserve, access to Guadalupe is limited to a few groups; namely the Mexican government and Navy ($''$Secretar\'{i}a de Gobernaci\'{o}n$''$ and $''$Secretar\'{i}a de Marina$''$), ecologists studying the land and marine life such as the $''$Grupo de Ecolog\'{i}a y Conservaci\'{o}n de Islas A.C.$''$ (GECI) and CONANP, and the local fishing cooperative ($''$Sociedad Cooperativa d Producci\'{o}n Pesquera de Participaci\'{o}n Estatal Abuloneros y Langosteros, S.C.L.$''$). We were able to travel to Isla Guadalupe with support from these organizations. 
+Isla Guadalupe ($29^\circ 1' 51''$ N, $118^\circ 16' 48''$ W) is a small volcanic island located about 250 $km$ west of Baja California in Mexico. The island has an area of $\sim$250 $km^2$, with two significant peaks along the north-south axis of the island. A biosphere reserve, access to Guadalupe is limited to a few groups; namely the Mexican government and Navy ($''$Secretar\'{i}a de Gobernaci\'{o}n$''$ and $''$Secretar\'{i}a de Marina$''$), ecologists studying the land and marine life such as the $''$Grupo de Ecolog\'{i}a y Conservaci\'{o}n de Islas A.C.$''$ (GECI) and CONANP, and the local fishing cooperative ($''$Sociedad Cooperativa d Producci\'{o}n Pesquera de Participaci\'{o}n Estatal Abuloneros y Langosteros, S.C.L.$''$). We were able to travel to Isla Guadalupe with support from these organizations. 
 
 \begin{figure}[htb]
 \centering
-\begin{minipage}[b]{0.47\textwidth}
+\begin{minipage}[b]{0.44\textwidth}
 \centering
 \includegraphics[width=0.95\linewidth]{RFI_testing/figures/mex_navy_arrival.jpg}
-\caption{Mexican naval vessel as it arrived at Isla Guadalupe to deliver supplies.}
+\caption{Mexican naval vessel as it arrived at Isla Guadalupe to deliver supplies and pick us up.}
 \label{Fig:guadboat}
 \end{minipage}%
 \begin{minipage}[b]{0.02\textwidth}
 \hspace{1cm}
 \end{minipage}%
-\begin{minipage}[b]{0.47\textwidth}
+\begin{minipage}[b]{0.50\textwidth}
 \centering
 \includegraphics[width=0.95\linewidth]{RFI_testing/figures/mex_navy_onboard.jpg}
-\caption{Onboard the Mexican naval vessel during trip back to the Port of Ensenada.}
+\caption{View from onboard the Mexican naval vessel during the trip back to the Port of Ensenada.}
 \label{Fig:guadonboard}
 \end{minipage}
 \end{figure}
 
 \subsubsection{Logistics and Current Infrastructure}
 
-Access to Isla Guadalupe can requires one of two transport methods. First, small planes such as the one shown in Figure \ref{Fig:guadplane} can fly from the city of Ensenada in Baja California to the island, where there is a small landing strip. This flight takes 1-2 hours and can only be made during good weather. On several of our visits to Isla Guadalupe, this was our method of transport. 
+Access to Isla Guadalupe can requires one of two transport methods. First, small planes such as the one shown in Figure \ref{Fig:guadplane} can fly from the city of Ensenada in Baja California to the island, where there is a small landing strip. This flight takes 1-2 hours and can only be made during good weather. On several of our visits to Isla Guadalupe, this was our method of transport. However, each flight costs about \$2000 and can only carry $\sim$600 $kg$ including both people and supplies. 
 
-A much cheaper alternative is transport with the supply ship that the Mexican Navy uses to support its base on Guadalupe. This supply ship, shown in Figures \ref{Fig:guadboat} and \ref{Fig:guadonboard}, deploys once a month from the port of Ensenada; stopping first at Isla Guadalupe, then Isla Cedros, then returning to Ensenada with a total travel time of about three days. Travel via this route requires passengers to $''$camp out$''$ by sleeping on the deck of the ship during transit. In addition, since passengers are hitching a ride with the ship they have no control over changes in ship deployment (eg delays or re-routing) that may change the departure or arrival schedule. This places strictures on any deployments to Isla Guadalupe that must be accounted for in planning the trip. 
+A much cheaper alternative is transport with the supply ship that the Mexican Navy uses to support its base on Guadalupe. This supply ship, shown in Figures \ref{Fig:guadboat} and \ref{Fig:guadonboard}, deploys once a month from the port of Ensenada; stopping first at Isla Guadalupe, then Isla Cedros, then returning to Ensenada with a total travel time of about three days. Travel via this route requires passengers to $''$camp out$''$ by sleeping on the deck of the ship during transit. In addition, since passengers are hitching a ride with the ship they have no control over changes in ship deployment (eg delays or re-routing) that may change the departure or arrival schedule. This places strictures on any deployments to Isla Guadalupe that must be accounted for in planning the trip. In comparison to the flight costs, passage on the supply ship is only \$50 per person (for food) with minimal weight limits as some of the other passengers have been known to even transport cars via the supply ship. 
 
 While on Guadalupe we had the option of staying with the ecologists, the fishing village or the navy base. Each provided some level of logistical support, but all had limited resources. 
 
@@ -354,13 +359,9 @@ Site testing on Socorro and Clari\'{o}n is planned for the near future.
 
 \subsection{South Africa and Antarctica}
 
-
 \textcolor{red}{Add a short section on the logistics of visiting these islands.}
 
 
-\section{Ionspheric Impacts}
-
-\textcolor{red}{May add a whole section to this chapter on the earth's ionosphere, in which case these islands discussion will need significant write up. Additional research needed prior to writing this section. }
 
 
 

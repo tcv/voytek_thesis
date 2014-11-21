@@ -34,3 +34,19 @@ Icon
 # Files that might appear on external disk
 .Spotlight-V100
 .Trashes
+
+#Pdfs (can be too big).
+*.pdf
+
+#tex to pdf files
+*.tex~
+*.bib~
+*.bbl
+*.blg
+*.lof
+*.log
+*.lot
+*.toc
+*.aux
+*/*.tex~
+*/*.aux
