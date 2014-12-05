@@ -316,7 +316,7 @@ In addition to the hinged joints, we also added extention pieces to the support 
 
 \begin{figure}[htb]
 \begin{center}
-\includegraphics[width=0.95\linewidth]{SCIHI_system/figures/SCIHI_guad_sys.jpg}
+\includegraphics[width=0.85\linewidth]{SCIHI_system/figures/SCIHI_guad_sys.jpg}
 \caption{SCI-HI system with HIbiscus antenna set up on site at Isla Guadalupe in June 2013}
 \label{Fig:sys_guad}
 %\end{minipage}
@@ -401,11 +401,16 @@ Immediatelly following the switch in the RF chain is the first stage amplifier.
 \paragraph{Multi-stage Amplification}
 Because the $\sim50-100 m$ signal cable will attenuate signals travelling down its length, a second stage amplifier was added to the system to increase the gain of the signal. Both amplifiers use DC power supplied by the same power cable as the switch. Because different levels of DC power were needed for the varying electronic components, voltage regulation circuits were also included in the antenna electronics housing. 
 
-To maintain transmission efficiency, the first and second stage amplifiers' impedence had to match well. This was accomplished by using the same amplifier type for both stages. Initially the second stage amplifier was placed at the base of antenna (see Figure \ref{Fig:trombone_base}). However, this placement resulted in reflections in the signal whose period corresponded to the cable length between the two amplifiers. \textcolor{red}{May try to make a plot that shows this.} Therefore, the second stage amplifier was moved to a position immediately following the first stage amplifier (see Figure \ref{Fig:rf_ant_box}), which removed the effect. 
+To maintain transmission efficiency, the first and second stage amplifiers' impedence had to match well. This was accomplished by using the same amplifier type for both stages. Initially the second stage amplifier was placed at the base of antenna (see Figure \ref{Fig:trombone_base}). However, this placement resulted in reflections in the signal whose period corresponded to the cable length between the two amplifiers. \textcolor{red}{May try to make a plot that shows this.} Therefore, the second stage amplifier was moved to a position immediately following the first stage amplifier (see Figure \ref{Fig:rf_ant_box}), which removed the effect. The total gain of the amplifiers was $\sim$50 dB over the entire frequency band. 
+
+\textcolor{red}{Add a third level RF chain flow chart of just the Faraday cage electronics here.}
+
+\subsection{Faraday Cage Electronics}
+Once the signal has travelled down a long cable from the antenna, there are a few electronic stages that it must pass through prior to entering the data processing system. A third stage amplifier is needed to compensate for the attenuation caused by the long cable, filters are needed to keep signals from outside the frequency band of interest from overloading the data processing system, and a signals splitter used to achieve the necessary data sampling rate. All of these electronics, as well as the data processing system, were placed inside a Faraday cage designed specifically to accomodate them. 
 
 \begin{figure}[htb]
 \centering
-\begin{minipage}[b]{0.50\textwidth}
+\begin{minipage}[b]{0.36\textwidth}
 \centering
 \includegraphics[width=0.95\linewidth]{SCIHI_system/figures/SCIHI_fcage_old.jpg}
 \caption{Faraday cage around data processing system as setup in October 2012.}
@@ -414,17 +419,22 @@ To maintain transmission efficiency, the first and second stage amplifiers' impe
 \begin{minipage}[b]{0.02\textwidth}
 \hspace{1cm}
 \end{minipage}%
-\begin{minipage}[b]{0.44\textwidth}
+\begin{minipage}[b]{0.58\textwidth}
 \centering
 \includegraphics[width=0.95\linewidth]{SCIHI_system/figures/SCIHI_filter.jpg}
-\caption{Power signal filter box for one of the Faraday Cages.}
+\caption{System power and control signal filter box for one of the Faraday Cages.}
 \label{Fig:fcage_filter}
 \end{minipage}
 \end{figure}
 
+\subsubsection{Faraday Cage Design}
+The design of the Faraday Cage for the SCI-HI system was inspired by the dual requirements of space and portability. Because the wavelengths being studied with the system are $\geq 2$ meters, metal mesh could be used in place of solid metal for the sides of the cage. This mesh is considerably lighter than solid metal, but does not hold its structure. So I came up with a design that uses a metal mesh bag with a PVC pipe framework placed inside to hold its shape (see Figure \ref{Fig:fcage_old}). The mesh bag folds up like a paper bag and the PVC framework can be disassembled, allowing it to be packed up into a suitcase. 
+
+Access to the Faraday cage was supplied through the front panel, which attached to the rest of the bag through a set of metal snaps spaced less than 20 cm apart. This front panel included access ports for the signal cable, as well as the power and switch control cable. Multiple versions of the Faraday cage were constructed, but all of them used the same mesh bag system (see Figures \ref{Fig:fcage_int} and \ref{Fig:fcage_new}). 
+
 \begin{figure}[htb]
 \centering
-\begin{minipage}[b]{0.43\textwidth}
+\begin{minipage}[b]{0.44\textwidth}
 \centering
 \includegraphics[width=0.95\linewidth]{SCIHI_system/figures/SCIHI_fcage_int.jpg}
 \caption{Faraday cage around data processing system as setup in June 2013.}
@@ -433,33 +443,67 @@ To maintain transmission efficiency, the first and second stage amplifiers' impe
 \begin{minipage}[b]{0.02\textwidth}
 \hspace{1cm}
 \end{minipage}%
-\begin{minipage}[b]{0.51\textwidth}
+\begin{minipage}[b]{0.50\textwidth}
 \centering
 \includegraphics[width=0.95\linewidth]{SCIHI_system/figures/SCIHI_fcage_new.jpg}
-\caption{New Faraday Cage with double shielding around data processing system.}
+\caption{Faraday Cage with double shielding around data processing system, currently under development.}
 \label{Fig:fcage_new}
 \end{minipage}
 \end{figure}
 
-\subsection{Faraday Cage Electronics}
-
-\subsubsection{Faraday Cage Design}
-
 \subsubsection{Power Filters}
+Because the power and switch control cable carried DC power out to the antenna electronics, it needed to be filtered to keep RF signals from using the cable to escape the Faraday Cage. To accomplish this, a set of filter boxes were placed in the DC power and switch control signal lines. These filter boxes (see Figure \ref{Fig:fcage_filter}) were low pass filters with over 40 dB of attenuation at 40 MHz. Two stages of filtering were included to ensure that there was no signal transmission through the DC power lines. 
+
+Once the battery was placed outside of the Faraday Cage, filters also had to be used between the battery and the electronics inside the cage. The same filters used for the DC power and switch control cable were also used to make sure that RF signals didn't use the power supply cable from the battery to transmit outside the Faraday Cage.  
+
+
+\subsubsection{System Power} \label{Sec:sys_power}
+The entire system was powered using deep-cycle automotive batteries. These batteries supplied 12 V unregulated power, which was used by both the data processing system and the RF electronics. Initial designs of the Faraday cage had the DC battery stored inside the Faraday Cage, as shown in Figure \ref{Fig:fcage_old}. Later, the battery was moved outside the cage for easier access (see Figure \ref{Fig:fcage_int}). A fully charged battery could power the entire system for $\sim$12-15 hours. 
+
+Charging batteries was a big part of the support process for the SCI-HI system. Keeping the system running continually required at least 3 batteries with regular access to a battery charger and transport between the SCI-HI site and the battery charging location 2-3 times a day. 
+
+An alternative to running off batteries is to use a small portable gasoline or diesel generator. Using this generator would cut down on the number of site visits required, as the generator would run constantly with only occasional stops to top off the fuel. However, using a generator also provides a new source of RF noise (particularly a gasoline generator with spark plugs). Placing the generator inside its own Faraday Cage should attenuate this noise, but it is a factor that must be accounted for in selecting a power source. 
 
 \subsubsection{RF Filters and Amplification}
+Once the signal from the antenna entered the Faraday Cage, the first part of the RF chain was a set of filters. These filters were a low pass filter at 200 MHz (\textcolor{red}{add part number here}) and a high pass filter at 30 MHz (\textcolor{red}{add part number here}). The low pass filter was placed to prevent signals from higher frequencies ($\geq 200$ MHz) from aliasing into the frequency range where we were observing. The high pass filter was placed to prevent signals from the AM band and below overloading the sampling system, which could affect the overall system gain or create spurious signals in the observing band. 
 
-\subsubsection{RF Signal Splitting}
+After the signal has passed through the long cable and the filters, it is necessary to add another level of amplification to the system. This final stage of amplification is to bring the signal levels to a point where they can be clearly distinguished from system noise by the data processing system and adds $\sim25$ dB of gain. The amplifier used here is a \textcolor{red}{Add part number here} minicircuits amplifier, which is supplied with regulated power from the DC source. 
+
+\subsubsection{RF Signal Splitting} \label{Sec:hard_split}
+The analog to digital conversion (ADC) card used in the data processing system is limited to a 250 MSamples-per-sec sampling rate, but the bandwidth of the system is over 125 MHz. In order to expand the operating range of the ADC, a hardware $''$trick$''$ is used.
+
+The signal from the antenna is split into two identical signals with a \textcolor{red}{Add part number here} splitter. Both signals are then sent to the ADC using two of the input ports. However, the lengths of the cables placed between the two outputs of the splitter and the two input ports of the ADC are slightly different. The difference (\textcolor{red}{Add exact length here} is exactly matched such that a sample taken from one input port is has been delayed by 2 ns compared to the other input port. If the signals from both ports are combined, the data now appears to have been sampled at 500 MSamples-per-sec. 
 
 
+\section{Data Processing System}
 
-\section{Data Processing}
+\subsection{Data Processing Pathway}
+As discussed in Section \ref{Sec:hard_split}, signals from the sky enter the system via two ports of an analog to digital conversion (ADC) card. For the SCI-HI system, we used a \textcolor{red}{add part name and number here} card. Data is collected for one second of integration, with the interleaving stragegy producing 500 MSamples of data. 
 
-\subsection{Overview}
+Storing the entire dataset for each second would require a great deal of space. Instead, a fast fourier transform (FFT) is performed on the dataset. The frequency spectrum produced by the FFT takes up much less space (\textcolor{red}{How much less?}) and is stored by the system. The process is then repeated for another second of data. 
+
+Because of the design of the system, collecting new data can only be done after the FFT is complete. This means that the system is less than 100\% efficient, or it takes longer than 1 second to record the frequency spectrum of 1 second of data. Initially the FFT calculation was quite time consuming ($\sim 30-60$ seconds), but improvements to the software and hardware have decreased this calculation rate to $\sim 2$ seconds. This means that the system has a maximum duty cycle of $\sim30$\%. 
+
+All of the frequency spectrum data is stored locally on the hard drive of the processing system. The relatively small data volume ($\sim 2$ Gb per day) means that data transfer can be done using small USB drives. During deployment, data was removed from the hard drive 2-3 times a day and stored locally on multiple laptop computers and external hard drives before being uploaded to a server upon return to $''$civilization$''$. 
+
+\subsection{System Control and User Interface}
+In addition to the data processing software, a graphical user interface was designed for diagnostic and control purposes. This interface displays the most recent frequency spectrum collected by the system and lets the user set the current data collection mode (including switch control). The user can choose to either take a single data set with any of the switch positions (Antenna, 50 $\Omega$, Short, Noise Source, 100 $\Omega$), or take continual data with a set number of Antenna datasets followed by a single dataset from each of the calibration sources. \textcolor{red}{Add screenshot of the UI here}
+
+The system default upon start-up is to run in continual data collection mode with the number of antenna iterations as set by the system when it was previously used. To lower the power consumption and space requirements of the system, it is designed to be run without a monitor, mouse and keyboard. Instead, the system can be controlled by an external system through an ethernet port. This port is only used when the system needs to be checked.
+
+\subsection{Control Computer}
+The data processing system can be diagnosed using a personal computer (such as a laptop) with an ethernet port. However, an additional diagnostic computer was also developed for the SCI-HI system. This computer is a Raspberry Pi\footnote{www.raspberrypi.org} with a small monitor, mouse and ethernet port. \textcolor{red}{Add picture of the diagnostic computer.} Using this small computer, we can quickly check that the system is working properly and run simple diagnostics.
+
+\subsection{Power Suppy and Consumption}
+In order to power the data processing system, a computer power supply had to be selected that matched the system power source (DC battery). Initially, we started with a typical AC computer power supply and a DC to AC inverter that converted the incoming DC power from the batteries into AC power that the computer could handle. 
+
+While using an inverter is the simplest solution, it is very energy inefficient.  \textcolor{red}{Add exact inefficiency of the inverter we were using in percentages.} Additionally, any failure of the inverter can crash the entire system. Therefore, we decided to switch to an entirely DC system by replacing the AC power supply for the computer with a power supply that takes input DC power. \textcolor{red}{Add original DC power supply part number here.} 
+
+Utilizing this power supply greatly lowered our power consumption. However, we found that the power supply we selected was not reliable. Most of the DC power supplies on the market are designed for automotive applications, where they are only needed for short durations rather than continual use. In particular, the DC power supply was particularly unhappy when running in a low battery situation. We are currently exploring different alternatives, as discussed in Section \ref{Sec:sys_power}. 
 
 \begin{figure}[htb]
 \centering
-\begin{minipage}[b]{0.54\textwidth}
+\begin{minipage}[b]{0.52\textwidth}
 \centering
 \includegraphics[width=0.95\linewidth]{SCIHI_system/figures/SCIHI_comp.jpg}
 \caption{Current version of the data processing system assembled inside a Faraday Cage box.}
@@ -468,7 +512,7 @@ To maintain transmission efficiency, the first and second stage amplifiers' impe
 \begin{minipage}[b]{0.02\textwidth}
 \hspace{1cm}
 \end{minipage}%
-\begin{minipage}[b]{0.40\textwidth}
+\begin{minipage}[b]{0.42\textwidth}
 \centering
 \includegraphics[width=0.95\linewidth]{SCIHI_system/figures/SCIHI_water_cooling_pipe.jpg}
 \caption{Part of the water cooling system for the data processing machine.}
@@ -476,13 +520,15 @@ To maintain transmission efficiency, the first and second stage amplifiers' impe
 \end{minipage}
 \end{figure}
 
-\subsection{Analog to Digital Conversion and Sample Interleaving}
-
-\subsection{Fourier Transformation and Data Collection Efficiency}
-
-\subsection{Power Suppy and Consumption}
-
 \subsection{System Noise Generation}
+Deployment to Isla Guadalupe in June 2013 indicated that our Faraday Cage design had insufficient attenuation of self-generated RFI from the data processing system. This problem was not identified until deployment at the site due to the low levels of RFI compared to external RFI at the testing locations. Self-generated RFI was particularly noticeable above 90 MHz, (see Figure \textcolor{red}{Add time average plot here})but may be present in the data in the lower frequencies as well. Our data indicated that the strength of the self-generated RFI was correlated with the voltage (or charge level) of the DC batteries (see Figure \textcolor{red}{Add waterfall plot here.}). 
 
-\subsection{User interface and system control}
+In order to address this problem, a more robust Faraday Cage was designed for the SCI-HI system. This Faraday Cage is a double layer cage (see Figure \ref{Fig:new_comp}) with the data processing system placed inside a solid aluminum sealed box and a second Faraday cage with the rest of the electronics placed around the inner box. 
 
+Using a set of two walkie talkies, the aluminum box was tested to show attenuation $\geq$70 dB before modification. This was measured by placing one walkie talkie inside the box in recieve mode and transmitting a signal with the other walkie talkie. If the attenuation was smaller than the transmitted signal, then the recieving signal would make a noise. Even transmitting from less than 1 meter from the box, the signal was not picked up by the reciever. 
+
+However, the problem with using a solid metal Faraday Cage is that it becomes very difficult to cool the system. we designed a water cooling system using copper tubing mounted to the inside of the box (see Figure \ref{Fig:water_pipe}) and heat fins mounted to the outside of the box. A fan with its own Faraday cage was also mounted to the outside of the box to aid heat transfer. This system has been found sufficient for cooling in lab tests, but has not yet been tested in the field. 
+
+\section{Summary}
+
+\textcolor{red}{Should I put something here, and if so, what?}
