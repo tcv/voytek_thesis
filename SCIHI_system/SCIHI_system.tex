@@ -131,7 +131,6 @@ Based on the FEKO simulation results we settled on a design that used the EDGES 
 
 We found that the shape parameters that were most significant in affecting antenna performance were the strip line gap width and the height of the antenna with respect to the ground plane. 
 
-
 \begin{figure}[htb]
 \centering
 \begin{minipage}[b]{0.50\textwidth}
@@ -227,10 +226,11 @@ In order to keep the petal separation even and correct, lucite spacers were plac
 \end{figure}
 
 Beyond the antenna structure, a ground plane was also required to keep the ground pattern constant in time. Like with the Trombone, we used a ground plane made out of chicken wire. In this case, our simulations showed us that a $\sim 100 m^2$ square ground plane was sufficient for our application. The entire system (antenna plus ground plane) was anchored to the ground to minimize the wind impact on the system. Each of the four support legs had an anchoring rope (see Figure \ref{Fig:hibiscus_gbt}), and the chicken wire was also anchored with many stakes. 
+\subsubsection{S-parameters and Impedance}\label{Sec:HIbiscus_Imp}
 
-With the antenna constructed, we could test that it matched our scale model measurements in terms of its s-parameters. To do this, we set up the antenna outdoors and made measurements with a portable Vector Network Analyzer. Measurements had to be made outdoors because the wavelengths corresponding to the SCI-HI frequencies ($40-130$ MHz) are $\sim$1-10 meters. This large wavelength scale means that reflections from the boundaries of a room can change antenna s-parameters, so accuracy in measurement requires the outdoor setting. Figures \ref{Fig:hibiscus_first} and \ref{Fig:hibiscus_gbt} show examples of how we made this measurement at CMU and Green Bank.
+With the antenna constructed, we could test that it matched our scale model measurements in terms of its S-parameters. To do this, we set up the antenna outdoors and made measurements with a portable Vector Network Analyzer (VNA). Measurements had to be made outdoors because the wavelengths corresponding to the SCI-HI frequencies ($40-130$ MHz) are $\sim$1-10 meters. This large wavelength scale means that reflections from the boundaries of a room can change antenna s-parameters, so accuracy in measurement requires the outdoor setting. Figures \ref{Fig:hibiscus_first} and \ref{Fig:hibiscus_gbt} show examples of how we made this measurement at CMU and Green Bank.
 
-\textcolor{red}{Here I'll add a paragraph with S11 data using VNA and explanation.}
+\textcolor{red}{Here I'll add a discussion of HIbiscus S11 data using VNA and explanation, along with figures showing}
 
 \subsubsection{Travelling with the Antenna}
 In order to use the HIbiscus antenna on-site at remote locations, it needed to be transportable to those locations and easily assembled upon arrival. The physical construction of the antenna was designed to match this requirement in a number of ways. 
@@ -390,7 +390,7 @@ Switching between inputs is controlled through a cable from the Faraday Cage tha
 \subsubsection{Amplifiers}
 Immediatelly following the switch in the RF chain is the first stage amplifier. 
 
-\textcolor{red}{Add general discussion of S-parameters and Transmission Efficiency followed by a section on the different types of amplifiers that we tried and why we selected the one that we did.}
+\textcolor{red}{Add general discussion of S-parameters and Transmission Efficiency followed by a section on the different types of amplifiers that we tried and why we selected the one that we did. This should include a figure showing the amplifier S11 signals.}
 
 \paragraph{S-parameters}
 
