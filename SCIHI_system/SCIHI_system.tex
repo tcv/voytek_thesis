@@ -1,16 +1,18 @@
 \chapter{SCI-HI System Development}\label{Ch:System}
 
-\section{Overview}
+\section{Overview} \label{Sec:sysover}
 $''$Sonda Cosmologica de las Islas para la Deteccion de Hidrogeno Neutro$''$ (SCI-HI) is an experiment which seeks to measure the \cm global spectrum during the end of the Dark Ages and the Cosmic Dawn before reionization. As such, SCI-HI instrument was designed to meet several distinct contraints:
 
 \begin{enumerate}
-\item The design must be low cost (under \$ 10,000 \textcolor{red}{Is this the right range?}).
+\item The design must be low cost (under \$ 10,000).
 
-\item The design must be low power (under \textcolor{red}{What value should this be?}) and be able to run with an independent power source separate from external supplies. 
+\item The design must be low power (under  200 Watts) so that it can be run with an independent power source separate from external supplies. 
 
 \item The design must be simple and easy to deploy to remote locations. 
 
 \item The design must be broad-band to cover the wide bandwidth of interest ($30-140$ MHz).
+
+\item The design must include a system response that varies smoothly with frequency. 
 
 \end{enumerate}
 
@@ -22,7 +24,7 @@ $''$Sonda Cosmologica de las Islas para la Deteccion de Hidrogeno Neutro$''$ (SC
 \end{center}
 \end{figure}
 
-In order to meet these constraints, the instrument design was broken down into three categories based upon their purpose in the overall design (see Figure \ref{Fig:basic_block_diagram}). These categories are an antenna for signal collection, radio frequency (RF) electronics for signal transmission, and a computer for signal processing and storage.
+In order to meet these constraints, the instrument design was broken down into three categories based upon their purpose in the overall design (see Figure \ref{Fig:basic_block_diagram}). These categories are an antenna for signal collection, radio frequency (RF) electronics for calibration and signal transmission, and a computer for signal processing and storage.
 
 \section{Antenna}
 When designing an instrument for radio astronomy, one of the big challenges is finding an antenna design that fits the particular needs of a given experiment. 
@@ -52,7 +54,7 @@ For the SCI-HI experiment, the key properties for the antenna selection were the
 \end{figure}
 
 \subsection{First Stage Antenna}
-Initially, we started with a simple $''$Trombone$''$ antenna. This design is a dipole with fat, angled elements over a ground plane (see Figures \ref{Fig:trombone_small} and \ref{Fig:trombone_large}). Changing the frequency range of the antenna simply required shifting the length of the dipole elements and their position above the ground plane. 
+Initially, we started with a simple $''$Trombone$''$ antenna. This design is a dipole with fat, angled elements over a ground plane (see Figures \ref{Fig:trombone_small} and \ref{Fig:trombone_large}). Changing the frequency range of the antenna simply required shifting the length of the dipole elements and their position above the ground plane. The value here was that features in the measured spectrum which were from the sky would stay at the same frequencies when the antenna was tuned, while features from the antenna would shift. This feature would allow us to identify real structure on the sky such as the \cm signal. 
 
 \begin{figure}[htb]
 \centering
@@ -74,9 +76,9 @@ Initially, we started with a simple $''$Trombone$''$ antenna. This design is a d
 \end{figure}
 
 \subsubsection{Antenna Construction}
-The trombone shapes were constructed out of welded aluminum with a lucite mounting block at the connection point of the two cones (see Figure \ref{Fig:trombone_mount}), The dipoles and mounting block were supported with a structure constructed out of fiberglass and PVC tubes. The entire system was placed above a ground plane composed of metal mesh (aka chicken wire) over a small ($\sim9 m^2$) area and long wire extensions ($\sim10 m$) extending out from the center like a spider web. 
+The trombone shapes were constructed out of welded aluminum with a lucite mounting block at the connection point of the two cones (see Figure \ref{Fig:trombone_mount}), The dipoles and mounting block were supported with a structure constructed out of fiberglass and PVC tubes. The entire system was placed above a ground plane composed of metal mesh (aka chicken wire) over a small ($\sim9 m^2$) area and long radial extensions ($\sim10 m$) extending out from the center like a spider web. 
 
-Tuning the trombone length was accomplished with an external tube that slid over the main dipole elements (see Figure \ref{Fig:trombone_adj}), while adjusting the height of the trombone was done using the support legs (PVC pipes with variable heights).
+Tuning the trombone length was accomplished with an external tube that slid over the main dipole elements (see Figure \ref{Fig:trombone_adj}), while adjustment of the height of the trombone was done using the support legs (PVC pipes with variable heights).
 
 The Trombone antenna was used throughout the initial stages of the SCI-HI project, including deployments at Green Bank in West Virginia (Figure \ref{Fig:trombone_gbt}), the Zona del Silencio in Mexico (Figure \ref{Fig:trombone_zds}), Algonquin Radio Observatory in Canada (Figure \ref{Fig:trombone_alg}), and Isla Guadalupe in Mexico (Figure \ref{Fig:trombone_guad}). For more discussion of these sites, see Chapter \ref{Ch:RFI}.
 
@@ -123,20 +125,19 @@ Simulating the Trombone antenna indicated some problems with the design, includi
 
 \subsection{HIbiscus Antenna Design}
 
-Because of the problems we had with the trombone design, we decided to shift our antenna design in a new direction based upon our expectations from the literature (\textcolor{red}{Need to add specific references for different antenna types}). We tested several antenna designs in simulation, including the four-square design used in the EDGES experiment \cite{rogers_2012}. This testing was done using FEKO, a finite element computational electromagnetics software package.\footnote{https://www.feko.info/}
+Because of the problems we had with the trombone design, we decided to shift our antenna design in a new direction based upon our expectations from the literature (\textcolor{red}{Need to add specific references for different antenna types}). We tested several antenna designs in simulation, including the four-square design used in the EDGES experiment \cite{rogers_2012}. Simulations were run by Jose-Miguel Juaregui-Garcia using FEKO, a finite element computational electromagnetics software package.\footnote{https://www.feko.info/} 
 
-Based on the FEKO simulation results we settled on a design that used the EDGES design as a starting point, but changed the exact shapes of the four squares. We took each square and turned it into an incliclined petal composed of three trapezoidal shapes. Each shape was connected to its neighbors on the petal, but had a different angle with respect to the ground. Additional panels were added to each side of the petal to create a strip line with a fixed gap between the petals. The entire antenna was then placed a distance above a flat ground plane. We call this design a HIbiscus antenna. 
+Based on the FEKO simulation results we settled on a design that used the EDGES design as a starting point, but changed the exact shapes of the four squares. We took each square and turned it into an incliclined petal composed of three trapezoidal shapes. Each shape was connected to its neighbors on the petal, but had a different angle with respect to the ground. Additional panels were added to each side of the petal to create a strip line with a fixed gap between the petals. The entire antenna was then placed above a flat ground plane. We call this design a HIbiscus antenna. 
 
 \textcolor{red}{Add either pictures or simulation images for antenna shape details.}
 
-We found that the shape parameters that were most significant in affecting antenna performance were the strip line gap width and the height of the antenna with respect to the ground plane. 
 
 \begin{figure}[htb]
 \centering
 \begin{minipage}[b]{0.50\textwidth}
 \centering
 \includegraphics[width=0.95\linewidth]{SCIHI_system/figures/model_test_tabitha.jpg}
-\caption{Testing a model HIbiscus antenna in the Project REAL Chamber. }
+\caption{Testing a model HIbiscus antenna in the CMU Project REAL Chamber. }
 \label{Fig:hibiscus_scale_tabitha}
 \end{minipage}%
 \begin{minipage}[b]{0.02\textwidth}
@@ -151,11 +152,13 @@ We found that the shape parameters that were most significant in affecting anten
 \end{figure}
 
 \subsubsection{Scale Model Testing}
-In order to test our simulation to see if it matched the real antenna performance, we built a set of scaled HIbiscus designs tuned for higher frequencies around 400 MHz. This allowed us to use an antenna range to measure the antenna beam shape and s-parameters. 
+In order to test our simulation to see if it matched the real antenna performance, Jose-Miguel built a set of scaled HIbiscus designs tuned for higher frequencies around 400-500 MHz. This allowed us to use an antenna range to measure the antenna beam shape and s-parameters. 
 
-We used the Project REAL\footnote{http://www.preal.ece.cmu.edu/} (Remote Educational Antenna Laboratory) facility at Carnegie Mellon University to measure the antenna response of different scaled HIbiscus models, as is shown in Figures \ref{Fig:hibiscus_scale_tabitha} and \ref{Fig:hibiscus_scale_jose}. By incrementally adjusting the strip line gap width and antenna height we were able to tune the antenna scale model to optimize these critical parameters in a real design. 
+Jose-Miguel and I used the Project REAL\footnote{http://www.preal.ece.cmu.edu/} (Remote Educational Antenna Laboratory) facility at Carnegie Mellon University to measure the antenna response of different scaled HIbiscus models, as is shown in Figures \ref{Fig:hibiscus_scale_tabitha} and \ref{Fig:hibiscus_scale_jose}. 
 
-Using the scale model data, we were also able to edit the antenna simulation to better match the actual antenna response, providing us with an antenna simulation dataset that was closer to reality. 
+This scale model testing indicated that the shape parameters that were most significant in affecting antenna performance were the strip line gap width and the height of the antenna with respect to the ground plane. By incrementally adjusting these parameters on the scale models, we were able to tune the antenna scale model to optimize these critical parameters in a real design. 
+
+Using the scale model data, Jose-Miguel was also able to edit the antenna simulation to better match the actual antenna response, providing us with an antenna simulation dataset that was closer to reality. 
 
 \textcolor{red}{Here there will be some paragraphs about the exact simulation and scale model measurements including plots of impedence and antenna pattern.}
 
@@ -181,9 +184,9 @@ Using the scale model data, we were also able to edit the antenna simulation to 
 \subsection{HIbiscus Antenna Construction}
 
 \subsubsection{Initial Assembly}
-Once we had a design finalized, we set out to construct a HIbiscus antenna with its center frequency tuned to 70 MHz (in the middle of the SCI-HI observation band).
+Once we had a design finalized, Jose-Miguel and I set out to construct a HIbiscus antenna with its center frequency tuned to 70 MHz (in the middle of the SCI-HI observation band).
 
-To construct the antenna petals, we started with large sheets of printed circuit board (pcb) material (see Figure \ref{Fig:hibiscus_pcb}). This material is a sheet of fiberglass sandwiched by two thin sheets of copper. We cut each of the trapezoidal shapes out of the pcb material, then added brass flanges to connect the shapes. Underneath the center line of each petal we placed a rib made out of aluminum angle with the appropriate bends to match the angles between trapezoids. Finally, the strip line panels were added using aluminum sheets soldered to some of the trapezoids (see Figure \ref{Fig:hibiscus_solder}). The entire system is bolted together using screws, and can be separated into parts for travel. 
+To construct the antenna petals, we started with large sheets of printed circuit board (pcb) material (see Figure \ref{Fig:hibiscus_pcb}). This material is a sheet of fiberglass sandwiched by two thin sheets of copper. We cut each of the trapezoidal shapes out of the pcb material, then added brass flanges to connect the shapes. Underneath the center line of each petal we placed a rib made out of aluminum angle with the appropriate bends to match the angles between trapezoids. Finally, the strip line panels were added using brass sheets soldered to some of the trapezoids (see Figure \ref{Fig:hibiscus_solder}). The entire system is bolted together using screws, and can be separated into parts for travel. 
 
 \begin{figure}[htb]
 \centering
@@ -225,12 +228,13 @@ In order to keep the petal separation even and correct, lucite spacers were plac
 \end{minipage}
 \end{figure}
 
-Beyond the antenna structure, a ground plane was also required to keep the ground pattern constant in time. Like with the Trombone, we used a ground plane made out of chicken wire. In this case, our simulations showed us that a $\sim 100 m^2$ square ground plane was sufficient for our application. The entire system (antenna plus ground plane) was anchored to the ground to minimize the wind impact on the system. Each of the four support legs had an anchoring rope (see Figure \ref{Fig:hibiscus_gbt}), and the chicken wire was also anchored with many stakes. 
+Beyond the antenna structure, a ground plane was also required to avoid variation in the antenna pattern and impedance due to weather conditions. Like with the Trombone, we used a ground plane made out of chicken wire. In this case, our simulations showed us that a $\sim 100 m^2$ square ground plane was sufficient for our application. The entire system (antenna plus ground plane) was anchored to the ground to minimize the wind impact on the system. Each of the four support legs had an anchoring rope (see Figure \ref{Fig:hibiscus_gbt}), and the chicken wire was also anchored with many stakes. 
+
 \subsubsection{S-parameters and Impedance}\label{Sec:HIbiscus_Imp}
 
 With the antenna constructed, we could test that it matched our scale model measurements in terms of its S-parameters. To do this, we set up the antenna outdoors and made measurements with a portable Vector Network Analyzer (VNA). Measurements had to be made outdoors because the wavelengths corresponding to the SCI-HI frequencies ($40-130$ MHz) are $\sim$1-10 meters. This large wavelength scale means that reflections from the boundaries of a room can change antenna s-parameters, so accuracy in measurement requires the outdoor setting. Figures \ref{Fig:hibiscus_first} and \ref{Fig:hibiscus_gbt} show examples of how we made this measurement at CMU and Green Bank.
 
-\textcolor{red}{Here I'll add a discussion of HIbiscus S11 data using VNA and explanation, along with figures showing}
+\textcolor{red}{Here I'll add a discussion of HIbiscus S11 data using VNA and explanation, along with figures showing the structures.}
 
 \subsubsection{Travelling with the Antenna}
 In order to use the HIbiscus antenna on-site at remote locations, it needed to be transportable to those locations and easily assembled upon arrival. The physical construction of the antenna was designed to match this requirement in a number of ways. 
@@ -269,7 +273,7 @@ Third, the entire system was arranged for travel in three suitcases (plus an ext
 \end{figure}
 
 \subsubsection{Antenna Upgrades}
-Deployment of the SCI-HI system in June 2013 demonstrated that the HIbiscus antenna could use some improvements prior to future deployements. The first and most significant change was the addition of a second antenna scaled to have a center frequency of 100 MHz. By having both scales (70 MHz and 100 MHz), data can now be collected over a wider range of frequencies. In addition, the overlap region where both antennas work ($\sim 85-95$ MHz) provides a cross check for the signal. In other words, this cross check will help us to make sure that any signal measured is not coming from the antenna structure. 
+Deployment of the SCI-HI system in June 2013 demonstrated that the HIbiscus antenna could use some improvements prior to future deployements. The first and most significant change was the addition of a second antenna scaled to have a center frequency of 100 MHz. By having both scales (70 MHz and 100 MHz), data can now be collected over a wider range of frequencies. In addition, the overlap region where both antennas work ($\sim 85-95$ MHz) provides a cross check for the signal. In other words, this cross check will help us to make sure that any spectral structure measured is not coming from the antenna. 
 
 \begin{figure}[htb]
 \centering
@@ -484,7 +488,7 @@ Storing the entire dataset for each second would require a great deal of space. 
 
 Because of the design of the system, collecting new data can only be done after the FFT is complete. This means that the system is less than 100\% efficient, or it takes longer than 1 second to record the frequency spectrum of 1 second of data. Initially the FFT calculation was quite time consuming ($\sim 30-60$ seconds), but improvements to the software and hardware have decreased this calculation rate to $\sim 2$ seconds. This means that the system has a maximum duty cycle of $\sim30$\%. 
 
-All of the frequency spectrum data is stored locally on the hard drive of the processing system. The relatively small data volume ($\sim 2$ Gb per day) means that data transfer can be done using small USB drives. During deployment, data was removed from the hard drive 2-3 times a day and stored locally on multiple laptop computers and external hard drives before being uploaded to a server upon return to $''$civilization$''$. 
+All of the frequency spectrum data is stored locally on the hard drive of the processing system. The relatively small data volume ($\sim 2$ Gb per day) means that data transfer can be done using small USB drives. During deployment, data was removed from the hard drive 2-3 times a day and stored locally on multiple laptop computers and external hard drives before being uploaded to a server upon return to $''$civilization$''$ (aka the lab). 
 
 \subsection{System Control and User Interface}
 In addition to the data processing software, a graphical user interface was designed for diagnostic and control purposes. This interface displays the most recent frequency spectrum collected by the system and lets the user set the current data collection mode (including switch control). The user can choose to either take a single data set with any of the switch positions (Antenna, 50 $\Omega$, Short, Noise Source, 100 $\Omega$), or take continual data with a set number of Antenna datasets followed by a single dataset from each of the calibration sources. \textcolor{red}{Add screenshot of the UI here}
@@ -531,4 +535,4 @@ However, the problem with using a solid metal Faraday Cage is that it becomes ve
 
 \section{Summary}
 
-\textcolor{red}{Should I put something here, and if so, what?}
+The SCI-HI system has been developed to meet the constraints set in Section \ref{Sec:sysover} and features the optimized HIbiscus antenna, a compact RF electronic chain, and a robust, low-power data processing system. 

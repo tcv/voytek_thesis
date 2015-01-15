@@ -45,7 +45,7 @@ In the following sections, I evaluate both existing telescope sites and new site
 
 One major element of site evaluations was a set of single time sweep measurements of the RFI over a wide frequency band at each site. To do this, a sit testing kit was assembled. The kit includes a broadband antenna, amplifiers, and a portable spectrum analyzer for data collection. 
 
-RFI signals are picked up by the antenna, a Workman $T-601$ discone antenna with a vertical polarization and a 3 meter PVC pipe mast (see Figure \ref{Fig:aroant}). From the antenna, the signal is sent through a 50 cm cable to a set of amplifiers (Minicircuits $ZX60-33LN$ followed by $ZX60-4016E$) powered by a DC battery pack. The signal is then sent down a $\sim$7 meter cable to the spectrum analyzer. The spectrum analyzer (Anritsu $MS2711$) was enclosed in a brass mesh bag (Faraday Cage) to minimize self-generated RFI contamination. 
+RFI signals are picked up by the antenna, a Workman $T-601$ discone antenna with a vertical polarization and a 3 meter PVC pipe mast (see Figure \ref{Fig:aroant}). From the antenna, the signal is sent through a 50 cm cable to a set of amplifiers (Minicircuits $ZX60-33LN$ followed by $ZX60-4016E$) powered by a DC battery pack. The signal is then sent down a $\sim$7 meter cable to the spectrum analyzer. The spectrum analyzer (Anritsu $MS2711A$) was enclosed in a brass mesh bag (Faraday Cage) to minimize self-generated RFI contamination. 
 
 Data was collected by sweeping individual 200 MHz bands from $\sim$1 MHz to 1600 MHz, with a video and resolution bandwidth of 10 kHz. Only 400 data points are saved by the spectrum analyzer, requiring the data to be rebinned down to 500 kHz resolution. The highest peak of the $\sim50$ data points within each 500 kHz band is stored, which can be accounted for by changing the resolution bandwidth to an effective bandwidth of 30 kHz. 
 
@@ -84,7 +84,7 @@ Because we use the same kit at all the sites, any systematic noise contribution 
 \begin{figure}[tb]
 \begin{center}
 \includegraphics[width=0.9\linewidth]{RFI_testing/figures/Pittsburgh_cal.png}
-\caption{RFI measurement at Carnegie Mellon University in Pittsburgh, Pennsylvania}
+\caption{RFI measurement at Carnegie Mellon University in Pittsburgh, Pennsylvania collected April 23rd, 2009. Strong inter-modulations is believed to create the sloping spectral structure below 88 MHz and above 108 MHz.}
 \label{Fig:pghcal}
 \end{center}
 \end{figure}
@@ -121,7 +121,7 @@ Removing amplification is particularly important because when there are RFI sign
 \begin{figure}[htb]
 \begin{center}
 \includegraphics[width=0.9\linewidth]{RFI_testing/figures/GBT_bands.png}
-\caption{RFI measurement at the NRAO Green Bank site. Colored bands indicate well known RFI source frequencies.}
+\caption{RFI measurement at the NRAO Green Bank site collected on May 18th, 2010. Colored boxes indicate well known RFI source frequencies (Red is the FM band, Purple is the Orbcom satellite band, and Cyan is the military satellite band). }
 \label{Fig:gbtrfi}
 \end{center}
 \end{figure}
@@ -147,7 +147,7 @@ Beyond the RFI, one of the other features of the site test data is a large scale
 \begin{figure}[htb]
 \begin{center}
 \includegraphics[width=0.9\linewidth]{RFI_testing/figures/DRAO_bands.png}
-\caption{RFI measurement at the DRAO Penticton site. }
+\caption{RFI measurement at the DRAO Penticton site collected on December 14th, 2009. Excessive RFI in the entire spectrum below 400 MHz is believed to be partially due to inter-modulationn from extremely noisy sources in the RFI bands. }
 \label{Fig:draorfi}
 \end{center}
 \end{figure}
@@ -155,7 +155,7 @@ Beyond the RFI, one of the other features of the site test data is a large scale
 \begin{figure}[tb]
 \begin{center}
 \includegraphics[width=0.9\linewidth]{RFI_testing/figures/ALG_bands.png}
-\caption{RFI measurement at the ARO Algonquin site.}
+\caption{RFI measurement at the ARO Algonquin site collected on September 12th, 2012.}
 \label{Fig:arorfi}
 %\end{minipage}
 \end{center}
@@ -187,7 +187,7 @@ Although the site has excellent radio quiet properties at higher frequencies, it
 \begin{figure}[htb]
 \begin{center}
 \includegraphics[width=0.9\linewidth]{RFI_testing/figures/ZdS_halfway_in_bands.png}
-\caption{RFI measurement near the ecologist's camp in the Zona del Silencio.}
+\caption{RFI measurement near the ecologist's camp in the Zona del Silencio collected on May 5th, 2010.}
 \label{Fig:zdsendrfi}
 \end{center}
 \end{figure}
@@ -299,7 +299,7 @@ Like the ecology camp, the military (naval) base is extremely minimal in scope. 
 \begin{figure}[tb]
 \begin{center}
 \includegraphics[width=0.9\linewidth]{RFI_testing/figures/GI_3__bands.png}
-\caption{RFI measurement from the ecology camp at the summit of Isla Guadalupe.}
+\caption{RFI measurement from the ecology camp at the summit of Isla Guadalupe collected on November 1st, 2012.}
 \label{Fig:guadsummit}
 \end{center}
 \end{figure}
@@ -314,7 +314,7 @@ Guadalupe's location puts it north of the main Pacific hurricane impact zone, bu
 \begin{figure}[htb]
 \begin{center}
 \includegraphics[width=0.9\linewidth]{RFI_testing/figures/GI_2__bands.png}
-\caption{RFI measurement from the plateau near the fishing village at Isla Guadalupe.}
+\caption{RFI measurement from the lava flow near the fishing village at Isla Guadalupe collected on November 1st, 2012.}
 \label{Fig:guadlow}
 \end{center}
 \end{figure}
