@@ -1,22 +1,28 @@
 \chapter{Introduction}\label{Ch:Intro}
 When we open the history book of the universe, we find blank pages in the middle. These blank pages correspond to periods in cosmic history where we have no direct data. One such time period is the $''$Dark Ages$''$ ($z \sim 1100$ to $z \sim 30$), which started when light and matter decoupled during recombination and ended with the births of the first stars in the universe. Following that came the $''$Cosmic Dawn$''$ ($z\sim 30$ to $z\sim 10$), when the first stars lived, died and impacted the universe around them. Very little is known about these times; as no one has been able to observe them directly. 
 
-Recently, the development of \cm cosmology has provided a potential tool for measuring these eras of our history and filling in some of the blanks. There are a number of experiments that seek to utilize this tool to study the universe. Many of the experiments are interested in the Dark Ages, Cosmic Dawn, or the Epoch of Reionization that immediately follows them.  
+Recently, the development of \cm cosmology has provided a potential tool for measuring these eras of our history and filling in some of the blanks. There are a number of experiments that seek to utilize this tool to study the universe. Many of the experiments are interested in the Dark Ages, Cosmic Dawn, or the Epoch of Reionization and Era of Acceleration that immediately follow them.  
 
-\section{Hydrogen \cm Signal}
-In order to discuss \cm cosmology, we first need to understand the basic physics behind the signals that we are studying. There are four components that need to be defined to facilitate this understanding. First, we need to review the atomic states of hydrogen and in particular the hyperfine splitting of the ground state. Second, we need to define the spin temperature of a cloud of neutral hydrogen atoms and discuss how emission and absorption change the spin temperature. Third, we need to define brightness temperature and detail how that temperature can change when it passes through a cloud of hydrogen gas. Fourth, we need to combine spin temperature and brightness temperature via the opacity of a cloud of hydrogen gas. 
+In this thesis I focus on one particular experiment in \cm cosmology called SCI-HI, which observes the end of the Dark Ages and the Cosmic Dawn. I will outline the science behind the project in Chapter \ref{Ch:Intro}, describe the system in Chapter \ref{Ch:System}, discuss location selection for data collection with the system in Chapters \ref{Ch:RFI} and \ref{Ch:Iono}, detail the data analysis and results from data collected in June 2013 in Chapter \ref{Ch:Data}, and discuss plans for the future in Chapter \ref{Ch:Conclude}. In addition, I will discuss how we are working to educate the public on \cm cosmology in Chapter \ref{Ch:Planet}. 
+
+\section{Hydrogen \cm Science}
+To set a background for \cm cosmology, we first need to understand the basic physics behind the signals that we are studying. There are four concepts that need to be outlined to facilitate this understanding. 
+
+First, we need to review the atomic states of hydrogen and in particular the hyperfine splitting of the ground state. Second, we need to define the spin temperature of a cloud of neutral hydrogen atoms and discuss how emission and absorption change the spin temperature. Third, we need to define brightness temperature and detail how that temperature can change when it passes through a cloud of hydrogen gas. Fourth, we need to combine spin temperature and brightness temperature via the opacity of a cloud of hydrogen gas. 
+
+\textcolor{red}{Add a figure here to represent spin states?}
 
 \subsection{Hydrogen Atomic States}
 To understand the \cm signal, we start with the structure of the hydrogen atom; one proton and one electron. The proton and electron each have a spin $\pm \frac{1}{2}$, which leads to a splitting of the ground state of hydrogen depending on the total spin angular momentum of the atom. The energy of the atom is lower when the spins are anti-aligned and the total spin angular momentum of the atom is zero than when the spins are aligned with a total spin angular momentum of one. This energy difference is called $''$hyperfine$''$ splitting; with the spin 0 state being a singlet and the spin 1 state being a triplet (and therefore three times more likely). The energy difference from this splitting is $h \nu_{10}$, where $\nu_{10}=1420.405$ MHz and $\lambda_{10} =  21$ centimeters.  
 
-\subsection{Spin Temperature}
+\subsection{Spin Temperature (\ts)}
 When working with a cloud of hydrogen atoms rather than a single atom, we need to compare the number of atoms in the two states within the cloud. To do this, we define the spin temperature using Boltzmann's law for a cloud in thermodynamic equilibrium. A spin temperature (\ts) is defined with the ratio of the the two states $n_1/n_0$. 
 
 \begin{equation}\label{Eq:T_s}
 \frac{n_1}{n_0} \equiv 3 e^{- h \nu_{10} / kT_S} = 3 e^{-T_*/T_S}
 \end{equation} 
 
-\subsection{Changing the Spin Temperature} \label{Sec:dT_S}
+\subsection{Emission and Absorption} \label{Sec:dT_S}
 Change of the spin temperature occurs through emission and absorption of \cm photons corresponding to a transition between the two spin states. Transitions occur when the atom either spontaneously emits a photon or is induced to emit or absorb a photon due to external forces. These transitions can be described using a differential equation (Equation \ref{Eq:dn}), and each type of transition (m) has a different $X^m_{ij}$. 
 
 \begin{equation} \label{Eq:dn}
@@ -63,13 +69,13 @@ The third and final mechanism is photons of light at other wavelengths causing c
 \end{equation}
 
 \subsubsection{Spin Transition Rate Equation}
-When we combine all of these sources of transitions using Equation \ref{Eq:sn}, we can derive an equation for \ts. We start with the summations, as shown in Equation \ref{Eq:sns}.  
+When we combine all of these sources of transitions using Equation \ref{Eq:sn}, we can derive an equation for \ts. Equation \ref{Eq:sns} shows the expansion of Equation \ref{Eq:sn}, including both spontaneous and stimulated transitions. 
 
 \begin{equation}\label{Eq:sns}
 n_1(A_{10} + B_{10} I_\nu + C_{10} + L_{10}) = n_0 (B_{01} I_\nu + C_{01} + L_{01})
 \end{equation}
 
-By rearranging and substituting in Equation \ref{Eq:T_s}, we get a direct relationship between the transition rates and the spin temperature. 
+By rearranging and using Equation \ref{Eq:T_s} to substitute for $n_1/n_0$, we get a direct relationship between the transition rates and the spin temperature. 
 
 \begin{equation}
 \frac{n_1}{n_0} = 3 e^{-T_*/T_S} = \frac{B_{01} I_\nu + C_{01}+ L_{01}}{A_{10}+ B_{10} I_\nu + C_{10} +L_{10}}
@@ -83,7 +89,7 @@ T_s = \frac{T_{R} + x_K T_{K} + x_{L} T_{L}}{1+x_K +x_{L}}
 
 where the coupling coefficients are $x_K = T_* C_{10}/A_{10} T_K$ and $x_L = T_* L_{10} / A_{10} T_L$, and $T_R$ is the incident radiation temperature. 
 
-\subsection{Brightness Temperature}
+\subsection{Brightness Temperature (\tb)}
 The primary sources of incident radiation for hydrogen gas clouds are blackbody sources such as the CMB. These blackbody sources have a spectral energy distribution ($B_\nu (T)$) defined by the Planck spectrum:
 
 \begin{equation}
@@ -95,7 +101,7 @@ For long wavelengths, we use the Rayleigh-Jeans approximation ($B_{\nu} (T) \sim
 \subsubsection{Change in Brightness Temperature}
 Now, brightness temperature will change as the light travels through the universe. Such change can be caused by the expansion of the universe or by external sources such as passage through gas clouds. 
 
-Expansion of the universe simply causes the brightness temperature at each frequency to decrease at a rate $\propto 1/(1+z)$. 
+Expansion of the universe simply causes the brightness temperature at each frequency to change at a rate $\propto (1+z)^{-1}$. 
 
 In comparison, when the light passes through a gas cloud the rate at which the brightness temperature changes varies between frequencies. This rate of change is represented mathematically as a cloud opacity (\tu). Using opacity allows us to write the brightness temperature after passing through the cloud using Equation \ref{Eq:T_bf}. 
 
@@ -103,7 +109,7 @@ In comparison, when the light passes through a gas cloud the rate at which the b
 (T_b (\nu))_{final}= T_{C} (\nu) (1-e^{-\tau_\nu}) +T_{R} e^{-\tau_\nu}
 \end{equation}
 
-where $T_{C}$ is the cloud temperature and $T_{R}$ is the original brightness temperature when it enters the cloud. As observers, what we actually care about and can observe is $\delta T_b (\nu) = T_b (\nu) - T_R  (\nu)$. 
+where $T_{C}$ is the cloud temperature and $T_{R}$ is the original brightness temperature when it enters the cloud. As observers, what we actually care about and can observe is $\delta T_b (\nu) = (T_b (\nu))_{final} - T_R  (\nu)$. 
 
 \subsection{Opacity ($\tau_\nu$)}
 So, in order to measure the change in brightness temperature caused by passing through a cloud of gas, we need to know the cloud's opacity at a given frequency. The opacity (\tu) is defined as an integral along a line of sight through the cloud of the absorption rate of photons at the frequency $\nu$. In this case, what we care about is $\tau_{21-cm}$, which has a defined opacity:
@@ -112,7 +118,9 @@ So, in order to measure the change in brightness temperature caused by passing t
 \tau_{\nu} = \frac{3 c^2 A_{10}}{8 \pi \nu^2 } (1-e^{-T_*/T_S}) \int ds \phi (\nu) n_0(s)
 \end{equation}
 
-where $\phi (\nu)$ is the line profile of the hydrogen \cm spectral line at each position such that $\int \phi(\nu) d \nu = 1$ at that position and $n_0 (s)$ is the number of hydrogen atoms at each position that are in the spin 0 state. A detailed formulation for \tu depends on the details of the hydrogen gas cloud, as will be discussed in Section \ref{Sec:IGM}. 
+where $\phi (\nu)$ is the line profile of the hydrogen \cm spectral line at each position such that $\int \phi(\nu) d \nu = 1$ at that position and $n_0 (s)$ is the number of hydrogen atoms at each position that are in the spin 0 state. 
+
+In order to determine $n_0 (s)$ and $\phi (\nu)$ at each point, we need to be able to describe the hydrogen gas cloud. Section \ref{Sec:IGM} will outline the details of the hydrogen gas clouds of interest to us, namely neutral hydrogen in the Intergalactic Medium. 
 
 
 \section{The Intergalactic Medium (IGM)}\label{Sec:IGM}
@@ -131,7 +139,7 @@ To calculate the opacity of the IGM requires a model of atomic density. In this 
 where $(1+\delta)$ is the matter density at a given position, $dv_{\parallel}/dr_{\parallel}$ is the gradient of proper velocity along the line of sight, and $H(z)$ is the Hubble parameter. 
 
 \subsubsection{Brightness Temperature Change (\dtb)}
-Because the opacity is $\propto T^{-1}_S$, if $T_S \approx 0$ we can approximate $e^{-\tau_\nu}$ as $(1-\tau_\nu)$. So we write the change in brightness temperature of CMB photons due to passing through the IGM using Equation \ref{Eq:dT_b}.
+As long as the opacity is small ($\tau_\nu \ll 1$) we can approximate $e^{-\tau_\nu}$ as $(1-\tau_\nu)$. As discussed in Section \ref{Sec:IGMhist}, this will be true for much of the IGM history that we are studying. Therfore, we can write the change in brightness temperature of CMB photons due to passing through the IGM using Equation \ref{Eq:dT_b}.
 
 \begin{equation}\label{Eq:dT_b}
 \delta T_b = \frac{T_S - T_\gamma}{1+z}(1-e^{-\tau_\nu}) \approx 9 (1+\delta) (1+z)^{1/2} \Big(1-\frac{T_\gamma}{T_S}\Big) x_{HI} \Big[ \frac{H(z)/(1+z)}{dv_{\parallel}/dr_{\parallel}} \Big] mK
@@ -143,6 +151,8 @@ where \tg is the CMB photon temperature, which also acts as the incident radiati
 Given that the spin temperature of the IGM is a significant term in the brightness temperature equation, we need to understand how it can vary over time. As discussed in Section \ref{Sec:dT_S}, the spin temperature of hydrogen in the IGM is coupled to three sources during its history. 
 
 The first source is the CMB (\tg), which provides a source of external radiation ($T_R$). The second source is the kinetic temperature of the gas (\tk), which characterizes the thermal motion of the atoms in the gas. The third and final source is external photons corresponding to transition energies between the ground and excited states of the hydrogen atom. The most important transition for our purposes is the \lya  transition. 
+
+\textcolor{red}{Add a figure showing atomic energy levels?}
 
 The mechanism for coupling between the hydrogen spin temperature and \lya  photons is called the Wouthuysen-Field Effect \cite{wouthuysen_1952}\cite{field_1958} and can be understood by going back again to the atomic states of the hydrogen atom. Just as we've discussed for the \cm transition, external photons with an energy corresponding to the \lya  wavelength ($\lambda = 121.6$ nm) can induce a transition from the ground state of hydrogen (1S) to its first excited state (2P). However, conservation of total spin angular momentum for the hydrogen atom sets the selection rules for spontaneous emission due to transitions back to the ground state from that first excited state. 
 
@@ -165,7 +175,9 @@ P_{\alpha} = 4 \pi \int d\nu J_{\nu}(\nu) \sigma_{\nu}(\nu)
 Light sources for the IGM have varied during its history, as will be discussed in Section \ref{Sec:IGMhist}.
 
 \subsection{History of the IGM} \label{Sec:IGMhist}
-In the early universe before galaxies came into existence, the entire universe was filled with a medium that was the progenitor of the IGM. From the Cosmic Microwave Background, we know that at $z \sim 1100$ the IGM was a nearly homogeneous gas of protons, free electrons, and atoms; most of which were neutral hydrogen atoms. Within the gas were small inhomogeneities in the matter density that would eventually grow into galaxies, but the overall gas density was high enough that collisions between baryons were common throughout the gas. 
+
+\subsubsection{Initial Conditions}
+In the early universe before galaxies came into existence, the entire universe was filled with a medium that was the progenitor of the IGM. From the Cosmic Microwave Background, we know that at $z \sim 1100$ the IGM was a nearly homogeneous gas of protons, free electrons, and atoms; most of which were neutral hydrogen (HI) atoms. Within the gas were small inhomogeneities in the matter density that would eventually grow into galaxies, but the overall gas density was high enough that collisions between baryons were common throughout the gas. 
 
 \begin{figure}[htb]
 \begin{center}
@@ -182,9 +194,18 @@ However, this coupling gradually decreased as the rate of collisions between bar
 
 At the same time, the first generation of stars began to form in the overdense regions of space. 
 
-\subsubsection{Formation of the First Stars}
+\subsubsection{Cosmic Dawn}
+As the universe evolved during the dark ages, at the same time hierarchical structure formation led to the formation of more and more massive dark matter minihaloes. The first (PopIII.1) stars are believed to have formed in dark matter minihaloes with mass $\sim 10^6 - 10^8 M_{\odot}$, which $\Lambda$CDM simulations predict occurred around redshifts of $z \approx 20-30$ \cite{bromm_2013}. Formation of these first stars is considered the beginning of the $''$Cosmic Dawn$''$. 
 
-\textcolor{blue}{Need to add discussion of first stars.}
+%\textcolor{red}{Add figure of HII bubbles from aravind's review paper's reference.}
+
+These first stars produce many UV photons, which ionize neutral hydrogen and create bubbles of ionized hydrogen (HII) around the stars. In addition, the stars also produce \lya  radiation, leading to coupling due to the Wouthuysen-Field effect. The total amount of coupling from the first stars $x_\alpha$ was shown in Equations \ref{Eq:xa} and \ref{Eq:pa} to be related to the \lya  photon intensity $J_\alpha$. This photon intensity is matched to emissivity of \lya  photons by the stars  plus the emissivity of photons in other Lyman transitions, which cascade down to affect the \lya  transition rate. 
+
+The emissivity is heavily dependent on the rate of first star formation and the initial mass function (IMF) of PopIII stars. Some models suggest that PopIII stars may have a heavier IMF than that of younger stars, which would produce more \lya  photons per star \cite{natarajan_2014}. 
+
+Meanwhile, x-ray photons were produced by two types of sources among the first Pop.III stars. One source was electrons accelerated by supernovae to relativistic speeds. When these electrons undergo inverse Compton scattering, x-ray photons are produced. The other source was high-mass x-ray binary stars, which occur when massive stars on the main sequence lose material through accretion onto a compact neighbor such as a neutron star, black hole or white dwarf star. 
+
+These high energy photons heated the IGM through a combination of photoionization of Hydrogen or Helium and collisions with IGM components \cite{furlanetto_2006}. 
 
 \begin{figure}[htb]
 \begin{center}
@@ -194,31 +215,36 @@ At the same time, the first generation of stars began to form in the overdense r
 \end{center}
 \end{figure}
 
-\subsubsection{Cosmic Dawn}
-With the birth of the first stars, light began to propogate through the IGM. This light included \lya photons, which re-coupled \ts and \tk via the Wouthuysen-Field mechanism. Since the kinetic temperature of the IGM was at this point much lower than \tg, this re-coupling decreased \ts. 
+Depending on the rate of x-ray heating compared to the rate of \lya coupling, the spin temperature is predicted to dip during the period where $x_k>0$ and \tk is less than \tg. By varying the model of first star formation that sets these two rates for PopIII stars, the exact shape of the dip in the spin temperature can be adjusted. Most models predict a dip centered around $z\sim20$, with a width of $0 \leq z \leq 10$ and a depth of $0\leq \Delta T \leq 300 mK$. 
 
-Meanwhile, x-ray photons were produced by two types of sources among the first Pop.III stars. One source was electrons accelerated by supernovae to relativistic speeds. When these electrons undergo inverse Compton scattering, x-ray photons are produced. The other source was high-mass x-ray binary stars, which occur when massive stars on the main sequence lose material through accretion onto a compact neighbor such as a neutron star, black hole or white dwarf star. 
+Figure \ref{Fig:cd_global} shows a few models of global \dtb during the Cosmic Dawn, as well as some of the parameters that feed into the brightness temperature variance. These models were run by Aravind Natarajan using SIMFAST code \cite{simfast}\cite{21cmfast}\cite{natarajan_2014}.  
 
-These high energy photons heated the IGM through a combination of photoionization of Hydrogen or Helium and collisions with IGM components \cite{furlanetto_2006}. 
-
-Depending on the rate of x-ray heating compared to the rate of \lya coupling, the spin temperature is predicted to dip during the period where $x_k>0$ and \tk is less than \tg. By varying the model of first star formation, the exact shape of the dip in the spin temperature can be adjusted. Most models predict a dip centered around $z\sim20$, with a width of $0 \leq z \leq 10$ and a depth of $0\leq \Delta T \leq 300 mK$. Figure \ref{Fig:cd_global} shows a few models of global \dtb during the Cosmic Dawn, as well as some of the parameters that feed into the brightness temperature variance. 
-
-\textcolor{red}{Add figure here to show reionization.}
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=0.95\linewidth]{Introduction/figures/reionization.jpg}
+\caption{Snapshots at $z=$14,12,10,8 (from top left to bottom right) from a simulation run using SIMFAST from natarajan et. al. \cite{natarajan_2014}. The simulation shows the expected \dtb signal in units of Kelvin during the Epoch of Reionization. }
+\label{Fig:eor}
+\end{center}
+\end{figure}
 
 \subsubsection{Epoch of Reionization (EoR)}
-As the kinetic temperature of the gas continued to rise, it reached the threshold where Equation \ref{Eq:dT_b} breaks down because the kinetic and spin temperatures of the gas are large enough that the approximation used for \tu is no longer applicable. At this point \dtb reaches a maximum. Meanwhile, the propogation of x-ray photons through the IGM also began to ionize the hydrogen atoms. Since the brightness temperature of the \cm signal is also proportional to the amount of neutral hydrogen ($x_{HI}$) present in the IGM, as shown in Equation \ref{Eq:dT_b}, this ionization process caused a gradual decrease in the average \cm signal. 
+As the kinetic temperature of the gas continued to rise, it reached the threshold where Equation \ref{Eq:dT_b} breaks down because the kinetic and spin temperatures of the gas are large enough that the approximation used for \tu is no longer applicable. At this point \dtb reaches a maximum because of saturation of the signal. 
 
-\subsection{Era of Acceleration}
+Meanwhile, the propogation of x-ray photons through the IGM also began to ionize the hydrogen atoms starting in regions near the galaxies and spreading gradually throughout the IGM (see Figure \ref{Fig:eor}). This period of time is also known as the Epoch of Reionization (EoR) because the IGM is resuming the ionized state that it had in the early universe before the dark ages. 
+
+Since the brightness temperature of the \cm signal is also proportional to the amount of neutral hydrogen ($x_{HI}$) present in the IGM, as shown in Equation \ref{Eq:dT_b}, the ionization process caused a gradual decrease in the average \cm signal. 
+
+However, the gradual nature of the ionization means that there are interesting structures in the spatial distribution of the \cm signal during the EoR. The exact spatial distribution over time provides insight into the distribution of the PopIII stars, since larger stars produce more ionizing photons compared to the number of \lya  photons \cite{furlanetto_2006}. 
+
+\subsubsection{Era of Acceleration}
 In the modern universe post reionization, neutral Hydrogen gas in the IGM is limited to the regions around galaxies. This gas can still be mapped using the \cm signal, but the magnitude of the signal is much smaller than in previous eras. 
 
-\textcolor{red}{Not sure how much science detail to include about the era of acceleration since it's not the main focus of the rest of the thesis.}
-
-\textcolor{red}{Add figure here to show \cm signal as a function of frequency or make sure that the previous figures include frequency information.}
+In this regime, mapping of the spectral structure can be done through intensity mapping. Intensity mapping is a process by which the signal from the neutral hydrogen can be measured in aggreggate around many galaxies. This is done with data that is collected in large voxels. Each voxel contains many galaxies and the \cm signal that is measured is the sum of the \cm signal from all the galaxies in that voxel \cite{masui_2012}.
 
 \section{Measuring the \cm Signal}
-After passing through the IGM at a given time, the \cm photons travel toward the earth. As they travel, the photons frequencies are redshifted ($\nu_{meas} = \nu_{10}/(1+z)$) from their original frequencies. This shift allows us to measure a spectrum $\delta T_b (\nu)$, where $\nu$ is the frequency at which the signal is measured, corresponding to the redshift where the signal was produced. 
+After passing through the IGM at a given time, the \cm photons travel toward the earth. As they travel, the photons' frequencies are redshifted ($\nu_{meas} = \nu_{10}/(1+z)$) from their original frequencies. This shift allows us to measure a spectrum $\delta T_b (\nu)$, where $\nu$ is the frequency at which the signal is measured, corresponding to the redshift where the signal was produced. 
 
-Measurements of the \cm spectrum are classified in two types. The first type aremeasurements of the sky-averaged spectrum \avgdtb, while the second type are measurements of the fluctuations in the \cm spectrum ($\delta_{T_b} =  \delta T_b (\nu)/ T_b (\nu)$) using the power spectrum of the fluctuations ($ \tilde{ \delta_{T_b} } ( \vec{k} )$) \cite{natarajan_2014}. 
+Measurements of the \cm spectrum are classified in two types. The first type aremeasurements of the sky-averaged spectrum \avgdtb, while the second type are measurements of the spatial fluctuations in the \cm spectrum ($\delta_{T_b} =  \delta T_b (\nu)/ T_b (\nu)$) using the power spectrum of the fluctuations ($ \tilde{ \delta_{T_b} } ( \vec{k} )$) \cite{natarajan_2014}. 
 
 \begin{figure}[htb]
 \begin{center}
@@ -228,8 +254,8 @@ Measurements of the \cm spectrum are classified in two types. The first type are
 \end{center}
 \end{figure}
 
-\subsection{Foregrounds}
-One of the greatest challenges of making any \cm measurements is the presence of foregrounds in the data. These foregrounds include any signals on the sky that aren't related to the CMB brightness temperature (\tb) and its variance due to the IGM. Foreground signals come from astrophysical sources which emit in the low frequency radio band ($\nu \leq \nu_{10}$), interference from Earth's ionosphere, and radio frequency interference (RFI) from man-made sources. We will discuss RFI in Chapter \ref{Ch:RFI} and ionospheric impacts in Chapter \ref{Ch:Iono}, so in this section I will focus on astrophysical foregrounds. 
+\subsection{Non-Cosmological Foregrounds}
+One of the greatest challenges of making any \cm measurements is the presence of foregrounds in the data. These foregrounds include any signals on the sky that aren't related to the CMB brightness temperature (\tb) and its variance due to the IGM. Foreground signals come from astrophysical sources which emit in the low frequency radio band ($\nu \leq \nu_{10}$), interference from Earth's ionosphere, and radio frequency interference (RFI) from man-made sources. I will discuss RFI in Chapter \ref{Ch:RFI} and ionospheric impacts in Chapter \ref{Ch:Iono}, so in this section I will focus on astrophysical foregrounds. 
 
 For $\nu \leq \nu_{10}$ the dominant astrophysical foreground is synchrotron radiation from the Milky Way Galaxy. This radiation comes from free electrons in the galaxy and has a strongly sloping spectrum \cite{furlanetto_2006}, as shown in Equation \ref{Eq:T_sky}. 
 
@@ -237,9 +263,9 @@ For $\nu \leq \nu_{10}$ the dominant astrophysical foreground is synchrotron rad
 T_{sky} \approx 180 \Big( \frac{\nu}{180 MHz} \Big)^{-2.6} K
 \end{equation}
 
-Maps of the astrophysical foregrounds have been made at a number of frequencies, including the $''$Haslam$''$ map at 408 MHz and the WMAP maps (after removal of the CMB signal) at 23,33,41,61 and 94 GHz. These maps are shown in Figure \ref{Fig:GSM_maps}. A model of the foregrounds from $10 MHz-100 GHz$ was constructed using the maps, as outlined in de Oliveira-Costa et al \cite{GSM_model}. This sky model is commonly used for foreground assessment and even calibration by \cm experiments. A discussion of how the model is used in one particular application can be found in Section \ref{Sec:GSM}. 
+Maps of the astrophysical foregrounds have been made at a number of frequencies, including the $''$Haslam$''$ map at 408 MHz and the WMAP maps (after removal of the CMB signal) at 23,33,41,61 and 94 GHz. These maps are shown in Figure \ref{Fig:GSM_maps}. A model of the foregrounds from $10 MHz-100 GHz$ was constructed using the maps, as outlined in de Oliveira-Costa et al \cite{GSM_model}. This sky model is commonly used for foreground assessment and even calibration by \cm experiments. A discussion of how the model is used in the SCI-HI project can be found in Section \ref{Sec:model}. 
 
-\subsection{Average (Global) \cm Frequency Spectrum (\avgdtb)}
+\subsection{Average (Global) Frequency Spectrum (\avgdtb)}
 In order to make a measurement of \avgdtb, experiments need to be designed that measure the total sky brightness temperature spectrum ($T_{Sky}$) over a wide range of frequencies. These experiments will measure the combination of signals collected by an antenna:
 
 \begin{equation}
@@ -248,26 +274,25 @@ T_{ant} = T_{fg} + T_b +T_{sys}+T_{RFI} = T_{Sky} + T_{sys}
 
 where $T_{fg}$ is the astrophysical foreground signal, $T_{RFI}$ is the man-made signal, $T_{sys}$ is the system temperature, and \tb is the brightness temperature from the CMB. The system temperature $T_{sys}$ will be a combination of thermal noise and instrument noise. Thermal noise is set by the radiometer equation ($T_{thermal} = T_{ant}/\sqrt{BW \tau}$), where $BW$ is the system bandwidth and $\tau$ is the integration time \cite{carroll2007}. Instrument noise comes from the electronics in the system (such as the amplifiers). 
 
-Extracting the \cm brightness temperature spectrum requires removing all of the other terms in the data. Different strategies have been proposed for removing these signals, but all of them rely on the fact that the other signals have a different type of spectral structure than the \cm signal. We will discuss one such strategy for foreground removal in a \avgdtb experiment in Chapter \ref{Ch:Data}.
+Extracting the \cm brightness temperature spectrum requires removing all of the other terms in the data. Different strategies have been proposed for removing these signals, but all of them rely on the fact that the other signals have a different type of spectral structure than the \cm signal. I will discuss one such strategy for foreground removal with the SCI-HI experiment in Section \ref{Sec:fore}. 
 
-\subsection{\cm Fluctuation Power Spectrum}
-Like the \avgdtb experiments, power spectrum measurements will also be dominated by foregrounds. 
+\subsection{Fluctuation Power Spectrum ($ \tilde{ \delta_{T_b} } ( \vec{k} )$)}
+Like the \avgdtb experiments, power spectrum measurements will also be dominated by foregrounds. Unlike the \avgdtb experiments, these foregrounds are dominated by specific galactic and extragalactic point sources. However, like the Milky Way galaxy, these sources have a smooth spectrum that can be fitted with a power law; although each point source follows a different power law. 
 
-\textcolor{red}{Not sure how much detail to put here since it's not directly relevant to the science discussed in the rest of the thesis.}
+There are a number of different specific foreground removal strategies that have been developed, including principal component analysis \cite{masui_2012}\cite{switzer_2013}. All of these strategies rely on the removal of the dominant foregrounds thanks to their smooth spectra. The \cm signal is left behind when the foregrounds are removed because it will have significant structure in frequency, as each frequency corresponds to  the signal from a different set of galaxies in the intensity map. 
 
-
-\section{\cm Experiments}
+\section{Hydrogen \cm Cosmology Experiments}
 There are a number of experiments specifically designed to measure the \cm global signal or power spectrum. These experiments are either currently gathering data or are still under development. Preliminary constraints on the \cm signals have been placed for different cosmological eras, and future measurements should continue to tighten those constraints such that we will have a good detection of the \cm global signal and power spectrum during the Dark Ages, Cosmic Dawn, Epoch of Reionization and Era of Acceleration. 
 
 \subsection{Global Experiments}
-There are a number of experiments trying to measure the \avgdtb signal during different cosmological eras. These experiments focus on redshifts where \dtb is large and/or has a large first derivative. EDGES \cite{bowman_2008} is a single antenna system focused on frequencies $100-200 MHz$, and has placed upper limits on the signal during the Epoch of Reionization. 
+The experiments that are trying to measure the \avgdtb signal are focused on redshifts where \dtb is large and/or has a large first derivative, which is expected to occur during the Dark Ages, Cosmic Dawn, and the Epoch of Reionization. EDGES \cite{bowman_2008} is a single antenna experiment focused on frequencies $100-200 MHz$. It has placed limits on the duration of reionization using the width of the \cm global signal emission bump during the Epoch of Reionization. 
 
 LEDA \cite{leda}\cite{bernardi_2014} and DARE \cite{burns_2011} are currently under development, and are targeting the Dark Ages and Cosmic Dawn. LEDA is designed to operate on the ground using a combination of an interferometer and a single antenna, while DARE intends to launch a satellite in orbit around the moon with a single antenna. 
 
-Both of these experiments have large budgets of over \$ 1 million dollars and require significant resources and technology development. In contrast, the EDGES experiment is on a much smaller scale and can be deployed in the field with minimal infrastructure. 
+Both of these experiments have large budgets of over 1 million dollars and require significant resources and technology development. In contrast, the EDGES experiment is on a much smaller scale and can be deployed in the field with minimal infrastructure. 
 
 \subsubsection{SCI-HI Experiment}
-We were inspired by the EDGES experiment to develop a similar system focusing on a different part of the \cm spectrum ($40 \leq \nu \leq 130 MHz$) and going after the Cosmic Dawn signal. This experiment is the SCI-HI experiment, and will be the main focus of the rest of this thesis. Chapter \ref{Ch:System} details the experiment design, chapter \ref{Ch:RFI} discusses the search for an experiment site, chapter \ref{Ch:Data} details the data analysis done on data collected with the experiment in June 2013, and chapter \ref{Ch:Conclude} outlines the plans for the continuation for the SCI-HI project. 
+We were inspired by the EDGES experiment to develop a similar system focusing on a different part of the \cm spectrum ($40 \leq \nu \leq 130 MHz$) and going after the Cosmic Dawn signal. This experiment is the SCI-HI experiment, and will be the main focus of the rest of this thesis.  
 
 \subsection{Mapping Experiments}
 Experiments which seek to measure the \cm power spectrum are typically many-element interferometers, each with a different antenna design and configuration. Early projects, including the GMRT-EoR \cite{paciga_2013} project, made use of existing telescopes to make measurements. Meanwhile, a number of projects were designed and constructed such as the Precision Array for Probing the Epoch of Reionization (PAPER) \cite{pober_2013}\cite{jacobs_2014}, the Murchison Widefield Array (MWA) \cite{bernardi_2013}\cite{tingay_2012}, and the Low Frequency Array for Radio Astronomy (LOFAR) \cite{jelic_2014}\cite{lofar}. These projects have put first constraints on the power spectrum during the Epoch of Reionization. 
@@ -278,5 +303,5 @@ Beyond the EoR projects, there are a number of power spectrum projects focusing 
 
 Like with the EoR experiments, full sky mapping requires a dedicated project. One such project is the Canadian Hydrogen Intensity Mapping Experiment (CHIME) \cite{shaw_2014}\cite{chime}, currently under development. CHIME uses a unique cylindrical interferometer design to map the sky. 
 
-Chapter \ref{Ch:Planet} includes some discussion of the Green Bank Telescope and CHIME, and how they were used in a public outreach project for educating the public on \cm observations. 
+Chapter \ref{Ch:Planet} includes some discussion of the Green Bank Telescope and CHIME, and how they were used in a public outreach project for educating the public on \cm cosmology. 
 
