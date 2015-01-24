@@ -1,70 +1,89 @@
 \chapter{Introduction}\label{Ch:Intro}
-When we open the history book of the universe, we find blank pages in the middle. These blank pages correspond to periods in cosmic history where we have no direct data. One such time period is the $''$Dark Ages$''$ ($z \sim 1100$ to $z \sim 30$), which started when light and matter decoupled during recombination and ended with the births of the first stars in the universe. Following that came the $''$Cosmic Dawn$''$ ($z\sim 30$ to $z\sim 10$), when the first stars lived, died and impacted the universe around them. Very little is known about these times; as no one has been able to observe them directly. 
+When we open the history book of the universe, we find blank pages in the middle--periods in cosmic history where we have no direct data. One such time period is the $''$Dark Ages$''$ ($z \sim 1100$ to $z \sim 30$), which started when light and matter decoupled during recombination and ended with the births of the first stars in the universe. Following that came the $''$Cosmic Dawn$''$ ($z\sim 30$ to $z\sim 10$), when the first stars lived, died and impacted the universe around them. Very little is known about these times; as, so far, no one has been able to observe them directly. 
 
-Recently, the development of \cm cosmology has provided a potential tool for measuring these eras of our history and filling in some of the blanks. There are a number of experiments that seek to utilize this tool to study the universe. Many of the experiments are interested in the Dark Ages, Cosmic Dawn, or the Epoch of Reionization and Era of Acceleration that immediately follow them.  
+Recently, the development of \cm cosmology has provided a potential tool for measuring these eras of our history and filling in some of the blanks. There are a number of experiments that seek to utilize the \cm line to study the universe, as will be discussed in Section \ref{Sec:cm_expts}. These experiments focus on a number of cosmological eras; including the Dark Ages, Cosmic Dawn, and the Epoch of Reionization and Era of Acceleration that immediately follow them. We will discuss the cosmological eras mentioned above in detail in Section \ref{Sec:IGMhist}.   
 
-In this thesis I focus on one particular experiment in \cm cosmology called SCI-HI, which observes the end of the Dark Ages and the Cosmic Dawn. I will outline the science behind the project in Chapter \ref{Ch:Intro}, describe the system in Chapter \ref{Ch:System}, discuss location selection for data collection with the system in Chapters \ref{Ch:RFI} and \ref{Ch:Iono}, detail the data analysis and results from data collected in June 2013 in Chapter \ref{Ch:Data}, and discuss plans for the future in Chapter \ref{Ch:Conclude}. In addition, I will discuss how we are working to educate the public on \cm cosmology in Chapter \ref{Ch:Planet}. 
+In this thesis I focus on one particular experiment in \cm cosmology called SCI-HI, which observes the end of the Dark Ages and the Cosmic Dawn. I outline the science behind the project in Chapter \ref{Ch:Intro}, describe the system in Chapter \ref{Ch:System}, discuss site selection for data collection with the system in Chapters \ref{Ch:RFI} and \ref{Ch:Iono}, detail the data analysis and results from data collected in June 2013 in Chapter \ref{Ch:Data}, and discuss plans for the future in Chapter \ref{Ch:Conclude}. 
+
+\textcolor{red}{Jeff mentions putting the planetarium chapter as an appendix...}
+
+In addition, I discuss how we have developed a planetarium show to educate the public on \cm cosmology in Chapter \ref{Ch:Planet}. 
 
 \section{Hydrogen \cm Science}
 To set a background for \cm cosmology, we first need to understand the basic physics behind the signals that we are studying. There are four concepts that need to be outlined to facilitate this understanding. 
 
-First, we need to review the atomic states of hydrogen and in particular the hyperfine splitting of the ground state. Second, we need to define the spin temperature of a cloud of neutral hydrogen atoms and discuss how emission and absorption change the spin temperature. Third, we need to define brightness temperature and detail how that temperature can change when it passes through a cloud of hydrogen gas. Fourth, we need to combine spin temperature and brightness temperature via the opacity of a cloud of hydrogen gas. 
+First, we need to review the atomic states of hydrogen and in particular the \cm hyperfine splitting of the ground state. Second, we need to define the spin temperature of a cloud of neutral hydrogen atoms and discuss how emission and absorption change the spin temperature. Third, we need to define brightness temperature and detail how that temperature can change when it passes through a cloud of hydrogen gas. Fourth, we need to relate spin temperature and brightness temperature to the opacity of a cloud of hydrogen gas. 
 
-\textcolor{red}{Add a figure here to represent spin states?}
+\textcolor{red}{Add a figure here to represent spin states, use energy splitting diagram. Can make a version that is expanded for the Wouthuysen-Field explanation.}
 
 \subsection{Hydrogen Atomic States}
-To understand the \cm signal, we start with the structure of the hydrogen atom; one proton and one electron. The proton and electron each have a spin $\pm \frac{1}{2}$, which leads to a splitting of the ground state of hydrogen depending on the total spin angular momentum of the atom. The energy of the atom is lower when the spins are anti-aligned and the total spin angular momentum of the atom is zero than when the spins are aligned with a total spin angular momentum of one. This energy difference is called $''$hyperfine$''$ splitting; with the spin 0 state being a singlet and the spin 1 state being a triplet (and therefore three times more likely). The energy difference from this splitting is $h \nu_{10}$, where $\nu_{10}=1420.405$ MHz and $\lambda_{10} =  21$ centimeters.  
+To understand the \cm signal, we start with the structure of the hydrogen atom; one proton and one electron. The proton and electron each have a spin $\pm \frac{1}{2}$, which leads to a splitting of the ground state of hydrogen depending on the total spin angular momentum of the atom. 
+
+There are four potential eigenstates of the hydrogen ground state; which can be written in terms of the spin state of proton and electron ($\| \pm z_p, \pm z_e \rangle$). These four eigenstates can be computed and are:
+
+\begin{equation}
+\begin{matrix}
+\| 1 \rangle = \| + z , + z \rangle \\
+\| 2 \rangle = \| - z, - z \rangle \\
+\| 3 \rangle = \frac{1}{\sqrt{2}} (\| + z, - z \rangle + \|-z, +z \rangle) \\
+\| 4 \rangle = \frac{1}{\sqrt{2}} (\| + z, - z \rangle - \|-z, +z \rangle) \\
+\end{matrix}
+\end{equation}
+
+States $\| 1 \rangle$, $\| 2 \rangle$, and $\| 3 \rangle$ correspond to the higher energy eigenvalue, which has a total spin angular momentum of 1. State $\| 4 \rangle$ corresponds to the lower energy eigenvalue, which has a total spin angular momentum of 0. The energy difference between the two eigenstates is called $''$hyperfine splitting$''$, and has a value of $h \nu_{10}$, where $\nu_{10}=1420.405$ MHz and $\lambda_{10} =  21$ centimeters \cite{townsend2000}. 
+
 
 \subsection{Spin Temperature (\ts)}
-When working with a cloud of hydrogen atoms rather than a single atom, we need to compare the number of atoms in the two states within the cloud. To do this, we define the spin temperature using Boltzmann's law for a cloud in thermodynamic equilibrium. A spin temperature (\ts) is defined with the ratio of the the two states $n_1/n_0$. 
+When working with a cloud of hydrogen atoms rather than a single atom, we need to compare the number of atoms in the two states within the cloud. To do this, we define the spin temperature using Boltzmann's law for a cloud in thermodynamic equilibrium. A spin temperature (\ts) is defined with the ratio of the the two states $n_1/n_0$ \cite{field_1958}. 
 
 \begin{equation}\label{Eq:T_s}
 \frac{n_1}{n_0} \equiv 3 e^{- h \nu_{10} / kT_S} = 3 e^{-T_*/T_S}
 \end{equation} 
 
+The factor of 3 in Equation \ref{Eq:T_s} comes from the ratio of eigenstates for the different spin energy levels of the ground state hydrogen (3:1). 
+
 \subsection{Emission and Absorption} \label{Sec:dT_S}
-Change of the spin temperature occurs through emission and absorption of \cm photons corresponding to a transition between the two spin states. Transitions occur when the atom either spontaneously emits a photon or is induced to emit or absorb a photon due to external forces. These transitions can be described using a differential equation (Equation \ref{Eq:dn}), and each type of transition (m) has a different $X^m_{ij}$. 
+Change of the spin temperature occurs through emission and absorption of \cm photons corresponding to a transition between the two spin states. Transitions occur when the atom either spontaneously emits a photon or is induced to emit or absorb a photon due to external forces. These transitions can be described using a differential equation (Equation \ref{Eq:dn}) \cite{furlanetto_2006}, and each type of transition (m) has a different rate coefficient $X^m_{ij}$, where m is the type of transition, i is the initial state, and j is the final state of the atom. 
 
 \begin{equation} \label{Eq:dn}
 \Big( \frac{d n_i}{dt} \Big)_m = X^m_{ij} n_i
 \end{equation}
 
-If the cloud is in equilibrium, the rates of change are set such that $n_{total} = n_0 + n_1$ is a constant. This means that $d n_0/dt = d n_1 /dt$, allowing us to calculate the spin temperature using Equation \ref{Eq:sn} at any time.
+If the cloud is in equilibrium, the rates of change are set such that $n_{total} = n_0 + n_1$ is a constant. This means that $d n_0/dt = d n_1 /dt$, allowing us to calculate the spin temperature using Equation \ref{Eq:sn} at any time \cite{field_1958}. 
 
 \begin{equation} \label{Eq:sn}
 n_0 \sum^m X^m_{01} = n_1 \sum^m X^m_{10}
 \end{equation}
 
 \subsubsection{Spontaneous Emission}
-Spontaneous emission due to a transition between the spin states caused by quantum interactions with the electromagnetic environment. Because the spin transition is a forbidden one, the lifetime of the higher energy (triplet) state is over 10 million years. The exact rate is set by the Einstein A coefficient ($A_{10}$), which is defined as: 
+Spontaneous emission due to a transition between the spin states caused by quantum interactions with the electromagnetic environment. Because the spin transition is a forbidden one, the lifetime of the higher energy (triplet) state is over 10 million years. The rate is the Einstein A coefficient ($X^A_{10} = A_{10}$), defined as:
 
 \begin{equation}
 A_{10} = \frac{64 \pi^4 \beta^2}{3 h \lambda^3} = 2.85 x 10^{-15} sec^{-1}
 \end{equation}
 
-where $\beta$ is the Bohr magneton. The small magnitude of $A_{10}$ means that spontaneous emission of \cm photons is very rare. 
+where $\beta$ is the Bohr magneton \cite{field_1958}. The small magnitude of $A_{10}$ means that spontaneous emission of \cm photons is very rare. 
 
 \subsubsection{Absorption and Stimulated Emission}
-In comparison to spontaneous emission, both absorption and stimulated emission are caused by external mechanisms and can therefore occur much more frequently than spontaneous emission. In the types of hydrogen gas clouds that we are considering, there are only three types of external mechanisms that provide high transition rates. 
+Absorption and stimulated emission are transitions which depend on an external triggers and can occur at a higher rate than spontaneous emission. In the types of hydrogen gas clouds that we are considering, there are three primary triggers. These are \cm radiation, baryon collisions, and optical radiation \cite{field_1958}. 
 
-\paragraph{Radiation}
-The first transition mechanism is caused by incident radiation from an external source of \cm photons such as Cosmic Microwave Background (CMB) photons. The coefficients for this source are $X^R_{01} = B_{01} I_\nu$ and $X^R_{10} = B_{10} I_\nu $, which are the Einstein B coefficients and can be related to $A_{10}$ by Equation \ref{Eq:Bxx}. 
+\paragraph{\cm Radiation}
+Incident radiation from an external source of \cm photons such as the Cosmic Microwave Background (CMB) will cause absorption and stimulated emission. The rates of absorption and stimulated emission are set by the Einstein B coefficients ($B_{01}$ and $B_{10}$). These coefficients are related to the rate coefficients $X^{m}_{ij}$ from Equation \ref{Eq:dn} via  $X^R_{01} = B_{01} I_\nu$ and $X^R_{10} = B_{10} I_{\nu}$ \cite{field_1958}. 
 
-\begin{equation} \label{Eq:Bxx}
-B_{01} I_{\nu} = 3 B_{10} I_{\nu} = 3 A_{10} \Big( \frac{\lambda^2 I_\nu}{ 2 h \nu_{10}} \Big)
-\end{equation}
+Since the CMB is a blackbody, we know that $B_{10} I_{\nu} = A_{10} \lambda^2 I_{\nu}/ h \nu_{10}$. Also, the relative number of eigenstates in $n_0$ and $n_1$ means that $B_{01} = 3 B_{10}$. 
+
 
 \paragraph{Collisions}
-The second transition mechanism is collisions between the atoms and electrons in a hydrogen gas cloud. This mechanism has coefficients $C_{01}$ and $C_{10}$. Because the system is in thermodynamic equilibrium, we can define a kinetic temperature (\tk) using the transition coefficients. 
+Collisions between the atoms and electrons in a hydrogen gas cloud causes transitions described by coefficients $X^m_{01} = C_{01}$ and $X^m_{10} = C_{10}$. Because the system is in thermodynamic equilibrium, we can define a kinetic temperature (\tk) using the transition rate coefficients \cite{field_1958}. 
 
 \begin{equation}
 \frac{C_{01}}{C_{10}} \equiv 3 e^{-T_*/T_K}
 \end{equation}
 
-\paragraph{Light}
-The third and final mechanism is photons of light at other wavelengths causing changes to the atoms. This is known as the Wouthuysen-Field mechanism \cite{wouthuysen_1952}\cite{field_1958} and will be discussed in greater detail in Section \ref{Sec:WFM}. For now, we'll just define a light temperature ($T_L$) using the same form as the other temperatures.
+\paragraph{Optical Radiation}
+Transitions to and from higher energy states due to optical radiation will also cause a transition between spin states. This is known as the Wouthuysen-Field mechanism \cite{wouthuysen_1952}\cite{field_1958} and will be discussed in greater detail in Section \ref{Sec:WFM}. For now, we'll just define an optical brightness temperature ($T_L$) using the same form as the other temperatures. This gives us Equation \ref{Eq:lcoef}, where the transition rate coefficients are $L_{01} = X^L_{01}$ and $L_{10} = X^L_{10}$ \cite{field_1958}. 
 
-\begin{equation}
+\begin{equation} \label{Eq:lcoef}
 \frac{L_{01}}{L_{10}} = 3 e^{-T_*/T_L}
 \end{equation}
 
@@ -87,7 +106,7 @@ Since $T_* = 68.1 mK$ and $T_S \gg T_*$, we can approximate the exponentials ($e
 T_s = \frac{T_{R} + x_K T_{K} + x_{L} T_{L}}{1+x_K +x_{L}}
 \end{equation}
 
-where the coupling coefficients are $x_K = T_* C_{10}/A_{10} T_K$ and $x_L = T_* L_{10} / A_{10} T_L$, and $T_R$ is the incident radiation temperature. 
+where the coupling coefficients are $x_K = T_* C_{10}/A_{10} T_K$ and $x_L = T_* L_{10} / A_{10} T_L$, and $T_R$ is the incident radiation temperature \cite{field_1958}.
 
 \subsection{Brightness Temperature (\tb)}
 The primary sources of incident radiation for hydrogen gas clouds are blackbody sources such as the CMB. These blackbody sources have a spectral energy distribution ($B_\nu (T)$) defined by the Planck spectrum:
@@ -99,9 +118,9 @@ I_{\nu} (T) = B_{\nu}(T) = \frac{ 2 h \nu^3 / c^2}{e^{h \nu / k T}-1}
 For long wavelengths, we use the Rayleigh-Jeans approximation ($B_{\nu} (T) \simeq (2 k \nu^2 / c^2) T$) to give us a brightness temperature ($T_b (\nu)$) \cite{carroll2007}. 
 
 \subsubsection{Change in Brightness Temperature}
-Now, brightness temperature will change as the light travels through the universe. Such change can be caused by the expansion of the universe or by external sources such as passage through gas clouds. 
+Now, brightness temperature will change as the light travels through the universe. Such change can be caused by the expansion of the universe or by radiation sources and sinks such as gas clouds. 
 
-Expansion of the universe simply causes the brightness temperature at each frequency to change at a rate $\propto (1+z)^{-1}$. 
+Expansion of the universe simply causes the brightness temperature at each frequency to change at a rate proportional to the expansion rate ($a$). 
 
 In comparison, when the light passes through a gas cloud the rate at which the brightness temperature changes varies between frequencies. This rate of change is represented mathematically as a cloud opacity (\tu). Using opacity allows us to write the brightness temperature after passing through the cloud using Equation \ref{Eq:T_bf}. 
 
@@ -112,31 +131,32 @@ In comparison, when the light passes through a gas cloud the rate at which the b
 where $T_{C}$ is the cloud temperature and $T_{R}$ is the original brightness temperature when it enters the cloud. As observers, what we actually care about and can observe is $\delta T_b (\nu) = (T_b (\nu))_{final} - T_R  (\nu)$. 
 
 \subsection{Opacity ($\tau_\nu$)}
-So, in order to measure the change in brightness temperature caused by passing through a cloud of gas, we need to know the cloud's opacity at a given frequency. The opacity (\tu) is defined as an integral along a line of sight through the cloud of the absorption rate of photons at the frequency $\nu$. In this case, what we care about is $\tau_{21-cm}$, which has a defined opacity:
+The change in brightness temperature caused by passing through a cloud of gas is determined by the cloud's opacity at a given frequency. The opacity (\tu) is defined as an integral along a line of sight through the cloud of the absorption rate of photons at the frequency $\nu$. In this case, what we care about is $\tau_{21-cm}$, which has a defined opacity:
 
-\begin{equation}
+\begin{equation} \label{Eq:tau}
 \tau_{\nu} = \frac{3 c^2 A_{10}}{8 \pi \nu^2 } (1-e^{-T_*/T_S}) \int ds \phi (\nu) n_0(s)
 \end{equation}
 
-where $\phi (\nu)$ is the line profile of the hydrogen \cm spectral line at each position such that $\int \phi(\nu) d \nu = 1$ at that position and $n_0 (s)$ is the number of hydrogen atoms at each position that are in the spin 0 state. 
+where $\phi (\nu)$ is the line profile of the hydrogen \cm spectral line at each position such that $\int \phi(\nu) d \nu = 1$ at that position and $n_0 (s)$ is the number of hydrogen atoms at each position that are in the spin 0 state \cite{furlanetto_2006}. 
 
-In order to determine $n_0 (s)$ and $\phi (\nu)$ at each point, we need to be able to describe the hydrogen gas cloud. Section \ref{Sec:IGM} will outline the details of the hydrogen gas clouds of interest to us, namely neutral hydrogen in the Intergalactic Medium. 
+In order to determine $n_0 (s)$ and $\phi (\nu)$ at each point, we need to be able to describe the hydrogen gas cloud. In our case the hydrogen gas cloud is the Intergalactic Medium. 
 
 
 \section{The Intergalactic Medium (IGM)}\label{Sec:IGM}
-Using the physics discussed in the previous section, we can study the intergalactic medium (IGM) as a hydrogen gas cloud that changes the brightness temperature of photons from the Cosmic Microwave Background (CMB) as they pass through the cloud. The modified brightness temperature (\dtb) has a spectrum in frequency and space that depends on the history of the IGM. 
+Using the physics discussed in the previous section, we model the intergalactic medium (IGM) as a hydrogen gas cloud that changes the brightness temperature of photons from the Cosmic Microwave Background (CMB) as they pass through the cloud. The modified brightness temperature (\dtb) has a spectrum in frequency and space that depends on the history of the IGM. 
 
-In order to make a prediction of this spectrum, we need to have a model of the history of the IGM during the time periods that we want to study. This model will allow us to calculate a predicted \ts and \tu in the IGM throughout its history. 
+To make a prediction of this spectrum, we need to have a model of the history of the IGM during the time periods that we want to study. This model will allow us to calculate a predicted \ts and \tu in the IGM throughout its history. 
 
 \subsection{IGM Fundamentals}
 \subsubsection{Opacity ($\tau_\nu$)}
-To calculate the opacity of the IGM requires a model of atomic density. In this model there are a few significant terms that all combine to give a column density of neutral hydrogen ($N_{HI}$) through the IGM. This column density is $N_{HI}/4 = \int ds n_0 (s)$, where the factor of 4 comes from the sum of states (triplet plus singlet). The column density can also be written as the fraction of hydrogen that is neutral ($x_{HI}$) times the number of hydrogen atoms along the line of sight ($n_H (z)$) times the line of sight ($s$). With all of these factors, we can re-write the opacity as:
+From Equation \ref{Eq:tau} we know that the opacity of the IGM is set by the number of hydrogen atoms in in the lower spin state ($n_0$) at each position along the line of sight, aka the column density ($N_{HI}$). This column density is $N_{HI}/4 = \int ds n_0 (s)$, where the factor of 4 comes from the total number of eigenstates in the ground state of hydrogen. The column density can also be written as the fraction of hydrogen that is neutral ($x_{HI}$) times the number of hydrogen atoms along the line of sight ($n_H (z)$) times the line of sight ($s$).  
+With all of these factors, we can re-write the opacity as:
 
 \begin{equation}
 \tau_{\nu} \approx 0.0092 (1+\delta) (1+z)^{3/2} \frac{x_{HI}}{T_S} \Big[ \frac{H(z)/(1+z)}{dv_{\parallel}/dr_{\parallel}} \Big] Kelvin
 \end{equation} 
 
-where $(1+\delta)$ is the matter density at a given position, $dv_{\parallel}/dr_{\parallel}$ is the gradient of proper velocity along the line of sight, and $H(z)$ is the Hubble parameter. 
+where $(1+\delta)$ is the matter density at a given position, $dv_{\parallel}/dr_{\parallel}$ is the gradient of proper velocity along the line of sight, and $H(z)$ is the Hubble parameter \cite{furlanetto_2006}. 
 
 \subsubsection{Brightness Temperature Change (\dtb)}
 As long as the opacity is small ($\tau_\nu \ll 1$) we can approximate $e^{-\tau_\nu}$ as $(1-\tau_\nu)$. As discussed in Section \ref{Sec:IGMhist}, this will be true for much of the IGM history that we are studying. Therfore, we can write the change in brightness temperature of CMB photons due to passing through the IGM using Equation \ref{Eq:dT_b}.
@@ -145,14 +165,14 @@ As long as the opacity is small ($\tau_\nu \ll 1$) we can approximate $e^{-\tau_
 \delta T_b = \frac{T_S - T_\gamma}{1+z}(1-e^{-\tau_\nu}) \approx 9 (1+\delta) (1+z)^{1/2} \Big(1-\frac{T_\gamma}{T_S}\Big) x_{HI} \Big[ \frac{H(z)/(1+z)}{dv_{\parallel}/dr_{\parallel}} \Big] mK
 \end{equation}
 
-where \tg is the CMB photon temperature, which also acts as the incident radiation temperature ($T_R$) in Equation \ref{Eq:dT_s}. 
+where \tg is the CMB photon temperature, which also acts as the incident radiation temperature ($T_R$) in Equation \ref{Eq:dT_s} \cite{furlanetto_2006}. 
+
+\textcolor{red}{Add a figure showing atomic energy levels, aka the expanded version of the figure shown earlier in the introduction. }
 
 \subsection{Wouthuysen-Field Mechanism}\label{Sec:WFM}
 Given that the spin temperature of the IGM is a significant term in the brightness temperature equation, we need to understand how it can vary over time. As discussed in Section \ref{Sec:dT_S}, the spin temperature of hydrogen in the IGM is coupled to three sources during its history. 
 
 The first source is the CMB (\tg), which provides a source of external radiation ($T_R$). The second source is the kinetic temperature of the gas (\tk), which characterizes the thermal motion of the atoms in the gas. The third and final source is external photons corresponding to transition energies between the ground and excited states of the hydrogen atom. The most important transition for our purposes is the \lya  transition. 
-
-\textcolor{red}{Add a figure showing atomic energy levels?}
 
 The mechanism for coupling between the hydrogen spin temperature and \lya  photons is called the Wouthuysen-Field Effect \cite{wouthuysen_1952}\cite{field_1958} and can be understood by going back again to the atomic states of the hydrogen atom. Just as we've discussed for the \cm transition, external photons with an energy corresponding to the \lya  wavelength ($\lambda = 121.6$ nm) can induce a transition from the ground state of hydrogen (1S) to its first excited state (2P). However, conservation of total spin angular momentum for the hydrogen atom sets the selection rules for spontaneous emission due to transitions back to the ground state from that first excited state. 
 
@@ -160,24 +180,23 @@ There are two pathways set by the selection rules for a hydrogen atom to spontan
 
 The exact magnitude of the change will depend on the distribution of photons around the \lya  line. This is because the input photon frequency for $n_0 \rightarrow n_1$ is not the same as the input photon frequency for $n_1 \rightarrow n_0$.
 
-Now, the spectral distribution of \lya  photons is set by collisions within the IGM, and approximates a blackbody curve with temperature $T_{Ly-\alpha} = T_K$. Meanwhile, the \lya  coupling term ($x_C = x_{\alpha}$)is proportional to the intensity of \lya  photons produced by external sources of light. The exact \lya  coupling is related to the rate of scattering of \lya  photons by Equation \ref{Eq:xa}, where $P_{\alpha}$ is the scattering rate. 
+Now, the spectral distribution of \lya  photons is set by collisions within the IGM, and approximates a blackbody curve with temperature $T_{Ly-\alpha} = T_K$. Meanwhile, the \lya  coupling term ($x_C = x_{\alpha}$)is proportional to the intensity of \lya  photons produced by external sources of light. The exact \lya  coupling is related to the rate of scattering of \lya  photons by Equation \ref{Eq:xa}, where $P_{\alpha}$ is the scattering rate \cite{furlanetto_2006}. 
 
 \begin{equation}\label{Eq:xa}
 x_{\alpha} = \frac{4 P_{\alpha} T_*}{27 A_{10} T_{\gamma}}
 \end{equation}
 
-The scattering rate $P_{\alpha}$ is a function of the absorption cross section at a given position and frequency ($\sigma_{\nu}$) and the intensity of the incident radiation from external light sources ($J_{\nu}$), as shown in Equation \ref{Eq:pa} \cite{furlanetto_2006}. 
+The scattering rate $P_{\alpha}$ is a function of the absorption cross section at a given position and frequency ($\sigma_{\nu}$) and the intensity of the incident radiation from external optical radiation sources ($J_{\nu}$), as shown in Equation \ref{Eq:pa} \cite{furlanetto_2006}. 
 
 \begin{equation}\label{Eq:pa}
 P_{\alpha} = 4 \pi \int d\nu J_{\nu}(\nu) \sigma_{\nu}(\nu)
 \end{equation}
 
-Light sources for the IGM have varied during its history, as will be discussed in Section \ref{Sec:IGMhist}.
 
 \subsection{History of the IGM} \label{Sec:IGMhist}
 
 \subsubsection{Initial Conditions}
-In the early universe before galaxies came into existence, the entire universe was filled with a medium that was the progenitor of the IGM. From the Cosmic Microwave Background, we know that at $z \sim 1100$ the IGM was a nearly homogeneous gas of protons, free electrons, and atoms; most of which were neutral hydrogen (HI) atoms. Within the gas were small inhomogeneities in the matter density that would eventually grow into galaxies, but the overall gas density was high enough that collisions between baryons were common throughout the gas. 
+In the early universe before galaxies came into existence, the entire universe was filled with a medium that was the progenitor of the IGM. From the Cosmic Microwave Background, we know that at $z \sim 1100$ the IGM was a nearly homogeneous gas of protons, free electrons, and atoms; most of which were neutral hydrogen (HI) atoms. Within the gas were small inhomogeneities in the matter density that would eventually grow into galaxies, but the overall gas density was high enough that collisions between baryons were common throughout the gas \cite{furlanetto_2006}. 
 
 \begin{figure}[htb]
 \begin{center}
@@ -281,7 +300,7 @@ Like the \avgdtb experiments, power spectrum measurements will also be dominated
 
 There are a number of different specific foreground removal strategies that have been developed, including principal component analysis \cite{masui_2012}\cite{switzer_2013}. All of these strategies rely on the removal of the dominant foregrounds thanks to their smooth spectra. The \cm signal is left behind when the foregrounds are removed because it will have significant structure in frequency, as each frequency corresponds to  the signal from a different set of galaxies in the intensity map. 
 
-\section{Hydrogen \cm Cosmology Experiments}
+\section{Hydrogen \cm Cosmology Experiments} \label{Sec:cm_expts}
 There are a number of experiments specifically designed to measure the \cm global signal or power spectrum. These experiments are either currently gathering data or are still under development. Preliminary constraints on the \cm signals have been placed for different cosmological eras, and future measurements should continue to tighten those constraints such that we will have a good detection of the \cm global signal and power spectrum during the Dark Ages, Cosmic Dawn, Epoch of Reionization and Era of Acceleration. 
 
 \subsection{Global Experiments}

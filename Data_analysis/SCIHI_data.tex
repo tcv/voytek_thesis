@@ -2,21 +2,25 @@
 
 \section{Preparing the Data}
 
-Before the data can be analyzed for potential signals, it first has to go through an analysis pipeline to remove noise and make the datasets easier to handle. 
+Before the data can be analyzed for potential signals, it first has to go through an analysis pipeline to remove man-made RFI and instrumental noise and make the datasets easier to handle. 
 
 \begin{figure}[htb]
 \begin{center}
 \includegraphics[width=0.9\linewidth]{Data_analysis/figures/single_raw_guad_june03.png}
-\caption{Single dataset of the entire frequency spectrum of raw data from the SCI-HI system. Also present are single datasets from the different calibration sources.}
+\caption{Single dataset (1 second duration) of the entire frequency spectrum of raw data from the SCI-HI system. Also present are single datasets from the different calibration sources. }
 \label{Fig:raw_data}
 \end{center}
 \end{figure}
 
 \subsection{Integration and Sampling}\label{Sec:int}
 
-The frequency spectrum collected for each second of data is stored in a single file with a header containing some basic information like the timestamp, DC voltage level (when measuring with DC Power Supply), computer temperature, and switch position (antenna vs calibration sources). The spectrum has a bandwidth of 250 MHz, with a frequency resolution of $\sim 7.63$ kHz (or 32769 samples). The data is in units of power (dB) as set by the data processing software. \textcolor{red}{I know there's something that Jose does to set these units but I'm not sure exactly what it is.} 
+The frequency spectrum collected for each second of data is stored in a single file with a header containing some basic information like the timestamp, DC voltage level (only collected when the system is powered by a DC Power Supply), system temperature, and switch position (antenna vs calibration sources). The spectrum covers the frequency range of 0-250 MHz, with a frequency resolution of $\sim 7.63$ kHz (or 32769 samples) and the data is stored in units of power (dB).
 
-An example of the data collected by the system is shown in Figure \ref{Fig:raw_data}. Also included is a single sample of data from each of the calibration sources (Short, 50 $\Omega$, 100 $\Omega$, and Noise Source). The sharp signal cutoffs at 30 MHz and 200 MHz are from the high and low pass filters in the system.
+An example of the data collected by the system is shown in Figure \ref{Fig:raw_data}. Also included is a single sample of data from each of the calibration sources (Short, 50 $\Omega$, 100 $\Omega$, and Noise Source). 
+
+Examining the data, we can identify several frequency dependent structures that are connected to the SCI-HI system design. The sharp signal dropoffs at 30 MHz and 200 MHz are caused by the high and low pass filters. The comb of narrow spikes present in both the antenna data and calibration data is due to the interleaved sampling strategy described in Section \ref{Sec:hard_split}. Long period frequency structures from 150-200 MHz are caused by the HIbiscus antenna beam and impedence. The $''$bump$''$ in the antenna data around 95 MHz is time-dependent and has been tied to the system power, so it is believed to be caused by RF leakage from the SCI-HI system. 
+
+In addition, spikes present only in the antenna data are man-made RFI from beyond the SCI-HI system. These RFI spikes can be matched to RFI measured during site testing such as the FM band ($88-108$ MHz) and the orbcomm satellite band ($136-139$ MHz). 
 
 \begin{figure}[htb]
 \begin{center}
@@ -28,19 +32,23 @@ An example of the data collected by the system is shown in Figure \ref{Fig:raw_d
 
 \subsection{Truncation}
 
-Because the data we are interested in is a subset of the overall spectrum, one of the first things that we can do is to truncate frequency range of the data to make it smaller. For example, plotting the key frequency range for the SCI-HI data as collected in 2013 (50-120 MHz) helps us to pick out some of the things going on that are harder to see in the full spectrum (see Figure \ref{Fig:raw_data_trunc}). 
+Because the data we are interested in is a subset of the overall spectrum, one of the first things that we can do is to truncate frequency range of the data to make it smaller. We can throw away data for frequencies where the HIbiscus antenna doesn't have a stable beam or the data is dominated by signals other than those from the sky. 
 
-In the truncated dataset, it is easier to identify significant features in the data. For example, the nearly linear slope of the signal helps us confirm that the antenna is seeing the spectrum from the Milky Way Galaxy, while the excess of noise in the FM band and the bump in the middle of the FM band are evidence of RFI (both external and self-generated). 
+In the 2013 data, the reliable band corresponds to (50-120 MHz), as is shown in Figure \ref{Fig:raw_data_trunc}. In this part of the spectrum, the linear slope of the antenna dataset compared to the calibration datasets stands out. This linear slope is caused by the spectrum of synchrotron radiation in the Milky Way Galaxy, as will be discussed in later sections of this chapter. 
 
 \subsection{RFI Excision}
 
-Another early stage of the pipeline is RFI excision (both in frequency and time). 
+Another early stage of the pipeline is RFI excision (both in frequency and time) of narrow features or spikes in the data. 
 
 \subsubsection{RFI Frequency Flagger}
 
-RFI excision in frequency is done using a flagger that does a threshold cut for each dataset. Because the data is expected to have a polynomial fit, the first step is to fit a two term polynomial to a small subset of the data (center frequency plus a its nearest neighbors). The subset of data is then divided by the polynomial and a mean and variance of the flattened data is calculated. If the data point at the center frequency is further from the mean than a set threshold, then that data point is flagged. 
+RFI excision in frequency is done by flagging each dataset according to a threshold. The threshold is calculated for each frequency ($f_c$) in the spectrum by fitting a small subset of the spectrum from $f_c-n \leq f \leq f_c + n$, where n is the number of nearest neighbors used for the fit. This fit is a two term polynomial. 
 
-The exact threshold and number of neighbors used to set the mean can be tweaked, but the typical values I used were a 3$\sigma$ threshold and 32 neighbors on either side. If a data point is flagged, it is masked out of the data and will not be included in the data in the future. 
+Dividing out the fit gives a flattened dataset whose mean is one and whose variance can be calculated. The variance is used to set a threshold (eg $3 \sigma$), and if the flattened data at $f_c$ is outside the threshold then $f_c$ is flagged. 
+
+Flagging identifies a list of frequencies between $50-120$ MHz which have a spike above the threshold in a given dataset. 
+
+The exact threshold and number of neighbors used to set the mean can be tweaked, but the typical values I used were a 3$\sigma$ threshold and 32 neighbors on either side. If a data point is flagged, it is masked out of the data and will not be included in further analysis.  
 
 \begin{figure}[htb]
 \begin{center}
@@ -64,7 +72,7 @@ While most of the RFI in the data is time independent and can be flagged out in 
 
 Meteoroids are always passing through Earth's atmosphere. These meteoroids have a wide spectrum of sizes starting from $\leq$10 nm. As these meteoroids pass through the earth's atmosphere, some of their atoms are vaporized. Inelastic collisions between these atoms and air molecules in the atmosphere can lead to ionization \cite{meteor_review}. 
 
-The result of this ionoization is a thickening of the Earth's ionosphere along the meteor trail, causing the ionosphere to become opaque to shorter wavelength photons along the trail. This opacity extends the range of signals such as FM radio to more distant locations than would normally be accessible.
+The result of this ionoization is an increase in the column density of free electrons  in the Earth's ionosphere along the meteor trail. This temporarily increases the plasma frequency of the ionosphere along that trail, such that the ionosphere is opaque at higher frequencies along the trail. This opacity allows reflection of signals such as FM radio off the ionosphere, extending the range of visibility for the FM band beyond what would normally be accessible.
 
 In the SCI-HI data, this leads to a time-variable increase in the FM band RFI. For short time periods the strength of RFI signals from FM radio towers becomes larger. The duration of these signals is relatively small \textcolor{red}{(Add an estimate from our data based on the width of these events?)}, diminishing as free electrons diffuse away from the original meteor trail. 
 

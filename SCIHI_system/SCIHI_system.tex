@@ -4,13 +4,13 @@
 $''$Sonda Cosmologica de las Islas para la Deteccion de Hidrogeno Neutro$''$ (SCI-HI) is an experiment which seeks to measure the \cm global spectrum during the end of the Dark Ages and the Cosmic Dawn before reionization. As such, SCI-HI instrument was designed to meet several distinct contraints:
 
 \begin{enumerate}
-\item The design must be low cost (under \$ 10,000).
+\item The design must be low cost (under \$10,000).
 
 \item The design must be low power (under  200 Watts) so that it can be run with an independent power source separate from external supplies. 
 
 \item The design must be simple and easy to deploy to remote locations. 
 
-\item The design must be broad-band to cover the wide bandwidth of interest ($30-140$ MHz).
+\item The design must be broad-band to cover the wide bandwidth of interest ($40-130$ MHz).
 
 \item The design must include a system response that varies smoothly with frequency. 
 
@@ -54,7 +54,9 @@ For the SCI-HI experiment, the key properties for the antenna selection were the
 \end{figure}
 
 \subsection{First Stage Antenna}
-Initially, we started with a simple $''$Trombone$''$ antenna. This design is a dipole with fat, angled elements over a ground plane (see Figures \ref{Fig:trombone_small} and \ref{Fig:trombone_large}). Changing the frequency range of the antenna simply required shifting the length of the dipole elements and their position above the ground plane. The value here was that features in the measured spectrum which were from the sky would stay at the same frequencies when the antenna was tuned, while features from the antenna would shift. This feature would allow us to identify real structure on the sky such as the \cm signal. 
+Initially, we started with a simple $''$Trombone$''$ antenna. This design is a dipole with fat, angled elements over a ground plane (see Figures \ref{Fig:trombone_small} and \ref{Fig:trombone_large}). Changing the frequency range of the antenna simply required shifting the length of the dipole elements and their position above the ground plane. 
+
+The design was based on the idea that features in the measured spectrum which were from the sky would stay at the same frequencies when the antenna was tuned. On the other hand, features in the measured spectrum from the antenna would shift. This shifting would allow us to distinguish real structure on the sky such as the \cm signal from structure due to the antenna. 
 
 \begin{figure}[htb]
 \centering
@@ -79,8 +81,6 @@ Initially, we started with a simple $''$Trombone$''$ antenna. This design is a d
 The trombone shapes were constructed out of welded aluminum with a lucite mounting block at the connection point of the two cones (see Figure \ref{Fig:trombone_mount}), The dipoles and mounting block were supported with a structure constructed out of fiberglass and PVC tubes. The entire system was placed above a ground plane composed of metal mesh (aka chicken wire) over a small ($\sim9 m^2$) area and long radial extensions ($\sim10 m$) extending out from the center like a spider web. 
 
 Tuning the trombone length was accomplished with an external tube that slid over the main dipole elements (see Figure \ref{Fig:trombone_adj}), while adjustment of the height of the trombone was done using the support legs (PVC pipes with variable heights).
-
-The Trombone antenna was used throughout the initial stages of the SCI-HI project, including deployments at Green Bank in West Virginia (Figure \ref{Fig:trombone_gbt}), the Zona del Silencio in Mexico (Figure \ref{Fig:trombone_zds}), Algonquin Radio Observatory in Canada (Figure \ref{Fig:trombone_alg}), and Isla Guadalupe in Mexico (Figure \ref{Fig:trombone_guad}). For more discussion of these sites, see Chapter \ref{Ch:RFI}.
 
 \begin{figure}[htb]
 \centering
@@ -120,17 +120,108 @@ The Trombone antenna was used throughout the initial stages of the SCI-HI projec
 \end{minipage}
 \end{figure}
 
+\subsubsection{Antenna Deployment}
+The Trombone antenna was used throughout the initial stages of the SCI-HI project, including deployments at Green Bank in West Virginia (Figure \ref{Fig:trombone_gbt}), the Zona del Silencio in Mexico (Figure \ref{Fig:trombone_zds}), Algonquin Radio Observatory in Canada (Figure \ref{Fig:trombone_alg}), and Isla Guadalupe in Mexico (Figure \ref{Fig:trombone_guad}). For more discussion of these sites, see Chapter \ref{Ch:RFI}.
+
+\begin{figure}[htb]
+\centering
+\begin{minipage}[b]{0.56\textwidth}
+\centering
+\includegraphics[width=0.95\linewidth]{SCIHI_system/figures/trombone_sim.png}
+\caption{Simulated trombone antenna design using cocoaNEC. Simulation software utilizes line segments which intersect to create structures. }
+\label{Fig:trombone_sym}
+\end{minipage}%
+\begin{minipage}[b]{0.02\textwidth}
+\hspace{1cm}
+\end{minipage}%
+\begin{minipage}[b]{0.42\textwidth}
+\centering
+\includegraphics[width=0.95\linewidth]{SCIHI_system/figures/ground_plane_sim.png}
+\caption{Circular ground plane with radials, simulated using cocoaNEC. The center, filled section has a 5 meter radius and the radials extend an additional 5 meters.}
+\label{Fig:gp_sym}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=0.95\linewidth]{SCIHI_system/figures/trombone_no_gp.jpg}
+\caption{Trombone Simulation results with no ground plane included in the simulation. (a) Shows the azimuth (left) and elevation (right) antenna beam for different frequencies with the antenna at its shortest (35 cm) length. (b) Shows the same plots with the antenna at is longest (86 cm) length. (c) Shows a Smith chart of the antenna complex impedance (S11), where 1.0 is set to $50 \Omega$, for the shortest (35 cm) length. (d) Shows a Smith chart of the antenna complex impedance for the longest (86 cm) length. }
+\label{Fig:trsym_nogp}
+\end{center}
+\end{figure}
+
 \subsubsection{Antenna Simulation}
-Simulating the Trombone antenna indicated some problems with the design, including significant structure in the antenna beam and S-parameters. \textcolor{red}{Add image/details of Amy's simulation results.}
+In order to assess the behavior of the Trombone antenna, simulations were run on the design by Amy Stetten. Figure \ref{Fig:trombone_sym} shows the simulated Trombone design. Simulations were run using cocoaNEC,\footnote{http://www.w7ay.net/site/Applications/cocoaNEC/} a free antenna modelling code designed use in a Macintosh OS environment. 
+
+Simulations showed that the trombone antenna beam was wide, but well behaved for the shorter length as shown in Figure \ref{Fig:trsym_nogp}(a). The longer length antenna beam had quite a bit of structure, as shown in Figure \ref{Fig:trsym_nogp}(b). In addition, the impedance of the antenna (S11) was not well matched to 50 $\Omega$ and varied significantly across the band for all lengths (Figures \ref{Fig:trsym_nogp}(c) and \ref{Fig:trsym_nogp}(d)). 
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=0.95\linewidth]{SCIHI_system/figures/trombone_gp.jpg}
+\caption{Trombone Simulation results with spider web ground plane included in the simulation. (a) Shows the azimuth (left) and elevation (right) antenna beam for different frequencies with the antenna at its shortest (35 cm) length. (b) Shows a Smith chart of the antenna complex impedance (S11), where 1.0 is set to $50 \Omega$, for the shortest (35 cm) length.}
+\label{Fig:trsym_gp}
+\end{center}
+\end{figure}
+
+Beyond the trombone design, it was important to examine the effect of a non-infinite ground plane. Preliminary work with a square ground plane led to significant additional structure in the antenna beam. To counteract this structure, the ground plane was modified to the $''$spider-web$''$ design shown in Figure \ref{Fig:gp_sym}, with a center filled region and longer radials. 
+
+Adding this style of ground plane did not have a big impact on the simulation results (see Figure \ref{Fig:trsym_gp}) at most frequencies. There was additional structure in the beam at higher frequencies, but these frequencies are above the target frequency range of 40-130 MHz.  
+
+\begin{figure}[htb]
+\centering
+\begin{minipage}[b]{0.49\textwidth}
+\centering
+\includegraphics[width=0.95\linewidth]{SCIHI_system/figures/HIbiscus_top.png}
+\caption{Simulated HIbiscus antenna as viewed from above.}
+\label{Fig:HI_sim_top}
+\end{minipage}%
+\begin{minipage}[b]{0.02\textwidth}
+\hspace{1cm}
+\end{minipage}%
+\begin{minipage}[b]{0.49\textwidth}
+\centering
+\includegraphics[width=0.95\linewidth]{SCIHI_system/figures/HIbiscus_ISO.png}
+\caption{Simulated HIbiscus antenna as viewed from one side.}
+\label{Fig:HI_sim_side}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=0.95\linewidth]{SCIHI_system/figures/HIbiscus_gain.png}
+\caption{Simulated HIbiscus antenna beam, shown for different frequencies at a single azimuth. The beam is symmetric in azimuth.}
+\label{Fig:HIsym_beam}
+\end{center}
+\end{figure}
+ 
+\begin{figure}[htb]
+\centering
+\begin{minipage}[b]{0.50\textwidth}
+\centering
+\includegraphics[width=0.95\linewidth]{SCIHI_system/figures/HIbiscus_S11_50_Cart.png}
+\caption{Reflectivity of the simulated HIbiscus antenna when connected to a $50 \Omega$ transmission line. The narrow dip at $\sim 50$ MHz is an antenna resonance. }
+\label{Fig:HIsim_S11_dB}
+\end{minipage}%
+\begin{minipage}[b]{0.02\textwidth}
+\hspace{1cm}
+\end{minipage}%
+\begin{minipage}[b]{0.46\textwidth}
+\centering
+\includegraphics[width=0.95\linewidth]{SCIHI_system/figures/HIbiscus_S11_50_Smith.png}
+\caption{Smith chart of the simulated HIbiscus antenna complex S11 relative to $50 \Omega$ for 30 - 180 MHz.}
+\label{Fig:HIsim_S11_Smith}
+\end{minipage}
+\end{figure}
 
 \subsection{HIbiscus Antenna Design}
 
-Because of the problems we had with the trombone design, we decided to shift our antenna design in a new direction based upon our expectations from the literature (\textcolor{red}{Need to add specific references for different antenna types}). We tested several antenna designs in simulation, including the four-square design used in the EDGES experiment \cite{rogers_2012}. Simulations were run by Jose-Miguel Juaregui-Garcia using FEKO, a finite element computational electromagnetics software package.\footnote{https://www.feko.info/} 
+Simulation and testing demonstrated that the trombone design had a wide beam that was not well behaved at higher frequencies. In addition, the impedance of the antenna was complex and strongly varying over our frequency band. 
 
-Based on the FEKO simulation results we settled on a design that used the EDGES design as a starting point, but changed the exact shapes of the four squares. We took each square and turned it into an incliclined petal composed of three trapezoidal shapes. Each shape was connected to its neighbors on the petal, but had a different angle with respect to the ground. Additional panels were added to each side of the petal to create a strip line with a fixed gap between the petals. The entire antenna was then placed above a flat ground plane. We call this design a HIbiscus antenna. 
+Because of these problems, we decided to shift our antenna design in a new direction based upon our expectations from the literature (\textcolor{red}{Need to add specific references for different antenna types}). We tested several antenna designs in simulation, including the four-square design used in the EDGES experiment \cite{rogers_2012}. Simulations were run by Jose-Miguel Juaregui-Garcia using FEKO, a finite element computational electromagnetics software package.\footnote{https://www.feko.info/} 
 
-\textcolor{red}{Add either pictures or simulation images for antenna shape details.}
+Based on the FEKO simulation results we settled on a design that used the EDGES design as a starting point, but changed the exact shapes of the four squares. We took each square and turned it into an incliclined petal composed of three trapezoidal shapes. Each shape was connected to its neighbors on the petal, but had a different angle with respect to the ground. Additional panels were added to each side of the petal to create a strip line with a fixed gap between the petals. The entire antenna was then placed above a flat ground plane. We call this design a HIbiscus antenna, as shown in Figures \ref{Fig:HI_sim_top} and \ref{Fig:HI_sim_side}. 
 
+This HIbiscus design has an azimuthally symmetric beam with a $\sim 55^\circ$ full width half-maximum (FWHM) and no sidelobes over a wide frequency band, as shown in Figure \ref{Fig:HIsym_beam}. The impedance of the HIbiscus antenna is complex, but is centered around 50 $\Omega$ such that it has less than $-10 dB$ of reflectivity over 60 MHz. The simulated complex simulated impedance is shown in Figure \ref{Fig:HIsim_S11_Smith}, and the simulated antenna reflectivity is shown in Figure \ref{Fig:HIsim_S11_dB}. 
 
 \begin{figure}[htb]
 \centering
@@ -152,7 +243,7 @@ Based on the FEKO simulation results we settled on a design that used the EDGES 
 \end{figure}
 
 \subsubsection{Scale Model Testing}
-In order to test our simulation to see if it matched the real antenna performance, Jose-Miguel built a set of scaled HIbiscus designs tuned for higher frequencies around 400-500 MHz. This allowed us to use an antenna range to measure the antenna beam shape and s-parameters. 
+In order to test our simulation to see if it matched the real antenna performance, Jose-Miguel built a set of scaled HIbiscus designs tuned for higher frequencies around 400-500 MHz. This allowed us to use an antenna range to measure the antenna beam shape and S-parameters. 
 
 Jose-Miguel and I used the Project REAL\footnote{http://www.preal.ece.cmu.edu/} (Remote Educational Antenna Laboratory) facility at Carnegie Mellon University to measure the antenna response of different scaled HIbiscus models, as is shown in Figures \ref{Fig:hibiscus_scale_tabitha} and \ref{Fig:hibiscus_scale_jose}. 
 
@@ -160,14 +251,12 @@ This scale model testing indicated that the shape parameters that were most sign
 
 Using the scale model data, Jose-Miguel was also able to edit the antenna simulation to better match the actual antenna response, providing us with an antenna simulation dataset that was closer to reality. 
 
-\textcolor{red}{Here there will be some paragraphs about the exact simulation and scale model measurements including plots of impedence and antenna pattern.}
-
 \begin{figure}[htb]
 \centering
 \begin{minipage}[b]{0.43\textwidth}
 \centering
 \includegraphics[width=0.95\linewidth]{SCIHI_system/figures/HIbiscus_pgh_imp.jpg}
-\caption{HIbiscus antenna scaled for 70 MHz as it was setup during s-parameter testing at CMU. }
+\caption{HIbiscus antenna scaled for 70 MHz as it was setup during S-parameter testing at CMU. }
 \label{Fig:hibiscus_first}
 \end{minipage}%
 \begin{minipage}[b]{0.02\textwidth}
@@ -498,7 +587,7 @@ The system default upon start-up is to run in continual data collection mode wit
 \subsection{Control Computer}
 The data processing system can be diagnosed using a personal computer (such as a laptop) with an ethernet port. However, an additional diagnostic computer was also developed for the SCI-HI system. This computer is a Raspberry Pi\footnote{www.raspberrypi.org} with a small monitor, mouse and ethernet port. \textcolor{red}{Add picture of the diagnostic computer.} Using this small computer, we can quickly check that the system is working properly and run simple diagnostics.
 
-\subsection{Power Suppy and Consumption}
+\subsection{Power Supply and Consumption}
 In order to power the data processing system, a computer power supply had to be selected that matched the system power source (DC battery). Initially, we started with a typical AC computer power supply and a DC to AC inverter that converted the incoming DC power from the batteries into AC power that the computer could handle. 
 
 While using an inverter is the simplest solution, it is very energy inefficient.  \textcolor{red}{Add exact inefficiency of the inverter we were using in percentages.} Additionally, any failure of the inverter can crash the entire system. Therefore, we decided to switch to an entirely DC system by replacing the AC power supply for the computer with a power supply that takes input DC power. \textcolor{red}{Add original DC power supply part number here.} 
