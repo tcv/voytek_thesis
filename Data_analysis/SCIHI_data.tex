@@ -148,21 +148,7 @@ In comparison, the HIbiscus antenna has a complex impedance that varies with fre
 \end{figure}
 
 \subsubsection{Efficiency ($\eta$)}
-For the antenna, the $T_{impAnt}$ signal can be calculated using the match between the antenna impedance and the amplifier impedance. Impedance (Z) has a real (R) and imaginary (X) term, each of which vary as a function of frequency ($\nu$) and can be calculated from the S-parameter data: \textcolor{red}{Add a discussion here about how S11 data is compared to a 50 Ohm reference source.}
-
-\begin{equation}
-R(\nu) = \frac{50*(1- |S11|^2)}{(1-\Re(S11))^2+\Im(S11)^2}
-\end{equation}
-
-\begin{equation}
-X(\nu) = \frac{2*50*\Im(S11)}{(1-\Re(S11))^2+\Im(S11)^2}
-\end{equation} 
-
-Instead of being a separate term, $T_{Zant}$ can be considered a change to the magnitude of $T_{sky}$ and can be written as a transmission efficiency ($\eta$). This transmission efficiency depends on both the antenna impedance $Z_{ant} = R_{ant}+i X_{ant}$ and amplifier impedance $Z_{amp} = R_{amp} + i X_{amp}$, and is defined by the equation: \textcolor{red}{Add reference for this derivation}
-
-\begin{equation}
-\eta (\nu) = \frac{\sqrt{4 |R_{ant}*R_{amp}|}}{(R_{ant}+R_{amp})^2+(X_{ant}+X_{amp})^2}
-\end{equation}
+For the antenna, the $T_{impAnt}$ signal can be calculated using the match between the antenna impedance and the amplifier impedance, as discussed in Section \ref{Sec:Amp}. 
 
 For the June 2013 deployment data, the efficiency is shown in Figure \ref{Fig:eff}. With the efficiency, our antenna temperature equation (\ref{Eq:T_ant}) can be re-written as:
 

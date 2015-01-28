@@ -16,7 +16,7 @@ $''$Sonda Cosmologica de las Islas para la Deteccion de Hidrogeno Neutro$''$ (SC
 
 \end{enumerate}
 
-\begin{figure}[htb]
+\begin{figure}[bht]
 \begin{center}
 \includegraphics[width=0.9\linewidth]{SCIHI_system/figures/basic_block_diagram.png}
 \caption{Basic Block Diagram of the SCI-HI instrument.}
@@ -30,7 +30,9 @@ In order to meet these constraints, the instrument design was broken down into t
 When designing an instrument for radio astronomy, one of the big challenges is finding an antenna design that fits the particular needs of a given experiment. 
 
 \subsection{Design Considerations}
-For the SCI-HI experiment, the key properties for the antenna selection were the bandwidth and stability of the antenna beam pattern and impedance (S-parameters) over frequency. 
+For the SCI-HI experiment, the key properties for the antenna selection were the bandwidth and stability of the antenna beam pattern and impedance (S-parameters) as a function of frequency. 
+
+
 
 \textcolor{red}{Here I will add a brief discussion of antenna design including some of the key parameters for an antenna in general and why they are significant. }
 
@@ -53,8 +55,8 @@ For the SCI-HI experiment, the key properties for the antenna selection were the
 \end{minipage}
 \end{figure}
 
-\subsection{First Stage Antenna}
-Initially, we started with a simple $''$Trombone$''$ antenna. This design is a dipole with fat, angled elements over a ground plane (see Figures \ref{Fig:trombone_small} and \ref{Fig:trombone_large}). Changing the frequency range of the antenna simply required shifting the length of the dipole elements and their position above the ground plane. 
+\subsection{Trombone Antenna}
+Initially, we started with a simple $''$Trombone$''$ antenna, also called the NLTA dipole \cite{ellingson_2005}. This design is a dipole with fat, angled elements over a ground plane and is shown in Figures \ref{Fig:trombone_small} and \ref{Fig:trombone_large}. Changing the frequency range of the antenna simply required shifting the length of the dipole elements and their position above the ground plane. 
 
 The design was based on the idea that features in the measured spectrum which were from the sky would stay at the same frequencies when the antenna was tuned. On the other hand, features in the measured spectrum from the antenna would shift. This shifting would allow us to distinguish real structure on the sky such as the \cm signal from structure due to the antenna. 
 
@@ -80,14 +82,14 @@ The design was based on the idea that features in the measured spectrum which we
 \subsubsection{Antenna Construction}
 The trombone shapes were constructed out of welded aluminum with a lucite mounting block at the connection point of the two cones (see Figure \ref{Fig:trombone_mount}), The dipoles and mounting block were supported with a structure constructed out of fiberglass and PVC tubes. The entire system was placed above a ground plane composed of metal mesh (aka chicken wire) over a small ($\sim9 m^2$) area and long radial extensions ($\sim10 m$) extending out from the center like a spider web. 
 
-Tuning the trombone length was accomplished with an external tube that slid over the main dipole elements (see Figure \ref{Fig:trombone_adj}), while adjustment of the height of the trombone was done using the support legs (PVC pipes with variable heights).
+Tuning the Trombone antenna length was accomplished with an external tube that slid over the main dipole elements (see Figure \ref{Fig:trombone_adj}), while adjustment of the height of the Trombone antenna was done using the support legs (PVC pipes with variable heights).
 
 \begin{figure}[htb]
 \centering
 \begin{minipage}[b]{0.48\textwidth}
 \centering
 \includegraphics[width=0.95\linewidth]{SCIHI_system/figures/trombone_gbt.jpg}
-\caption{SCI-HI setup with trombone antenna on site at Green Bank in August 2011.}
+\caption{SCI-HI setup with Trombone antenna on site at Green Bank in August 2011.}
 \label{Fig:trombone_gbt}
 \end{minipage}%
 \begin{minipage}[b]{0.02\textwidth}
@@ -96,7 +98,7 @@ Tuning the trombone length was accomplished with an external tube that slid over
 \begin{minipage}[b]{0.46\textwidth}
 \centering
 \includegraphics[width=0.95\linewidth]{SCIHI_system/figures/trombone_sys_ZdS.jpg}
-\caption{SCI-HI setup with trombone antenna on site at the Zona del Silencio in January 2012.}
+\caption{SCI-HI setup with Trombone antenna on site at the Zona del Silencio in January 2012.}
 \label{Fig:trombone_zds}
 \end{minipage}
 \end{figure}
@@ -106,7 +108,7 @@ Tuning the trombone length was accomplished with an external tube that slid over
 \begin{minipage}[b]{0.52\textwidth}
 \centering
 \includegraphics[width=0.95\linewidth]{SCIHI_system/figures/trombone_alg_sys.jpg}
-\caption{SCI-HI setup with trombone antenna on site at the Algonquin Radio Observatory in August 2012.}
+\caption{SCI-HI setup with Trombone antenna on site at the Algonquin Radio Observatory in August 2012.}
 \label{Fig:trombone_alg}
 \end{minipage}%
 \begin{minipage}[b]{0.02\textwidth}
@@ -115,20 +117,20 @@ Tuning the trombone length was accomplished with an external tube that slid over
 \begin{minipage}[b]{0.42\textwidth}
 \centering
 \includegraphics[width=0.95\linewidth]{SCIHI_system/figures/trombone_sys_guad.jpg}
-\caption{SCI-HI setup with trombone antenna on site at Isla Guadalupe in October 2012.}
+\caption{SCI-HI setup with Trombone antenna on site at Isla Guadalupe in October 2012.}
 \label{Fig:trombone_guad}
 \end{minipage}
 \end{figure}
 
 \subsubsection{Antenna Deployment}
-The Trombone antenna was used throughout the initial stages of the SCI-HI project, including deployments at Green Bank in West Virginia (Figure \ref{Fig:trombone_gbt}), the Zona del Silencio in Mexico (Figure \ref{Fig:trombone_zds}), Algonquin Radio Observatory in Canada (Figure \ref{Fig:trombone_alg}), and Isla Guadalupe in Mexico (Figure \ref{Fig:trombone_guad}). For more discussion of these sites, see Chapter \ref{Ch:RFI}.
+The Trombone antenna was used throughout the initial stages of the SCI-HI project, including deployments at Green Bank in West Virginia (Figure \ref{Fig:trombone_gbt}), the Zona del Silencio in Mexico (Figure \ref{Fig:trombone_zds}), Algonquin Radio Observatory in Canada (Figure \ref{Fig:trombone_alg}), and Isla Guadalupe in Mexico (Figure \ref{Fig:trombone_guad}). For more discussion of these sites and why they were selected, see Chapter \ref{Ch:RFI}.
 
 \begin{figure}[htb]
 \centering
 \begin{minipage}[b]{0.56\textwidth}
 \centering
 \includegraphics[width=0.95\linewidth]{SCIHI_system/figures/trombone_sim.png}
-\caption{Simulated trombone antenna design using cocoaNEC. Simulation software utilizes line segments which intersect to create structures. }
+\caption{Simulated Trombone antenna design using cocoaNEC. Simulation software utilizes line segments which intersect to create structures. }
 \label{Fig:trombone_sym}
 \end{minipage}%
 \begin{minipage}[b]{0.02\textwidth}
@@ -145,15 +147,15 @@ The Trombone antenna was used throughout the initial stages of the SCI-HI projec
 \begin{figure}[htb]
 \begin{center}
 \includegraphics[width=0.95\linewidth]{SCIHI_system/figures/trombone_no_gp.jpg}
-\caption{Trombone Simulation results with no ground plane included in the simulation. (a) Shows the azimuth (left) and elevation (right) antenna beam for different frequencies with the antenna at its shortest (35 cm) length. (b) Shows the same plots with the antenna at is longest (86 cm) length. (c) Shows a Smith chart of the antenna complex impedance (S11), where 1.0 is set to $50 \Omega$, for the shortest (35 cm) length. (d) Shows a Smith chart of the antenna complex impedance for the longest (86 cm) length. }
+\caption{Trombone antenna simulation results with no ground plane included in the simulation. (a) Shows the azimuth (left) and elevation (right) antenna beam for different frequencies with the antenna at its shortest (35 cm) length. (b) Shows the same plots with the antenna at is longest (86 cm) length. (c) Shows a Smith chart of the antenna complex impedance (S11), where 1.0 is set to $50 \Omega$, for the shortest (35 cm) length. (d) Shows a Smith chart of the antenna complex impedance for the longest (86 cm) length. }
 \label{Fig:trsym_nogp}
 \end{center}
 \end{figure}
 
 \subsubsection{Antenna Simulation}
-In order to assess the behavior of the Trombone antenna, simulations were run on the design by Amy Stetten. Figure \ref{Fig:trombone_sym} shows the simulated Trombone design. Simulations were run using cocoaNEC,\footnote{http://www.w7ay.net/site/Applications/cocoaNEC/} a free antenna modelling code designed use in a Macintosh OS environment. 
+In order to assess the behavior of the Trombone antenna, simulations were run on the design by Amy Stetten. Figure \ref{Fig:trombone_sym} shows the simulated Trombone design. Simulations were run using cocoaNEC,\footnote{http://www.w7ay.net/site/Applications/cocoaNEC/} a free antenna modelling code designed for use in a Macintosh OS environment. 
 
-Simulations showed that the trombone antenna beam was wide, but well behaved for the shorter length as shown in Figure \ref{Fig:trsym_nogp}(a). The longer length antenna beam had quite a bit of structure, as shown in Figure \ref{Fig:trsym_nogp}(b). In addition, the impedance of the antenna (S11) was not well matched to 50 $\Omega$ and varied significantly across the band for all lengths (Figures \ref{Fig:trsym_nogp}(c) and \ref{Fig:trsym_nogp}(d)). 
+Simulations showed that the Trombone antenna beam was wide, but well behaved for the shorter length as shown in Figure \ref{Fig:trsym_nogp}(a). The longer length antenna beam had quite a bit of structure, as shown in Figure \ref{Fig:trsym_nogp}(b). In addition, the impedance of the antenna (S11) was not well matched to 50 $\Omega$ and varied significantly across the band for all lengths (Figures \ref{Fig:trsym_nogp}(c) and \ref{Fig:trsym_nogp}(d)). 
 
 \begin{figure}[htb]
 \begin{center}
@@ -163,7 +165,7 @@ Simulations showed that the trombone antenna beam was wide, but well behaved for
 \end{center}
 \end{figure}
 
-Beyond the trombone design, it was important to examine the effect of a non-infinite ground plane. Preliminary work with a square ground plane led to significant additional structure in the antenna beam. To counteract this structure, the ground plane was modified to the $''$spider-web$''$ design shown in Figure \ref{Fig:gp_sym}, with a center filled region and longer radials. 
+Beyond the Trombone dipole design, it was important to examine the effect of a non-infinite ground plane. Preliminary work with a square ground plane led to significant additional structure in the antenna beam. To counteract this structure, the ground plane was modified to the $''$spider-web$''$ design shown in Figure \ref{Fig:gp_sym}, with a center filled region and longer radials. 
 
 Adding this style of ground plane did not have a big impact on the simulation results (see Figure \ref{Fig:trsym_gp}) at most frequencies. There was additional structure in the beam at higher frequencies, but these frequencies are above the target frequency range of 40-130 MHz.  
 
@@ -186,20 +188,32 @@ Adding this style of ground plane did not have a big impact on the simulation re
 \end{minipage}
 \end{figure}
 
+
 \begin{figure}[htb]
-\begin{center}
+\centering
+\begin{minipage}[b]{0.47\textwidth}
+\centering
 \includegraphics[width=0.95\linewidth]{SCIHI_system/figures/HIbiscus_gain.png}
-\caption{Simulated HIbiscus antenna beam, shown for different frequencies at a single azimuth. The beam is symmetric in azimuth.}
+\caption{Simulated HIbiscus antenna beam, shown for different frequencies at a single azimuthal plane. }
 \label{Fig:HIsym_beam}
-\end{center}
+\end{minipage}%
+\begin{minipage}[b]{0.02\textwidth}
+\hspace{1cm}
+\end{minipage}%
+\begin{minipage}[b]{0.47\textwidth}
+\centering
+\includegraphics[width=0.95\linewidth]{SCIHI_system/figures/HIbiscus_gain.png}
+\caption{Simulated HIbiscus antenna beam, shown for different frequencies at a single azimuth. \textcolor{red}{Add here a simulation image for a different azimuth. Currently showing two images of the same azimuthal plane. }}
+\label{Fig:HIsym_beam_2}
+\end{minipage}
 \end{figure}
  
 \begin{figure}[htb]
 \centering
-\begin{minipage}[b]{0.50\textwidth}
+\begin{minipage}[b]{0.49\textwidth}
 \centering
 \includegraphics[width=0.95\linewidth]{SCIHI_system/figures/HIbiscus_S11_50_Cart.png}
-\caption{Reflectivity of the simulated HIbiscus antenna when connected to a $50 \Omega$ transmission line. The narrow dip at $\sim 50$ MHz is an antenna resonance. }
+\caption{Reflectivity of the simulated HIbiscus antenna when connected to a $50 \Omega$ transmission line. The narrow dip at $\sim 55$ MHz is an antenna resonance. }
 \label{Fig:HIsim_S11_dB}
 \end{minipage}%
 \begin{minipage}[b]{0.02\textwidth}
@@ -215,13 +229,13 @@ Adding this style of ground plane did not have a big impact on the simulation re
 
 \subsection{HIbiscus Antenna Design}
 
-Simulation and testing demonstrated that the trombone design had a wide beam that was not well behaved at higher frequencies. In addition, the impedance of the antenna was complex and strongly varying over our frequency band. 
+Simulation and testing demonstrated that the Trombone antenna had a wide beam that was not well behaved at higher frequencies. In addition, the impedance of the antenna was complex and strongly varying over our frequency band. 
 
-Because of these problems, we decided to shift our antenna design in a new direction based upon our expectations from the literature (\textcolor{red}{Need to add specific references for different antenna types}). We tested several antenna designs in simulation, including the four-square design used in the EDGES experiment \cite{rogers_2012}. Simulations were run by Jose-Miguel Juaregui-Garcia using FEKO, a finite element computational electromagnetics software package.\footnote{https://www.feko.info/} 
+Because of these problems, we decided to shift our antenna design in a new direction. We started with the modified four-square design idea used by the EDGES experiment \cite{bowman_2008}\cite{rogers_2008}. Simulations were run by Jose-Miguel Juaregui-Garcia using FEKO, a finite element computational electromagnetics software package.\footnote{https://www.feko.info/} 
 
 Based on the FEKO simulation results we settled on a design that used the EDGES design as a starting point, but changed the exact shapes of the four squares. We took each square and turned it into an incliclined petal composed of three trapezoidal shapes. Each shape was connected to its neighbors on the petal, but had a different angle with respect to the ground. Additional panels were added to each side of the petal to create a strip line with a fixed gap between the petals. The entire antenna was then placed above a flat ground plane. We call this design a HIbiscus antenna, as shown in Figures \ref{Fig:HI_sim_top} and \ref{Fig:HI_sim_side}. 
 
-This HIbiscus design has an azimuthally symmetric beam with a $\sim 55^\circ$ full width half-maximum (FWHM) and no sidelobes over a wide frequency band, as shown in Figure \ref{Fig:HIsym_beam}. The impedance of the HIbiscus antenna is complex, but is centered around 50 $\Omega$ such that it has less than $-10 dB$ of reflectivity over 60 MHz. The simulated complex simulated impedance is shown in Figure \ref{Fig:HIsim_S11_Smith}, and the simulated antenna reflectivity is shown in Figure \ref{Fig:HIsim_S11_dB}. 
+This HIbiscus design has an azimuthally symmetric beam with a $\sim 55^\circ$ full width half-maximum (FWHM) and no sidelobes over a wide frequency band, as shown in Figure \ref{Fig:HIsym_beam}. The impedance of the HIbiscus antenna is complex, but is centered around 50 $\Omega$ such that it has less than $-10 dB$ of reflectivity over 60 MHz. The simulated complex impedance is shown in Figure \ref{Fig:HIsim_S11_Smith}, and the simulated antenna reflectivity is shown in Figure \ref{Fig:HIsim_S11_dB}. 
 
 \begin{figure}[htb]
 \centering
@@ -241,13 +255,76 @@ This HIbiscus design has an azimuthally symmetric beam with a $\sim 55^\circ$ fu
 \label{Fig:hibiscus_scale_jose}
 \end{minipage}
 \end{figure}
+ 
+\begin{figure}[htb]
+\centering
+\begin{minipage}[b]{0.47\textwidth}
+\centering
+\includegraphics[width=0.95\linewidth]{SCIHI_system/figures/HIbiscus_Gain_model_H_polar.png}
+\caption{Scale model antenna gain measured in the PREAL chamber. Data is taken along the plane of the dipole (active) petals of the antenna, the E-plane. }
+\label{Fig:eplane_gain_sm}
+\end{minipage}%
+\begin{minipage}[b]{0.02\textwidth}
+\hspace{1cm}
+\end{minipage}%
+\begin{minipage}[b]{0.47\textwidth}
+\centering
+\includegraphics[width=0.95\linewidth]{SCIHI_system/figures/HIbiscus_Gain_model_V_polar.png}
+\caption{Scale model antenna gain measured in the PREAL chamber. Data is taken perpendicular to the plane of the active petals of the antenna, the H-plane. }
+\label{Fig:hplane_gain_sm}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[htb]
+\centering
+\begin{minipage}[b]{0.50\textwidth}
+\centering
+\includegraphics[width=0.95\linewidth]{SCIHI_system/figures/HIbiscus_S11_model_dB_PREAL.png}
+\caption{Scale model antenna S11 reflectivity measured in the PREAL chamber and in the lab for one of the models. }
+\label{Fig:HIS11_model_dB}
+\end{minipage}%
+\begin{minipage}[b]{0.02\textwidth}
+\hspace{1cm}
+\end{minipage}%
+\begin{minipage}[b]{0.46\textwidth}
+\centering
+\includegraphics[width=0.95\linewidth]{SCIHI_system/figures/HIbiscus_S11_model_Smith_PREAL.png}
+\caption{Scale model antenna S11 Smith chart as measured in the PREAL chamber and in the lab for one of the models. Frequency Range for the data is 300-700 MHz.}
+\label{Fig:HIS11_model_Smith}
+\end{minipage}
+\end{figure}
 
 \subsubsection{Scale Model Testing}
 In order to test our simulation to see if it matched the real antenna performance, Jose-Miguel built a set of scaled HIbiscus designs tuned for higher frequencies around 400-500 MHz. This allowed us to use an antenna range to measure the antenna beam shape and S-parameters. 
 
-Jose-Miguel and I used the Project REAL\footnote{http://www.preal.ece.cmu.edu/} (Remote Educational Antenna Laboratory) facility at Carnegie Mellon University to measure the antenna response of different scaled HIbiscus models, as is shown in Figures \ref{Fig:hibiscus_scale_tabitha} and \ref{Fig:hibiscus_scale_jose}. 
+Jose-Miguel and I used the PREAL\footnote{http://www.preal.ece.cmu.edu/} (Project Remote Educational Antenna Laboratory) facility at Carnegie Mellon University to measure the antenna response of different scaled HIbiscus models. Figures \ref{Fig:hibiscus_scale_tabitha} and \ref{Fig:hibiscus_scale_jose} show one of the scale models being measured in the chamber.
 
-This scale model testing indicated that the shape parameters that were most significant in affecting antenna performance were the strip line gap width and the height of the antenna with respect to the ground plane. By incrementally adjusting these parameters on the scale models, we were able to tune the antenna scale model to optimize these critical parameters in a real design. 
+Measuring scale models gave us the antenna gain (S21) for two azimuthal planes of the antenna. The E-plane is along the active petals of the antenna, the $''$dipole$''$ that is seeing the sky. The H-plane is perpendicular to the E-plane and lies along the passive petals of the antenna. Figures \ref{Fig:eplane_gain_sm} and \ref{Fig:hplane_gain_sm} show the measured antenna gain for the scale model shown in Figure \ref{Fig:hibiscus_scale_tabitha}. At the same time, the reflectivity (S11) was also measured for the antenna, as shown in Figures \ref{Fig:HIS11_model_dB} and \ref{Fig:HIS11_model_Smith}
+
+\begin{figure}[htb]
+\centering
+\begin{minipage}[b]{0.50\textwidth}
+\centering
+\includegraphics[width=0.95\linewidth]{SCIHI_system/figures/HIbiscus_S11_model_spacing_dB.png}
+\caption{Scale model antenna S11 reflectivity measured in the lab for different strip line gap widths. }
+\label{Fig:HIS11_model_inc_dB}
+\end{minipage}%
+\begin{minipage}[b]{0.02\textwidth}
+\hspace{1cm}
+\end{minipage}%
+\begin{minipage}[b]{0.46\textwidth}
+\centering
+\includegraphics[width=0.95\linewidth]{SCIHI_system/figures/HIbiscus_S11_model_spacing_Smith.png}
+\caption{Scale model antenna S11 Smith chart as measured in the lab for different strip line gap widths. Frequency range for the data is 300-700 MHz. }
+\label{Fig:HIS11_model_inc_Smith}
+\end{minipage}
+\end{figure}
+
+Scale model testing indicated that the shape parameters that were most significant in affecting antenna performance were the strip line gap width and the height of the antenna with respect to the ground plane. We used scale model data to optimize the antenna by incrementally adjusting the shape parameters. 
+
+Figures \ref{Fig:HIS11_model_inc_dB} and \ref{Fig:HIS11_model_inc_Smith} show one example of measurements made for incremental adjustments of the strip line gap width. These measurements were made in the lab, and the small period oscillations in the S11 data is from reflections off the walls of the lab. This can be seen in Figures \ref{Fig:HIS11_model_dB} and \ref{Fig:HIS11_model_Smith}, where the oscillation is damped by the PREAL chamber compared to the lab due to anechoic foam on the chamber walls. 
+
+Beyond the small scale oscillations, the large scale structure of the S11 measurement can be seen to shift as we change the strip line gap width. In the Smith chart (Figure \ref{Fig:HIS11_model_inc_Smith} we see that changing the gap width moves the S11 data closer to the real axis and toward larger magnitude around 1.0 or $50 \Omega$. 
 
 Using the scale model data, Jose-Miguel was also able to edit the antenna simulation to better match the actual antenna response, providing us with an antenna simulation dataset that was closer to reality. 
 
@@ -265,7 +342,7 @@ Using the scale model data, Jose-Miguel was also able to edit the antenna simula
 \begin{minipage}[b]{0.51\textwidth}
 \centering
 \includegraphics[width=0.95\linewidth]{SCIHI_system/figures/HIbiscus_gbt.jpg}
-\caption{HIbiscus antenna scaled for 70 MHz setup for s-parameter testing on site at Green Bank.}
+\caption{HIbiscus antenna scaled for 70 MHz setup for S-parameter testing on site at Green Bank.}
 \label{Fig:hibiscus_gbt}
 \end{minipage}
 \end{figure}
@@ -319,11 +396,53 @@ In order to keep the petal separation even and correct, lucite spacers were plac
 
 Beyond the antenna structure, a ground plane was also required to avoid variation in the antenna pattern and impedance due to weather conditions. Like with the Trombone, we used a ground plane made out of chicken wire. In this case, our simulations showed us that a $\sim 100 m^2$ square ground plane was sufficient for our application. The entire system (antenna plus ground plane) was anchored to the ground to minimize the wind impact on the system. Each of the four support legs had an anchoring rope (see Figure \ref{Fig:hibiscus_gbt}), and the chicken wire was also anchored with many stakes. 
 
+\begin{figure}[htb]
+\centering
+\begin{minipage}[b]{0.51\textwidth}
+\centering
+\includegraphics[width=0.95\linewidth]{SCIHI_system/figures/HIbiscus_S11_dB_70MHz.png}
+\caption{Measured HIbiscus antenna S11 reflectivity for antenna on-site at Isla Guadalupe. }
+\label{Fig:HIS11_dB_70}
+\end{minipage}%
+\begin{minipage}[b]{0.02\textwidth}
+\hspace{1cm}
+\end{minipage}%
+\begin{minipage}[b]{0.46\textwidth}
+\centering
+\includegraphics[width=0.95\linewidth]{SCIHI_system/figures/HIbiscus_S11_meas_smith.png}
+\caption{Measured HIbiscus antenna S11 Smith chart for 30-200 MHz measured on-site at Isla Guadalupe.}
+\label{Fig:HIS11_Smith_70}
+\end{minipage}
+\end{figure}
+
 \subsubsection{S-parameters and Impedance}\label{Sec:HIbiscus_Imp}
 
-With the antenna constructed, we could test that it matched our scale model measurements in terms of its S-parameters. To do this, we set up the antenna outdoors and made measurements with a portable Vector Network Analyzer (VNA). Measurements had to be made outdoors because the wavelengths corresponding to the SCI-HI frequencies ($40-130$ MHz) are $\sim$1-10 meters. This large wavelength scale means that reflections from the boundaries of a room can change antenna s-parameters, so accuracy in measurement requires the outdoor setting. Figures \ref{Fig:hibiscus_first} and \ref{Fig:hibiscus_gbt} show examples of how we made this measurement at CMU and Green Bank.
+With the antenna constructed, we could test that it matched our scale model measurements in terms of its S-parameters. To do this, I set up the antenna outdoors and made measurements with a portable Vector Network Analyzer (VNA). Measurements had to be made outdoors because the wavelengths corresponding to the SCI-HI frequencies ($40-130$ MHz) are $\sim$1-10 meters. This large wavelength scale means that reflections from the boundaries of a room can change antenna s-parameters, so accuracy in measurement requires the outdoor setting. Figures \ref{Fig:hibiscus_first} and \ref{Fig:hibiscus_gbt} show examples of how I made this measurement at CMU and Green Bank.
 
-\textcolor{red}{Here I'll add a discussion of HIbiscus S11 data using VNA and explanation, along with figures showing the structures.}
+The resulting S11 measurement is shown in Figures \ref{Fig:HIS11_dB_70} and \ref{Fig:HIS11_Smith_70}. The plots are based on data collected on-site at Isla Guadalupe with the antenna ground plane in place. We can compare this measurement to the simulated S11 reflectivity shown in Figure \ref{Fig:HIsim_S11_dB}, with the caveat that the simulated antenna data shown is for a $\sim 100$ MHz center frequency HIbiscus antenna. The simulation successfully identified the antenna resonance between 50-60 MHz and the overall shape of the antenna reflectivity matches the simulation. However, the measured S11 has a much lower minimum reflectivity than the simulation predicted. 
+
+\begin{figure}[htb]
+\centering
+\begin{minipage}[b]{0.50\textwidth}
+\centering
+\includegraphics[width=0.95\linewidth]{SCIHI_system/figures/HIbiscus_S11_dB_both.png}
+\caption{Measured HIbiscus S11 reflectivity for new antennas scaled for 70 MHz and 100 MHz. Measurements were made without the ground plane in place. }
+\label{Fig:HIS11_dB}
+\end{minipage}%
+\begin{minipage}[b]{0.02\textwidth}
+\hspace{1cm}
+\end{minipage}%
+\begin{minipage}[b]{0.46\textwidth}
+\centering
+\includegraphics[width=0.95\linewidth]{SCIHI_system/figures/HIbiscus_S11_Smith_both.png}
+\caption{Measured Smith chart for the HIbiscus antennas scaled for 70 MHz and 100 MHz without the ground plane in place.}
+\label{Fig:HI_S11_Smith}
+\end{minipage}
+\end{figure}
+
+When the antenna was upgraded, as described in Section \ref{Sec:HIant_upgrade}, we again measured the S11 data for the antennas scaled to 70 MHz and 100 MHz to confirm that the antennas were behaving as expected (see Figure \ref{Fig:HIS11_dB}). Measurement without the ground plane in the system meant that the antenna resonance wasn't present, but the shape of the reflectivity matches the earlier version results. As expected, the 100 MHz antenna reflectivity looks like a scaled version of the 70 MHz antenna reflectivity. 
+
+In addition to the reflectivity, the Smith chart for the S11 data can also be plotted. Shown in Figure \ref{Fig:HI_S11_Smith}, this data looks similar to the simulated Smith chart of Figure \ref{Fig:HIsim_S11_Smith}, with the loop around 50 $\Omega$ at the frequencies where the reflectivity is at a minimum. 
 
 \subsubsection{Travelling with the Antenna}
 In order to use the HIbiscus antenna on-site at remote locations, it needed to be transportable to those locations and easily assembled upon arrival. The physical construction of the antenna was designed to match this requirement in a number of ways. 
@@ -361,8 +480,8 @@ Third, the entire system was arranged for travel in three suitcases (plus an ext
 \end{center}
 \end{figure}
 
-\subsubsection{Antenna Upgrades}
-Deployment of the SCI-HI system in June 2013 demonstrated that the HIbiscus antenna could use some improvements prior to future deployements. The first and most significant change was the addition of a second antenna scaled to have a center frequency of 100 MHz. By having both scales (70 MHz and 100 MHz), data can now be collected over a wider range of frequencies. In addition, the overlap region where both antennas work ($\sim 85-95$ MHz) provides a cross check for the signal. In other words, this cross check will help us to make sure that any spectral structure measured is not coming from the antenna. 
+\subsubsection{Antenna Upgrades} \label{Sec:HIant_upgrade}
+Deployment of the SCI-HI system in June 2013 demonstrated that the HIbiscus antenna could use some improvements prior to future deployements. The first and most significant change was the addition of a second antenna scaled to have a center frequency of 100 MHz. By having both scales (70 MHz and 100 MHz), data can now be collected over a wider range of frequencies. In addition, the overlap region where both antennas work well ($\sim 85-95$ MHz) provides a cross check for the signal. In other words, this cross check will help us to make sure that any spectral structure measured is not coming from the antenna. 
 
 \begin{figure}[htb]
 \centering
@@ -386,6 +505,14 @@ Deployment of the SCI-HI system in June 2013 demonstrated that the HIbiscus ante
 We built a new 70 MHz antenna (see Figure \ref{Fig:hibiscus_70}) as well as the 100 MHz antenna (see Figure \ref{Fig:hibiscus_100}) using the same shape as the original antenna. However, our deployment helped us to identify some changes to make to the physical construction of the antenna in order to make it easier to setup. We replaced the brass flanges that had to be screwed together to assemble each petal with hinged joints (made out of piano hinge) that do not have to be disassembled and reassembled (see Figure \ref{Fig:hibiscus_petal}). Figure \ref{Fig:hibiscus_fold} shows two of these petals when they are folded and stacked prior to being placed inside a bag for travel. 
 
 In addition to the hinged joints, we also added extention pieces to the support PVC to allow us to use the same supports for both scaled versions of the antenna. This allowed us to add the second antenna with only one additional bag required for transport of both antennas compared to transport of just the 70 MHz antenna.  
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=0.9\linewidth]{SCIHI_system/figures/rf_electronics_block_diagram.png}
+\caption{Block Diagram of the RF Electronics for the SCI-HI instrument.}
+\label{Fig:RF_block_diagram}
+\end{center}
+\end{figure}
 
 \begin{figure}[htb]
 \begin{center}
@@ -422,11 +549,10 @@ In addition to the hinged joints, we also added extention pieces to the support 
 
 Once the signal from the sky has been collected by the antenna, it has to be transmitted to the data proccessing system in a form that the system is capable of processing. Transmission happens along a chain of radio frequency (RF) electronics. 
 
-\textcolor{red}{Add a second level RF chain flow chart here.}
 \subsection{RF Chain Overview}
 For the SCI-HI system, the RF chain components are a switch, amplifiers, high and low pass filters, attenuators and a power splitter (along with the attendant cabling). Each of these components serves a specific purpose in the system. 
 
-We can divide the RF chain into two sections based upon physical location. The first section is the antenna electronics, which sit as close to the antenna terminal as physically possible. The second section is the Faraday cage electronics, which sit next to the data processing system within a Faraday Cage. Between the two sections is a long signal cable ($\sim50-100 m$), allowing the antenna and data processing system to be placed far enough apart that the transmission of self-generated noise from the data processor is minimized (see Figures \ref{Fig:sys_gbt} and \ref{Fig:sys_guad}).
+We can divide the RF chain into two sections based upon physical location, see Figure \ref{Fig:RF_block_diagram}. The first section is the antenna electronics, which sit as close to the antenna terminal as physically possible. The second section is the Faraday cage electronics, which sit next to the data processing system within a Faraday Cage. Between the two sections is a long signal cable ($\sim50-100 m$), allowing the antenna and data processing system to be placed far enough apart that the transmission of self-generated noise from the data processor is minimized (see Figures \ref{Fig:sys_gbt} and \ref{Fig:sys_guad}).
 
 \begin{figure}[htb]
 \centering
@@ -447,19 +573,25 @@ We can divide the RF chain into two sections based upon physical location. The f
 \end{minipage}
 \end{figure}
 
-\textcolor{red}{Add a third level RF chain flow chart of just the antenna electronics here.}
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=0.9\linewidth]{SCIHI_system/figures/antenna_rf_block_diagram.png}
+\caption{Block Diagram of the RF Electronics located at the base of the antenna.}
+\label{Fig:antenna_RF_block_diagram}
+\end{center}
+\end{figure}
 
 \subsection{Antenna Electronics}
-The antenna electronics are a calibration switch with known signal sources on some of the terminalsand two stages of amplification. In some versions of the electronics system, at least one of the RF filters was placed at the antenna end of the system but we'll discuss that component in the Faraday Cage electronics section. 
+The antenna electronics are a calibration switch with known signal sources on some of the terminals and two stages of amplification. In some versions of the electronics system, at least one of the RF filters was placed at the antenna end of the system, as shown in Figure \ref{Fig:antenna_RF_block_diagram}, but we'll discuss that component in the Faraday Cage electronics section. 
 
-\subsubsection{Calibration Switch}
+\subsubsection{Calibration Switch} \label{Sec:switch}
 Because the SCI-HI system has a single antenna with a relatively large beam ($\sim 55^\circ$), calibrating the data from the antenna can be difficult. One way to do this calibration is to use noise source of known temperature whose signal is sent through the same RF chain as the antenna data (see Chapter \ref{Ch:Data}). 
 
 In order to facilitate this calibration, a switch was placed at the terminal of the antenna. By making the antenna one of the inputs of the switch and matching one or more known temperature sources to the other switch inputs, data can be collected for all inputs with the same RF chain. 
 
-We used a 6 input electromechanical switch (\textcolor{red}{Add part numbers here}) for the system. One input to the switch was connected directly to the antenna (see Figures \ref{Fig:trombone_switch} and \ref{Fig:rf_ant_mount}). The other inputs were a short terminator, a $50 \Omega$ load terminatore, a $100 \Omega$ load terminator, and an artificial noise source of known power. One input was left open. 
+We used a 6 input electromechanical switch (Narda SEM066 SP6T\footnote{http://www.nardamicrowave.com/east/index.php}) for the system. One input to the switch was connected directly to the antenna (see Figures \ref{Fig:trombone_switch} and \ref{Fig:rf_ant_mount}). The other inputs were a short terminator, a $50 \Omega$ load terminator, a $100 \Omega$ load terminator, and an artificial noise source of known power. One input was left open. 
 
-Switching between inputs is controlled through a cable from the Faraday Cage that carries both the power for the antenna electronics and the control signal. In addtion, the artificial noise source is turned off when that input is not enabled (to avoid noise bleeding into the antenna). We also built a manual switch control box that can be hooked up to the switch for testing. 
+Switching between inputs is controlled through a cable from the Faraday Cage that carries both the power for the antenna electronics and the control signal. In addition, the artificial noise source is turned off when that input is not enabled (to avoid noise bleeding into the antenna). We also built a manual switch control box that can be hooked up to the switch for testing and runs off a small battery pack. 
 
 \begin{figure}[htb]
 \centering
@@ -480,26 +612,100 @@ Switching between inputs is controlled through a cable from the Faraday Cage tha
 \end{minipage}
 \end{figure}
 
-\subsubsection{Amplifiers}
-Immediatelly following the switch in the RF chain is the first stage amplifier. 
+\subsubsection{Amplifiers} \label{Sec:Amp}
+Immediatelly following the switch in the RF chain is the first stage low noise amplifier (LNA). This amplifier should have a low noise figure, as amplifier noise will be added to the incoming RF signal before amplification. In addition, the amplifier should have an impedance that is well matched to the antenna. This matching is necessary for signals from the antenna to be transmitted by the amplifier instead of being reflected back out the antenna. 
 
-\textcolor{red}{Add general discussion of S-parameters and Transmission Efficiency followed by a section on the different types of amplifiers that we tried and why we selected the one that we did. This should include a figure showing the amplifier S11 signals.}
 
-\paragraph{S-parameters}
+\paragraph{Impedance} 
+Impedance matching is quantified by the antenna S11 parameter, which is measured in comparison to a set impedance ($Z_{ref}= 50 \Omega$). Impedance (Z) is the complex resistance of a circuit element, and is can be calculated relative to S11.  \cite{rogers_2012} 
 
-\paragraph{Transmission Efficiency}
+\begin{equation}\label{Eq:Imp_calc}
+Z(\nu) = R(\nu)+ i X(\nu) 
+\end{equation}
+\begin{equation}
+R(\nu) = \frac{50 (1-|S11(\nu)|^2)}{(1-\Re(S11(\nu)))^2 + \Im(S11(\nu))} 
+\end{equation}
+\begin{equation}
+X(\nu) = \frac{100 \Im(S11(\nu))}{(1-\Re(S11(\nu)))^2 + \Im(S11(\nu))} 
+\end{equation}
+
+The antenna impedance as seen by the amplifier will be modified by the length of cable between the antenna and amplifier. This modification will not change the magnitude of Z, but will affect its complex phase as $Z_{mod} = |Z_{orig}| e^{2 \pi i \tau \nu }$. The magnitude of $\tau$ is set by the length of the cable and its propogation constant ($C_{cable}$), $\tau = l_{cable} C_{cable}$. The propogation constant $C_{cable}$ is based upon the cable's index of refraction n and has a value of $C_{cable} \approx 0.125$ ns/inch for coaxial cable. 
+
+\paragraph{Transmission Efficiency ($\eta$)}
+Impedance match can be quantified as a transmission efficiency ($\eta$), which sets the percentage of signal from the antenna that passes through the amplifier. Transmission efficiency is set by $Z_{ant}= R_{ant}+i X_{ant}$ and $Z_{amp} = R_{amp} + i X_{amp}$ through Equation \ref{Eq:eta}. 
+
+\begin{equation} \label{Eq:eta}
+\eta (\nu) = \frac{\sqrt{4 |R_{ant}*R_{amp}|}}{(R_{ant}+R_{amp})^2+(X_{ant}+X_{amp})^2}
+\end{equation}
+
+\begin{figure}[htb]
+\centering
+\begin{minipage}[b]{0.47\textwidth}
+\centering
+\includegraphics[width=0.95\linewidth]{SCIHI_system/figures/amp_S11_dB.png}
+\caption{Amplifier Reflectivity (S11) in dB for the two amplifiers used in the SCI-HI system.}
+\label{Fig:amp_comp_dB}
+\end{minipage}%
+\begin{minipage}[b]{0.02\textwidth}
+\hspace{1cm}
+\end{minipage}%
+\begin{minipage}[b]{0.47\textwidth}
+\centering
+\includegraphics[width=0.95\linewidth]{SCIHI_system/figures/amp_S11_Smith.png}
+\caption{Smith Chart of the impedance of the two amplifiers used in the SCI-HI system. Data is shown for 20-250 MHz. }
+\label{Fig:amp_comp_Smith}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=0.9\linewidth]{SCIHI_system/figures/amp_Gain_dB.png}
+\caption{Amplifier Gain (S21) in dB for the two amplifiers used in the SCI-HI system. }
+\label{Fig:amp_gain}
+\end{center}
+\end{figure}
 
 \paragraph{Amplifier Selection}
+In order to get an efficiency ($\eta \approx 1$), the amplifier and antenna impedance should be complex conjugates. I tested a number of low noise amplifiers to find one whose impedance was matched to our antenna over the entire frequency band. 
+
+I started with a Minicircuits\footnote{http://www.minicircuits.com} packaged amplifier ($ZX60 - 33 LN - S+$) with a low noise figure ($\sim 1 dB$) and wide bandwidth. Unfortunately this amplifier's impedance was a poor match for the antenna, but we were able to make use of the amplifier later in the RF chain (see Section \ref{Sec:fcage_elec}). 
+
+Next I tried to use the Avago Technologies\footnote{http://www.avagotech.com/} $MGA-633P8$ amplifier chip, which we had previously used for higher frequency applications. The benefit of using a chip versus a pre-packaged amplifier was that I could modify the circuit around the chip to tune the impedance to match the antenn. However, I was unable to tune the chip circuit to simultaneously get the desired impedance and maintain the amplifier gain. 
+
+Therefore, I went hunting again for a packaged amplifier that fit my specific impedance needs. Richardson RFPD\footnote{http://www.richardsonrfpd.com/} has the $WEA 101$ packaged low noise amplifier, whose impedance was a better match to the antenna than the Minicircuits amplifier. Figures \ref{Fig:amp_gain}, \ref{Fig:amp_comp_dB}, and \ref{Fig:amp_comp_Smith} show the S11 (reflectivity) and S21 (gain) of the amplifiers for the SCI-HI frequency band.
+
+Unlike the ZX60 amplifier, the WEA101 amplifier has an almost entirely real impedance which is nearly constant over our frequency band and a very low reflectivity. This makes it excellent as a first stage amplifier for the system as it adds very little structure into the signal. 
 
 \paragraph{Multi-stage Amplification}
-Because the $\sim50-100 m$ signal cable will attenuate signals travelling down its length, a second stage amplifier was added to the system to increase the gain of the signal. Both amplifiers use DC power supplied by the same power cable as the switch. Because different levels of DC power were needed for the varying electronic components, voltage regulation circuits were also included in the antenna electronics housing. 
+Because the $\sim 50-100 m$ signal cable will attenuate signals travelling down its length, a second stage amplifier was added to the system to increase the gain of the signal. Both amplifiers use DC power supplied by the same power cable as the switch. As different levels of DC power were needed for the varying electronic components, voltage regulation circuits were also included in the antenna electronics housing. 
 
-To maintain transmission efficiency, the first and second stage amplifiers' impedence had to match well. This was accomplished by using the same amplifier type for both stages. Initially the second stage amplifier was placed at the base of antenna (see Figure \ref{Fig:trombone_base}). However, this placement resulted in reflections in the signal whose period corresponded to the cable length between the two amplifiers. \textcolor{red}{May try to make a plot that shows this.} Therefore, the second stage amplifier was moved to a position immediately following the first stage amplifier (see Figure \ref{Fig:rf_ant_box}), which removed the effect. The total gain of the amplifiers was $\sim$50 dB over the entire frequency band. 
+To maintain transmission efficiency, the first and second stage amplifiers' impedence had to match well. This was accomplished by using the same amplifier type for both stages. Initially the second stage amplifier was placed at the base of antenna (see Figure \ref{Fig:trombone_base}). However, this placement resulted in reflections in the signal whose period corresponded to the cable length between the two amplifiers. \textcolor{red}{May try to make a plot that shows this.} Therefore, the second stage amplifier was moved to a position immediately following the first stage amplifier (see Figure \ref{Fig:rf_ant_box}), which removed the effect. The total gain of the amplifiers was $\sim 50$ dB over the entire frequency band. 
 
-\textcolor{red}{Add a third level RF chain flow chart of just the Faraday cage electronics here.}
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=0.9\linewidth]{SCIHI_system/figures/antenna_rf_power_block_diagram.png}
+\caption{Wiring block diagram for the antenna RF electronics.}
+\label{Fig:ant_RF_pow_block_diagram}
+\end{center}
+\end{figure}
+
+\subsubsection{Antenna Power and Switch Control} \label{Sec:ant_pow}
+Power and switch control signals were sent along a cable that ran parallel to the signal cable from the Faraday Cage to the base of the antenna. This cable had Amphenol\footnote{http://www.amphenol.com/} 23 pin circular mil spec connectors on each end, of which 7 pins were used. One pin was ground, one was the power, and the other five were control signals for each of the switch inputs from Section \ref{Sec:switch}. 
+
+Power to each of the antenna RF components was supplied following the diagram in Figure \ref{Fig:ant_RF_pow_block_diagram}. The two amplifiers used 5 V regulated power, while the noise source had 15 V regulated power which was only supplied when the noise source was being measured through the switch. Control of the noise source power input was handled by a Teledyne\footnote{http://www.teledynerelays.com/} optically isolated relay module. 
+
+In earlier versions of the SCI-HI system, the power from the Faraday Cage was $V< 15$V, so a 9V battery was added to the noise source circuit. This battery was only in use when the noise source was switched on. For the current version of the system, the switch needs $V \geq 18$V. This negates the need for a supplemental battery, as the system must continually supply $V \geq 15$V.  
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=0.9\linewidth]{SCIHI_system/figures/faraday_cage_rf_block_diagram.png}
+\caption{Block Diagram of the RF Electronics located inside the Faraday Cage.}
+\label{Fig:fcage_RF_block_diagram}
+\end{center}
+\end{figure}
 
 \subsection{Faraday Cage Electronics}
-Once the signal has travelled down a long cable from the antenna, there are a few electronic stages that it must pass through prior to entering the data processing system. A third stage amplifier is needed to compensate for the attenuation caused by the long cable, filters are needed to keep signals from outside the frequency band of interest from overloading the data processing system, and a signals splitter used to achieve the necessary data sampling rate. All of these electronics, as well as the data processing system, were placed inside a Faraday cage designed specifically to accomodate them. 
+Once the signal has travelled down a long cable from the antenna, there are a few electronic stages that it must pass through prior to entering the data processing system. A third stage amplifier is needed to compensate for the attenuation caused by the long cable, filters are needed to keep signals from outside the frequency band of interest from overloading the data processing system, and a signals splitter used to achieve the necessary data sampling rate (see Figure \ref{Fig:fcage_RF_block_diagram}). All of these electronics, as well as the data processing system, were placed inside a Faraday cage designed specifically to accomodate them. 
 
 \begin{figure}[htb]
 \centering
@@ -521,7 +727,7 @@ Once the signal has travelled down a long cable from the antenna, there are a fe
 \end{figure}
 
 \subsubsection{Faraday Cage Design}
-The design of the Faraday Cage for the SCI-HI system was inspired by the dual requirements of space and portability. Because the wavelengths being studied with the system are $\geq 2$ meters, metal mesh could be used in place of solid metal for the sides of the cage. This mesh is considerably lighter than solid metal, but does not hold its structure. So I came up with a design that uses a metal mesh bag with a PVC pipe framework placed inside to hold its shape (see Figure \ref{Fig:fcage_old}). The mesh bag folds up like a paper bag and the PVC framework can be disassembled, allowing it to be packed up into a suitcase. 
+The design of the Faraday Cage for the SCI-HI system was inspired by the dual requirements of space and portability. Because the wavelengths being studied with the system are $\lambda \geq 2$ meters, metal mesh could be used in place of solid metal for the sides of the cage. This mesh is considerably lighter than solid metal, but does not hold its structure. So I came up with a design that uses a metal mesh bag with a PVC pipe framework placed inside to hold its shape (see Figure \ref{Fig:fcage_old}). The mesh bag folds up like a paper bag and the PVC framework can be disassembled, allowing it to be packed up into a suitcase. 
 
 Access to the Faraday cage was supplied through the front panel, which attached to the rest of the bag through a set of metal snaps spaced less than 20 cm apart. This front panel included access ports for the signal cable, as well as the power and switch control cable. Multiple versions of the Faraday cage were constructed, but all of them used the same mesh bag system (see Figures \ref{Fig:fcage_int} and \ref{Fig:fcage_new}). 
 
@@ -549,24 +755,46 @@ Because the power and switch control cable carried DC power out to the antenna e
 
 Once the battery was placed outside of the Faraday Cage, filters also had to be used between the battery and the electronics inside the cage. The same filters used for the DC power and switch control cable were also used to make sure that RF signals didn't use the power supply cable from the battery to transmit outside the Faraday Cage.  
 
-
 \subsubsection{System Power} \label{Sec:sys_power}
 The entire system was powered using deep-cycle automotive batteries. These batteries supplied 12 V unregulated power, which was used by both the data processing system and the RF electronics. Initial designs of the Faraday cage had the DC battery stored inside the Faraday Cage, as shown in Figure \ref{Fig:fcage_old}. Later, the battery was moved outside the cage for easier access (see Figure \ref{Fig:fcage_int}). A fully charged battery could power the entire system for $\sim$12-15 hours. 
 
-Charging batteries was a big part of the support process for the SCI-HI system. Keeping the system running continually required at least 3 batteries with regular access to a battery charger and transport between the SCI-HI site and the battery charging location 2-3 times a day. 
+Charging batteries was a big part of the support process for the SCI-HI system. Keeping the system running continually required at least 3 batteries with regular access to a battery charger and transport between the SCI-HI site and the battery charging location 2-3 times a day. In addition, recent upgrades to the SCI-HI system include components that need DC voltages larger than 12V. Therefore, alternative power sources have been investigated.
 
-An alternative to running off batteries is to use a small portable gasoline or diesel generator. Using this generator would cut down on the number of site visits required, as the generator would run constantly with only occasional stops to top off the fuel. However, using a generator also provides a new source of RF noise (particularly a gasoline generator with spark plugs). Placing the generator inside its own Faraday Cage should attenuate this noise, but it is a factor that must be accounted for in selecting a power source. 
+One such alternative is to use a small portable gasoline or diesel generator. Using this generator would cut down on the number of site visits required, as the generator would run constantly with only occasional stops to top off the fuel. The generator would also allow us to supply larger DC voltages as needed. 
 
-\subsubsection{RF Filters and Amplification}
-Once the signal from the antenna entered the Faraday Cage, the first part of the RF chain was a set of filters. These filters were a low pass filter at 200 MHz (\textcolor{red}{add part number here}) and a high pass filter at 30 MHz (\textcolor{red}{add part number here}). The low pass filter was placed to prevent signals from higher frequencies ($\geq 200$ MHz) from aliasing into the frequency range where we were observing. The high pass filter was placed to prevent signals from the AM band and below overloading the sampling system, which could affect the overall system gain or create spurious signals in the observing band. 
+However, using a generator leads to a new source of RF noise (particularly a gasoline generator with spark plugs). Placing the generator inside its own Faraday Cage should attenuate this noise, but it is a factor that must be accounted for in selecting a power source. 
 
-After the signal has passed through the long cable and the filters, it is necessary to add another level of amplification to the system. This final stage of amplification is to bring the signal levels to a point where they can be clearly distinguished from system noise by the data processing system and adds $\sim25$ dB of gain. The amplifier used here is a \textcolor{red}{Add part number here} minicircuits amplifier, which is supplied with regulated power from the DC source. 
+\subsubsection{RF Filters and Amplification} \label{Sec:fcage_elec}
+Once the signal from the antenna entered the Faraday Cage, the first part of the RF chain was a set of filters. These filters were a low pass filter at 200 MHz (Minicircuits $SLP-200+$) and a high pass filter at 30 MHz (Minicircuits $SHP-25+$). The low pass filter was placed to prevent signals from higher frequencies ($\geq 200$ MHz) from aliasing into the frequency range where we were observing. The high pass filter was placed to prevent signals from the AM band and below overloading the sampling system, which could affect the overall system gain or create spurious signals in the observing band. 
+
+After the signal has passed through the long cable and the filters, it is necessary to add another level of amplification to the system. This final stage of amplification is to bring the signal levels to a point where they can be clearly distinguished from system noise by the data processing system and adds $\sim25$ dB of gain. The amplifier used here is a Minicircuits $ZX60-33LN-S+$ amplifier, which is supplied with 5V regulated power from the DC source. 
 
 \subsubsection{RF Signal Splitting} \label{Sec:hard_split}
 The analog to digital conversion (ADC) card used in the data processing system is limited to a 250 MSamples-per-sec sampling rate, but the bandwidth of the system is over 125 MHz. In order to expand the operating range of the ADC, a hardware $''$trick$''$ is used.
 
-The signal from the antenna is split into two identical signals with a \textcolor{red}{Add part number here} splitter. Both signals are then sent to the ADC using two of the input ports. However, the lengths of the cables placed between the two outputs of the splitter and the two input ports of the ADC are slightly different. The difference (\textcolor{red}{Add exact length here} is exactly matched such that a sample taken from one input port is has been delayed by 2 ns compared to the other input port. If the signals from both ports are combined, the data now appears to have been sampled at 500 MSamples-per-sec. 
+The signal from the antenna is split into two identical signals with a Minicircuits $ZFSC-2-1$ power splitter. Both signals are then sent to the ADC using two of the input ports. However, the lengths of the cables placed between the two outputs of the splitter and the two input ports of the ADC are slightly different. The difference ($\sim 50$ cm) is exactly matched such that a sample taken from one input port is has been delayed by 2 ns compared to the other input port. If the signals from both ports are combined, the data now appears to have been sampled at 500 MSamples-per-sec. 
 
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=0.9\linewidth]{SCIHI_system/figures/fcage_rf_power_block_diagram.png}
+\caption{Wiring block diagram for the Faraday Cage RF electronics.}
+\label{Fig:fcage_RF_pow_block_diagram}
+\end{center}
+\end{figure}
+
+\subsubsection{Faraday Cage RF Electronics Power}
+Power is supplied to the RF electronics inside the Faraday Cage and at the base of the antenna through a common source (DC battery or AC generator, see Section \ref{Sec:sys_power}). Assuming that the Faraday Cage input power is AC, the power is distributed as shown in Figure \ref{Fig:fcage_RF_pow_block_diagram}. Some of the power travels to the antenna RF electronics via the system power/control cable that runs parallel to signal cable. This power is discussed in full detail in Section \ref{Sec:ant_pow}. 
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=0.9\linewidth]{SCIHI_system/figures/fcage_pp_con_circuit_diagram.png}
+\caption{Circuit diagram for the parallel port switch control circuit.}
+\label{Fig:fcage_ppcon_block_diagram}
+\end{center}
+\end{figure}
+
+\subsubsection{Switch Control Circuit}
+In order to get the control signal for the switch from the data processing system into the RF chain, a small circuit is necessary. This circuit, shown in Figure \ref{Fig:fcage_ppcon_block_diagram}, uses a $ULN2003A$ transistor array chip to change the switch control voltages to the necessary levels based on the parallel port outputs. The control circuit lives inside the Faraday Cage with the computer (see Figure \ref{Fig:fcage_RF_pow_block_diagram}). 
 
 \section{Data Processing System}
 
@@ -575,17 +803,37 @@ As discussed in Section \ref{Sec:hard_split}, signals from the sky enter the sys
 
 Storing the entire dataset for each second would require a great deal of space. Instead, a fast fourier transform (FFT) is performed on the dataset. The frequency spectrum produced by the FFT takes up much less space (\textcolor{red}{How much less?}) and is stored by the system. The process is then repeated for another second of data. 
 
-Because of the design of the system, collecting new data can only be done after the FFT is complete. This means that the system is less than 100\% efficient, or it takes longer than 1 second to record the frequency spectrum of 1 second of data. Initially the FFT calculation was quite time consuming ($\sim 30-60$ seconds), but improvements to the software and hardware have decreased this calculation rate to $\sim 2$ seconds. This means that the system has a maximum duty cycle of $\sim30$\%. 
+Because of the design of the system, collecting new data can only be done after the FFT is complete. This means that the system is less than 100\% efficient, or it takes longer than 1 second to record the frequency spectrum of 1 second of data. Initially the FFT calculation was quite time consuming ($\sim 30-60$ seconds), but improvements to the software and hardware by Jose-Miguel have decreased this calculation rate to $\sim 2$ seconds. This means that the system has a maximum duty cycle of $\sim30$\%. 
 
 All of the frequency spectrum data is stored locally on the hard drive of the processing system. The relatively small data volume ($\sim 2$ Gb per day) means that data transfer can be done using small USB drives. During deployment, data was removed from the hard drive 2-3 times a day and stored locally on multiple laptop computers and external hard drives before being uploaded to a server upon return to $''$civilization$''$ (aka the lab). 
 
+\begin{figure}[htb]
+\centering
+\begin{minipage}[b]{0.48\textwidth}
+\centering
+\includegraphics[width=0.95\linewidth]{SCIHI_system/figures/SCIHI_filter.jpg}
+\caption{\textcolor{red}{Still need to take the screenshot of the UI} User interface for the SCI-HI system. }
+\label{Fig:GUI}
+\end{minipage}%
+\begin{minipage}[b]{0.02\textwidth}
+\hspace{1cm}
+\end{minipage}%
+\begin{minipage}[b]{0.48\textwidth}
+\centering
+\includegraphics[width=0.95\linewidth]{SCIHI_system/figures/SCIHI_raspberry_pi.jpg}
+\caption{Raspberry Pi System Control Computer.}
+\label{Fig:raspberry_pi}
+
+\end{minipage}
+\end{figure}
+
 \subsection{System Control and User Interface}
-In addition to the data processing software, a graphical user interface was designed for diagnostic and control purposes. This interface displays the most recent frequency spectrum collected by the system and lets the user set the current data collection mode (including switch control). The user can choose to either take a single data set with any of the switch positions (Antenna, 50 $\Omega$, Short, Noise Source, 100 $\Omega$), or take continual data with a set number of Antenna datasets followed by a single dataset from each of the calibration sources. \textcolor{red}{Add screenshot of the UI here}
+In addition to the data processing software, a graphical user interface was designed by Jose-Miguel for diagnostic and control purposes. This interface displays the most recent frequency spectrum collected by the system and lets the user set the current data collection mode (including switch control). The user can choose to either take a single data set with any of the switch positions (Antenna, 50 $\Omega$, Short, Noise Source, 100 $\Omega$), or take continual data with a set number of Antenna datasets followed by a single dataset from each of the calibration sources. \textcolor{red}{Add screenshot of the UI here}
 
 The system default upon start-up is to run in continual data collection mode with the number of antenna iterations as set by the system when it was previously used. To lower the power consumption and space requirements of the system, it is designed to be run without a monitor, mouse and keyboard. Instead, the system can be controlled by an external system through an ethernet port. This port is only used when the system needs to be checked.
 
 \subsection{Control Computer}
-The data processing system can be diagnosed using a personal computer (such as a laptop) with an ethernet port. However, an additional diagnostic computer was also developed for the SCI-HI system. This computer is a Raspberry Pi\footnote{www.raspberrypi.org} with a small monitor, mouse and ethernet port. \textcolor{red}{Add picture of the diagnostic computer.} Using this small computer, we can quickly check that the system is working properly and run simple diagnostics.
+The data processing system can be diagnosed using a personal computer (such as a laptop) with an ethernet port. However, an additional diagnostic computer was also developed for the SCI-HI system. This computer is a Raspberry Pi\footnote{www.raspberrypi.org} with a small monitor, mouse and ethernet port, built by Jose-Miguel and shown in Figure \ref{Fig:raspberry_pi}. Using this small computer, we can quickly check that the system is working properly and run simple diagnostics.
 
 \subsection{Power Supply and Consumption}
 In order to power the data processing system, a computer power supply had to be selected that matched the system power source (DC battery). Initially, we started with a typical AC computer power supply and a DC to AC inverter that converted the incoming DC power from the batteries into AC power that the computer could handle. 
@@ -616,7 +864,7 @@ Utilizing this power supply greatly lowered our power consumption. However, we f
 \subsection{System Noise Generation}
 Deployment to Isla Guadalupe in June 2013 indicated that our Faraday Cage design had insufficient attenuation of self-generated RFI from the data processing system. This problem was not identified until deployment at the site due to the low levels of RFI compared to external RFI at the testing locations. Self-generated RFI was particularly noticeable above 90 MHz, (see Figure \textcolor{red}{Add time average plot here})but may be present in the data in the lower frequencies as well. Our data indicated that the strength of the self-generated RFI was correlated with the voltage (or charge level) of the DC batteries (see Figure \textcolor{red}{Add waterfall plot here.}). 
 
-In order to address this problem, a more robust Faraday Cage was designed for the SCI-HI system. This Faraday Cage is a double layer cage (see Figure \ref{Fig:new_comp}) with the data processing system placed inside a solid aluminum sealed box and a second Faraday cage with the rest of the electronics placed around the inner box. 
+In order to address this problem, I designed a more robust Faraday Cage for the SCI-HI system. This Faraday Cage is a double layer cage (see Figure \ref{Fig:new_comp}) with the data processing system placed inside a solid aluminum sealed box and a second Faraday cage with the rest of the electronics placed around the inner box. 
 
 Using a set of two walkie talkies, the aluminum box was tested to show attenuation $\geq$70 dB before modification. This was measured by placing one walkie talkie inside the box in recieve mode and transmitting a signal with the other walkie talkie. If the attenuation was smaller than the transmitted signal, then the recieving signal would make a noise. Even transmitting from less than 1 meter from the box, the signal was not picked up by the reciever. 
 
