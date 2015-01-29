@@ -1,7 +1,8 @@
 \documentclass[12pt,twoside]{report}
 
 \usepackage{color}
-\usepackage{graphicx}                
+\usepackage{graphicx}    
+\usepackage{longtable}            
 \DeclareGraphicsExtensions{.eps,.ps}               
 
 \topmargin -0.3in
@@ -43,8 +44,8 @@
 	\\
 }
 
-\title{\bf{
-Using the 21-cm Hydrogen Line to Probe the History of the Intergalactic Medium 
+\title{\bf{ 
+Studying the History of the Intergalactic Medium with the SCI-HI Experiment
 }}
 
 \date{\today}
@@ -79,8 +80,6 @@ Using the 21-cm Hydrogen Line to Probe the History of the Intergalactic Medium
 
 \include{Introduction/Introduction}
 
-\include{Planetarium/Planetarium}
-
 \include{SCIHI_system/SCIHI_system}
 
 \include{RFI_testing/RFI_testing}
@@ -91,8 +90,12 @@ Using the 21-cm Hydrogen Line to Probe the History of the Intergalactic Medium
 
 \include{Future/Conclusions}
 
+\appendix
+\include{Planetarium/Planetarium}
+
 \bibliographystyle{abbrv}
 
 \bibliography{bibliography}
 
 \end{document}
+

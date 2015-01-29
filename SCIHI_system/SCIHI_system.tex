@@ -80,7 +80,7 @@ The design was based on the idea that features in the measured spectrum which we
 \end{figure}
 
 \subsubsection{Antenna Construction}
-The trombone shapes were constructed out of welded aluminum with a lucite mounting block at the connection point of the two cones (see Figure \ref{Fig:trombone_mount}), The dipoles and mounting block were supported with a structure constructed out of fiberglass and PVC tubes. The entire system was placed above a ground plane composed of metal mesh (aka chicken wire) over a small ($\sim9 m^2$) area and long radial extensions ($\sim10 m$) extending out from the center like a spider web. 
+The original Trombone antenna was constructed by Edgar Castillo. The trombone shapes were constructed out of welded aluminum with a lucite mounting block at the connection point of the two cones (see Figure \ref{Fig:trombone_mount}), The dipoles and mounting block were supported with a structure constructed out of fiberglass and PVC tubes. The entire system was placed above a ground plane composed of metal mesh (aka chicken wire) over a small ($\sim9 m^2$) area and long radial extensions ($\sim10 m$) extending out from the center like a spider web. 
 
 Tuning the Trombone antenna length was accomplished with an external tube that slid over the main dipole elements (see Figure \ref{Fig:trombone_adj}), while adjustment of the height of the Trombone antenna was done using the support legs (PVC pipes with variable heights).
 
@@ -193,8 +193,8 @@ Adding this style of ground plane did not have a big impact on the simulation re
 \centering
 \begin{minipage}[b]{0.47\textwidth}
 \centering
-\includegraphics[width=0.95\linewidth]{SCIHI_system/figures/HIbiscus_gain.png}
-\caption{Simulated HIbiscus antenna beam, shown for different frequencies at a single azimuthal plane. }
+\includegraphics[width=0.95\linewidth]{SCIHI_system/figures/HIbiscus_sim_gain_beam1.png}
+\caption{Simulated HIbiscus antenna beam slice in azimuth along the passive petals of the antenna (H-plane), shown for different frequencies.}
 \label{Fig:HIsym_beam}
 \end{minipage}%
 \begin{minipage}[b]{0.02\textwidth}
@@ -202,8 +202,8 @@ Adding this style of ground plane did not have a big impact on the simulation re
 \end{minipage}%
 \begin{minipage}[b]{0.47\textwidth}
 \centering
-\includegraphics[width=0.95\linewidth]{SCIHI_system/figures/HIbiscus_gain.png}
-\caption{Simulated HIbiscus antenna beam, shown for different frequencies at a single azimuth. \textcolor{red}{Add here a simulation image for a different azimuth. Currently showing two images of the same azimuthal plane. }}
+\includegraphics[width=0.95\linewidth]{SCIHI_system/figures/HIbiscus_sim_gain_beam2.png}
+\caption{Simulated HIbiscus antenna beam slice in azimuth along the active petals of the antenna (E-plane), shown for different frequencies.}
 \label{Fig:HIsym_beam_2}
 \end{minipage}
 \end{figure}
@@ -235,7 +235,7 @@ Because of these problems, we decided to shift our antenna design in a new direc
 
 Based on the FEKO simulation results we settled on a design that used the EDGES design as a starting point, but changed the exact shapes of the four squares. We took each square and turned it into an incliclined petal composed of three trapezoidal shapes. Each shape was connected to its neighbors on the petal, but had a different angle with respect to the ground. Additional panels were added to each side of the petal to create a strip line with a fixed gap between the petals. The entire antenna was then placed above a flat ground plane. We call this design a HIbiscus antenna, as shown in Figures \ref{Fig:HI_sim_top} and \ref{Fig:HI_sim_side}. 
 
-This HIbiscus design has an azimuthally symmetric beam with a $\sim 55^\circ$ full width half-maximum (FWHM) and no sidelobes over a wide frequency band, as shown in Figure \ref{Fig:HIsym_beam}. The impedance of the HIbiscus antenna is complex, but is centered around 50 $\Omega$ such that it has less than $-10 dB$ of reflectivity over 60 MHz. The simulated complex impedance is shown in Figure \ref{Fig:HIsim_S11_Smith}, and the simulated antenna reflectivity is shown in Figure \ref{Fig:HIsim_S11_dB}. 
+This HIbiscus design has a $\sim 55^\circ$ full width half-maximum (FWHM) and no sidelobes over a wide frequency band, as shown in Figures \ref{Fig:HIsym_beam} and \ref{Fig:HIsym_beam_2}. The beam is narrower along the active elements (E-plane) of the antenna. The impedance of the HIbiscus antenna is complex, but is centered around 50 $\Omega$ such that it has less than $-10 dB$ of reflectivity over 60 MHz. The simulated complex impedance is shown in Figure \ref{Fig:HIsim_S11_Smith}, and the simulated antenna reflectivity is shown in Figure \ref{Fig:HIsim_S11_dB}. 
 
 \begin{figure}[htb]
 \centering
@@ -419,7 +419,7 @@ Beyond the antenna structure, a ground plane was also required to avoid variatio
 
 With the antenna constructed, we could test that it matched our scale model measurements in terms of its S-parameters. To do this, I set up the antenna outdoors and made measurements with a portable Vector Network Analyzer (VNA). Measurements had to be made outdoors because the wavelengths corresponding to the SCI-HI frequencies ($40-130$ MHz) are $\sim$1-10 meters. This large wavelength scale means that reflections from the boundaries of a room can change antenna s-parameters, so accuracy in measurement requires the outdoor setting. Figures \ref{Fig:hibiscus_first} and \ref{Fig:hibiscus_gbt} show examples of how I made this measurement at CMU and Green Bank.
 
-The resulting S11 measurement is shown in Figures \ref{Fig:HIS11_dB_70} and \ref{Fig:HIS11_Smith_70}. The plots are based on data collected on-site at Isla Guadalupe with the antenna ground plane in place. We can compare this measurement to the simulated S11 reflectivity shown in Figure \ref{Fig:HIsim_S11_dB}, with the caveat that the simulated antenna data shown is for a $\sim 100$ MHz center frequency HIbiscus antenna. The simulation successfully identified the antenna resonance between 50-60 MHz and the overall shape of the antenna reflectivity matches the simulation. However, the measured S11 has a much lower minimum reflectivity than the simulation predicted. 
+The resulting S11 measurement is shown in Figures \ref{Fig:HIS11_dB_70} and \ref{Fig:HIS11_Smith_70}. The plots are based on data collected on-site at Isla Guadalupe with the antenna ground plane in place. We can compare this measurement to the simulated S11 reflectivity shown in Figure \ref{Fig:HIsim_S11_dB}. The simulation successfully identified the antenna resonance between 50-60 MHz and the overall shape of the antenna reflectivity matches the simulation. However, the measured S11 has a much lower minimum reflectivity than the simulation predicted. 
 
 \begin{figure}[htb]
 \centering
@@ -617,7 +617,7 @@ Immediatelly following the switch in the RF chain is the first stage low noise a
 
 
 \paragraph{Impedance} 
-Impedance matching is quantified by the antenna S11 parameter, which is measured in comparison to a set impedance ($Z_{ref}= 50 \Omega$). Impedance (Z) is the complex resistance of a circuit element, and is can be calculated relative to S11.  \cite{rogers_2012} 
+Impedance matching is quantified by the antenna S11 parameter, which is measured in comparison to a set impedance ($Z_{ref}= 50 \Omega$). Impedance (Z) is the complex resistance of a circuit element, and can be calculated relative to S11.  \cite{rogers_2012} 
 
 \begin{equation}\label{Eq:Imp_calc}
 Z(\nu) = R(\nu)+ i X(\nu) 
@@ -799,20 +799,20 @@ In order to get the control signal for the switch from the data processing syste
 \section{Data Processing System}
 
 \subsection{Data Processing Pathway}
-As discussed in Section \ref{Sec:hard_split}, signals from the sky enter the system via two ports of an analog to digital conversion (ADC) card. For the SCI-HI system, we used a \textcolor{red}{add part name and number here} card. Data is collected for one second of integration, with the interleaving stragegy producing 500 MSamples of data. 
+As discussed in Section \ref{Sec:hard_split}, signals from the sky enter the system via two ports of an analog to digital conversion (ADC) card. For the SCI-HI system, we used a GE PCIe digitizer board (ICS1650). Data is collected for one second of integration, with the interleaving strategy producing 500 MSamples/sec of data. 
 
 Storing the entire dataset for each second would require a great deal of space. Instead, a fast fourier transform (FFT) is performed on the dataset. The frequency spectrum produced by the FFT takes up much less space (\textcolor{red}{How much less?}) and is stored by the system. The process is then repeated for another second of data. 
 
 Because of the design of the system, collecting new data can only be done after the FFT is complete. This means that the system is less than 100\% efficient, or it takes longer than 1 second to record the frequency spectrum of 1 second of data. Initially the FFT calculation was quite time consuming ($\sim 30-60$ seconds), but improvements to the software and hardware by Jose-Miguel have decreased this calculation rate to $\sim 2$ seconds. This means that the system has a maximum duty cycle of $\sim30$\%. 
 
-All of the frequency spectrum data is stored locally on the hard drive of the processing system. The relatively small data volume ($\sim 2$ Gb per day) means that data transfer can be done using small USB drives. During deployment, data was removed from the hard drive 2-3 times a day and stored locally on multiple laptop computers and external hard drives before being uploaded to a server upon return to $''$civilization$''$ (aka the lab). 
+All of the frequency spectrum data is stored locally on the hard drive of the processing system. The relatively small data volume ($\sim 2$ GB per day) means that data transfer can be done using small USB drives. During deployment, data was removed from the hard drive 2-3 times a day and stored locally on multiple laptop computers and external hard drives before being uploaded to a server upon return to $''$civilization$''$ (aka the lab). 
 
 \begin{figure}[htb]
 \centering
 \begin{minipage}[b]{0.48\textwidth}
 \centering
-\includegraphics[width=0.95\linewidth]{SCIHI_system/figures/SCIHI_filter.jpg}
-\caption{\textcolor{red}{Still need to take the screenshot of the UI} User interface for the SCI-HI system. }
+\includegraphics[width=0.95\linewidth]{SCIHI_system/figures/SCIHI_UI_Screen.jpg}
+\caption{User interface for the SCI-HI system. }
 \label{Fig:GUI}
 \end{minipage}%
 \begin{minipage}[b]{0.02\textwidth}
@@ -828,19 +828,19 @@ All of the frequency spectrum data is stored locally on the hard drive of the pr
 \end{figure}
 
 \subsection{System Control and User Interface}
-In addition to the data processing software, a graphical user interface was designed by Jose-Miguel for diagnostic and control purposes. This interface displays the most recent frequency spectrum collected by the system and lets the user set the current data collection mode (including switch control). The user can choose to either take a single data set with any of the switch positions (Antenna, 50 $\Omega$, Short, Noise Source, 100 $\Omega$), or take continual data with a set number of Antenna datasets followed by a single dataset from each of the calibration sources. \textcolor{red}{Add screenshot of the UI here}
+In addition to the data processing software, a graphical user interface was designed by Jose-Miguel for diagnostic and control purposes. This interface displays the most recent frequency spectrum collected by the system and lets the user set the current data collection mode (including switch control). The user can choose to either take a single data set with any of the switch positions (Antenna, 50 $\Omega$, Short, Noise Source, 100 $\Omega$), or take continual data with a set number of Antenna datasets followed by a single dataset from each of the calibration sources. Figure \ref{Fig:GUI} shows an example screenshot of the user interface. In this screenshot, the data is $\sim0$ because the electronics and antenna are not connected to the system. 
 
 The system default upon start-up is to run in continual data collection mode with the number of antenna iterations as set by the system when it was previously used. To lower the power consumption and space requirements of the system, it is designed to be run without a monitor, mouse and keyboard. Instead, the system can be controlled by an external system through an ethernet port. This port is only used when the system needs to be checked.
 
 \subsection{Control Computer}
-The data processing system can be diagnosed using a personal computer (such as a laptop) with an ethernet port. However, an additional diagnostic computer was also developed for the SCI-HI system. This computer is a Raspberry Pi\footnote{www.raspberrypi.org} with a small monitor, mouse and ethernet port, built by Jose-Miguel and shown in Figure \ref{Fig:raspberry_pi}. Using this small computer, we can quickly check that the system is working properly and run simple diagnostics.
+The data processing system can be diagnosed using a personal computer (such as a laptop) with an ethernet port. However, an additional diagnostic computer was also developed by Jose-Miguel for the SCI-HI system. This computer is a Raspberry Pi\footnote{www.raspberrypi.org} with a small monitor, mouse and ethernet port, built by Jose-Miguel and shown in Figure \ref{Fig:raspberry_pi}. Using this small computer, we can quickly check that the system is working properly and run simple diagnostics.
 
 \subsection{Power Supply and Consumption}
 In order to power the data processing system, a computer power supply had to be selected that matched the system power source (DC battery). Initially, we started with a typical AC computer power supply and a DC to AC inverter that converted the incoming DC power from the batteries into AC power that the computer could handle. 
 
-While using an inverter is the simplest solution, it is very energy inefficient.  \textcolor{red}{Add exact inefficiency of the inverter we were using in percentages.} Additionally, any failure of the inverter can crash the entire system. Therefore, we decided to switch to an entirely DC system by replacing the AC power supply for the computer with a power supply that takes input DC power. \textcolor{red}{Add original DC power supply part number here.} 
+While using an inverter is the simplest solution, it can be very energy inefficient. For example, the 800 W inverter that we have previously used in the field is $\sim70$\% efficient. Additionally, any failure of the inverter can crash the entire system. Therefore, we decided to switch to an entirely DC system by replacing the AC power supply for the computer with the M4-ATX power supply that takes input DC power of 8-30 V. 
 
-Utilizing this power supply greatly lowered our power consumption. However, we found that the power supply we selected was not reliable. Most of the DC power supplies on the market are designed for automotive applications, where they are only needed for short durations rather than continual use. In particular, the DC power supply was particularly unhappy when running in a low battery situation. We are currently exploring different alternatives, as discussed in Section \ref{Sec:sys_power}. 
+Utilizing this power supply lowered our power consumption. However, we found that the power supply we selected was not reliable. Most of the DC power supplies on the market are designed for automotive applications, where they are only needed for short durations with higher battery voltage. The DC power supplies were particularly unhappy when running on a nearly drained battery. We are currently exploring different alternatives, as discussed in Section \ref{Sec:sys_power}. 
 
 \begin{figure}[htb]
 \centering
