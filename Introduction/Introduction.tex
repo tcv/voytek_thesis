@@ -12,12 +12,16 @@ To set a background for \cm cosmology, we first need to understand the basic phy
 
 First, we need to review the atomic states of hydrogen and in particular the \cm hyperfine splitting of the ground state. Second, we need to define the spin temperature of a cloud of neutral hydrogen atoms and discuss how emission and absorption change the spin temperature. Third, we need to define brightness temperature and detail how that temperature can change when it passes through a cloud of hydrogen gas. Fourth, we need to relate spin temperature and brightness temperature to the opacity of a cloud of hydrogen gas. 
 
-\textcolor{red}{Add a figure here to represent spin states, use energy splitting diagram. Can make a version that is expanded for the Wouthuysen-Field explanation.}
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=0.95\linewidth]{Introduction/figures/1s_spin_states.png}
+\caption{Simple atomic state diagram representing the hyperfine structure of the hydrogen ground state.}
+\label{Fig:spin_states}
+\end{center}
+\end{figure}
 
 \subsection{Hydrogen Atomic States}
-To understand the \cm signal, we start with the structure of the hydrogen atom; one proton and one electron. The proton and electron each have a spin $\pm \frac{1}{2}$, which leads to a splitting of the ground state of hydrogen depending on the total spin angular momentum of the atom. 
-
-There are four potential eigenstates of the hydrogen ground state; which can be written in terms of the spin state of proton and electron ($| \pm z_p, \pm z_e \rangle$). These four eigenstates can be computed and are:
+To understand the \cm signal, we start with the structure of the hydrogen atom; one proton and one electron. The proton and electron each have a spin $z_p,z_e = \pm \frac{1}{2}$. Interactions between the two spins lead to a splitting of the hydrogen ground state into two energy levels. Using the Hamiltonian of the two spin system, we can calculate the eigenstates of the system. These eigenstates can be written in terms of the spin state of the proton and electron ($| \pm z_p, \pm z_e \rangle$) as:
 
 \begin{equation}
 | 1 \rangle = | + z , + z \rangle 
@@ -32,8 +36,10 @@ There are four potential eigenstates of the hydrogen ground state; which can be 
 | 4 \rangle = \frac{1}{\sqrt{2}} (| + z, - z \rangle - |-z, +z \rangle)
 \end{equation}
 
-States $| 1 \rangle$, $| 2 \rangle$, and $| 3 \rangle$ correspond to the higher energy eigenvalue, which has a total spin angular momentum of 1. State $| 4 \rangle$ corresponds to the lower energy eigenvalue, which has a total spin angular momentum of 0. The energy difference between the two eigenstates is called $''$hyperfine splitting$''$, and has a value of $h \nu_{10}$, where $\nu_{10}=1420.405$ MHz and $\lambda_{10} =  21$ centimeters \cite{townsend2000}. 
 
+States $| 1 \rangle$, $| 2 \rangle$, and $| 3 \rangle$ correspond to the higher energy eigenvalue, while state $| 4 \rangle$ corresponds to the lower energy eigenvalue. The energy difference between the two eigenstates is called $''$hyperfine splitting$''$, and has a value of $h \nu_{10}$, where $\nu_{10}=1420.405$ MHz and $\lambda_{10} =  21$ centimeters \cite{townsend2000}. 
+
+Figure \ref{Fig:spin_states} shows a graphical representation of these two spin states. In this figure, atomic quantum number notation is used to represent the states. In this notation the azimuthal angular momentum ($l$) is represented by the letter ($S$ means that $l=0$). The sub-script after the letter is the total angular momentum of the electron $j=l+s$. The sub-script before the letter is the total spin angular momentum $F=0,1$ of the atom. 
 
 \subsection{Spin Temperature (\ts)}
 When working with a cloud of hydrogen atoms rather than a single atom, we need to compare the number of atoms in the two states within the cloud. To do this, we define the spin temperature using Boltzmann's law for a cloud in thermodynamic equilibrium. A spin temperature (\ts) is defined with the ratio of the the two states $n_1/n_0$ \cite{field_1958}. 
@@ -67,7 +73,7 @@ A_{10} = \frac{64 \pi^4 \beta^2}{3 h \lambda^3} = 2.85 x 10^{-15} sec^{-1}
 where $\beta$ is the Bohr magneton \cite{field_1958}. The small magnitude of $A_{10}$ means that spontaneous emission of \cm photons is very rare. 
 
 \subsubsection{Absorption and Stimulated Emission}
-Absorption and stimulated emission are transitions which depend on an external triggers and can occur at a higher rate than spontaneous emission. In the types of hydrogen gas clouds that we are considering, there are three primary triggers. These are \cm radiation, baryon collisions, and optical radiation \cite{field_1958}. 
+Absorption and stimulated emission are transitions which depend on external triggers and can occur at a higher rate than spontaneous emission. In the types of hydrogen gas clouds that we are considering, there are three primary triggers. These are \cm radiation, baryon collisions, and optical radiation \cite{field_1958}. 
 
 \paragraph{\cm Radiation}
 Incident radiation from an external source of \cm photons such as the Cosmic Microwave Background (CMB) will cause absorption and stimulated emission. The rates of absorption and stimulated emission are set by the Einstein B coefficients ($B_{01}$ and $B_{10}$). These coefficients are related to the rate coefficients $X^{m}_{ij}$ from Equation \ref{Eq:dn} via  $X^R_{01} = B_{01} I_\nu$ and $X^R_{10} = B_{10} I_{\nu}$ \cite{field_1958}. 
@@ -169,18 +175,25 @@ As long as the opacity is small ($\tau_\nu \ll 1$) we can approximate $e^{-\tau_
 
 where \tg is the CMB photon temperature, which also acts as the incident radiation temperature ($T_R$) in Equation \ref{Eq:dT_s} \cite{furlanetto_2006}. 
 
-\textcolor{red}{Add a figure showing atomic energy levels, aka the expanded version of the figure shown earlier in the introduction. }
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=0.95\linewidth]{Introduction/figures/wfm_states.png}
+\caption{Simple atomic state diagram for the Wouthuysen-Field mechanism. The pathway in blue corresponds to a $n_1 \rightarrow n_0$ transition while the pathway in red corresponds to a $n_0 \rightarrow n_1$ transition. In addition, solid lines are the stimulated emission pathways, while the dashed lines are the absorption pathways.}
+\label{Fig:wfm_states}
+\end{center}
+\end{figure}
 
 \subsection{Wouthuysen-Field Mechanism}\label{Sec:WFM}
 Given that the spin temperature of the IGM is a significant term in the brightness temperature equation, we need to understand how it can vary over time. As discussed in Section \ref{Sec:dT_S}, the spin temperature of hydrogen in the IGM is coupled to three sources during its history. 
 
 The first source is the CMB (\tg), which provides a source of external radiation ($T_R$). The second source is the kinetic temperature of the gas (\tk), which characterizes the thermal motion of the atoms in the gas. The third and final source is external photons corresponding to transition energies between the ground and excited states of the hydrogen atom. The most important transition for our purposes is the \lya  transition. 
 
-The mechanism for coupling between the hydrogen spin temperature and \lya  photons is called the Wouthuysen-Field Effect \cite{wouthuysen_1952}\cite{field_1958} and can be understood by going back again to the atomic states of the hydrogen atom. Just as we've discussed for the \cm transition, external photons with an energy corresponding to the \lya  wavelength ($\lambda = 121.6$ nm) can induce a transition from the ground state of hydrogen (1S) to its first excited state (2P). However, conservation of total spin angular momentum for the hydrogen atom sets the selection rules for spontaneous emission due to transitions back to the ground state from that first excited state. 
+The mechanism for coupling between the hydrogen spin temperature and \lya  photons is called the Wouthuysen-Field Effect \cite{wouthuysen_1952}\cite{field_1958} and can be understood by going back again to the atomic states of the hydrogen atom. Just as we've discussed for the \cm transition, external photons with an energy corresponding to the \lya  wavelength ($\lambda = 121.6$ nm) can induce a transition from the ground state of hydrogen to its first excited state. This excited state is not stable, so the hydrogen atom will eventually decay back to its ground state and emit a photon. However, conservation of angular momentum limits these stimulated emission transitions. 
 
-There are two pathways set by the selection rules for a hydrogen atom to spontaneously emit a \lya  photon. If the original 1S state is the singlet spin zero state, we get the transition chain $_0S_{1/2}$ $\rightarrow$ $_1P_{3/2}$ $\rightarrow$ $_1S_{1/2}$. On the other hand, if the original 1S state is the triplet spin one state we get the transition chain $_1S_{1/2}$ $\rightarrow$ $_1P_{1/2}$ $\rightarrow$ $_0S_{1/2}$. This process redistributes the the neutral hydrogen atoms in the ground state such that $n_tot = n_0 + n_1$ is unchanged but the spin temperature is changed. 
+Figure \ref{Fig:wfm_states} shows the possible transition chains for the \lya absorption and stimulated emission process. One transition chain occurs when the original $1S_{1/2}$ state is the $F=0$ state, and can be written as $_0S_{1/2}$ $\rightarrow$ $_1P_{3/2}$ $\rightarrow$ $_1S_{1/2}$. The other transition chain occurs when the original $1S_{1/2}$ state is the $F=1$ state, and can be written as $_1S_{1/2}$ $\rightarrow$ $_1P_{1/2}$ $\rightarrow$ $_0S_{1/2}$. So the absorption and stimulated emission of \lya phontons redistributes the the neutral hydrogen atoms in the ground state such that $n_tot = n_0 + n_1$ is unchanged but the spin temperature is changed. 
 
-The exact magnitude of the change will depend on the distribution of photons around the \lya  line. This is because the input photon frequency for $n_0 \rightarrow n_1$ is not the same as the input photon frequency for $n_1 \rightarrow n_0$.
+The exact magnitude of the change will depend on the distribution of photons around the \lya  line. This is because the input photon frequency for $n_0 \rightarrow n_1$ is not the same as the input photon frequency for $n_1 \rightarrow n_0$ due to the split energy states of the hydrogen atom. 
 
 Now, the spectral distribution of \lya  photons is set by collisions within the IGM, and approximates a blackbody curve with temperature $T_{Ly-\alpha} = T_K$. Meanwhile, the \lya  coupling term ($x_C = x_{\alpha}$)is proportional to the intensity of \lya  photons produced by external sources of light. The exact \lya  coupling is related to the rate of scattering of \lya  photons by Equation \ref{Eq:xa}, where $P_{\alpha}$ is the scattering rate \cite{furlanetto_2006}. 
 
