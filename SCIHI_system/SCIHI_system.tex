@@ -34,7 +34,11 @@ For the SCI-HI experiment, we wanted a single dipole antenna with radiation patt
 
 Assessing a potential antenna's beam and impedance could be done in one of two ways. First, we could simulate the antenna design using commercially available software to identify a basic design that met our criteria. Second, we could use an antenna chamber to measure the antenna's beam and impedance. We utilized both strategies in selecting the SCI-HI antenna design.
 
-Measurement of an antenna's beam requires a transmitting antenna with well known properties and an anechoic chamber large enough for the two antennas to be in each others far-field. The antenna under test is rotated with respect to the transmitting antenna, while the distance between the two antennas is held constant. The magnitude of the signal recieved by the antenna under test will change as a function of rotation angle. Mapping this magnitude over many angles gives the antenna's beam pattern. At the same time, the antenna's impedance is measured by sending a signal into the antenna under test and seeing what percentage of the original signal is reflected back. Impedance is measured with respect to a reference impedance, usually $Z=50 \Omega$, and is also called reflectivity. \cite{stutzman1981}
+Measurement of an antenna's beam requires a transmitting antenna with well known properties and an anechoic chamber large enough for the two antennas to be in each others far-field. The antenna under test is rotated with respect to the transmitting antenna, while the distance between the two antennas is held constant. The magnitude of the signal recieved by the antenna under test will change as a function of rotation angle. Mapping this magnitude over many angles gives the antenna's beam pattern. 
+
+At the same time, the antenna's impedance is measured by sending a signal into the antenna under test and seeing what percentage of the original signal is reflected back. Impedance is measured with respect to a reference impedance, usually $Z=50 \Omega$, and is also called reflectivity or S11. \cite{stutzman1981}
+
+
 
 \begin{figure}[htb]
 \centering
@@ -155,12 +159,12 @@ The Trombone antenna was used throughout the initial stages of the SCI-HI projec
 \subsubsection{Antenna Simulation}
 In order to better understand and assess the behavior of the Trombone antenna, simulations were run on the design by Amy Stetten. Figure \ref{Fig:trombone_sym} shows the simulated Trombone design. Simulations were run using cocoaNEC,\footnote{http://www.w7ay.net/site/Applications/cocoaNEC/} a free antenna modelling code designed for use in a Macintosh OS environment. 
 
-Simulations showed that the Trombone antenna beam was wide, but well behaved, for the shorter length as shown in Figure \ref{Fig:trsym_nogp}(a). In contrast, the longer length antenna beam had quite a bit of structure, as shown in Figure \ref{Fig:trsym_nogp}(b). In addition, the impedance of the antenna (S11) was not well matched to $50 \Omega$ and varied significantly across the band for all lengths (Figures \ref{Fig:trsym_nogp}(c) and \ref{Fig:trsym_nogp}(d)). 
+Simulations showed that the Trombone antenna beam was wide, but well behaved, for the shorter length as shown in Figure \ref{Fig:trsym_nogp}(a). In contrast, the longer length antenna beam had quite a bit of structure, as shown in Figure \ref{Fig:trsym_nogp}(b). In addition, the impedance of the antenna was not well matched to $50 \Omega$ and varied significantly across the band for all lengths (Figures \ref{Fig:trsym_nogp}(c) and \ref{Fig:trsym_nogp}(d)). 
 
 \begin{figure}[htb]
 \begin{center}
 \includegraphics[width=0.95\linewidth]{SCIHI_system/figures/trombone_gp.jpg}
-\caption{Trombone Simulation results with spider web ground plane included in the simulation. (a) Shows the azimuth (left) and elevation (right) antenna beam for different frequencies with the antenna at its shortest (35 cm) length. (b) Shows a Smith chart of the antenna complex impedance (S11), where 1.0 is set to $50 \Omega$, for the shortest (35 cm) length.}
+\caption{Trombone Simulation results with spider web ground plane included in the simulation. (a) Shows the azimuth (left) and elevation (right) antenna beam for different frequencies with the antenna at its shortest (35 cm) length. (b) Shows a Smith chart of the antenna complex impedance, where 1.0 is set to $50 \Omega$, for the shortest (35 cm) length.}
 \label{Fig:trsym_gp}
 \end{center}
 \end{figure}
@@ -232,7 +236,7 @@ So, simulation and testing demonstrated that the Trombone antenna had a wide bea
 
 Because of these problems, we decided to shift our antenna design in a new direction. We started with the modified four-square design idea used by the EDGES experiment \cite{bowman_2008}\cite{rogers_2008}, and modified it to fit our needs. Simulations were run by Jose-Miguel Juaregui-Garcia using FEKO, a finite element computational electromagnetics software package.\footnote{https://www.feko.info/} 
 
-Based on the FEKO simulation results we settled on a design that used the EDGES design as a starting point, but changed the exact shapes of the four squares. We took each square and turned it into an incliclined petal composed of three trapezoidal shapes. Each shape was connected to its neighbors on the petal, but had a different angle with respect to the ground. Additional panels were added to each side of the petal to create a strip line with a fixed gap between the petals. The entire antenna was then placed above a flat ground plane. We call this design a HIbiscus antenna, as shown in Figures \ref{Fig:HI_sim_top} and \ref{Fig:HI_sim_side}. 
+Based on the FEKO simulation results we settled on a design that used the EDGES design as a starting point, but changed the exact shapes of the four squares. We took each square and turned it into an inclined petal composed of three trapezoidal shapes. Each shape was connected to its neighbors on the petal, but had a different angle with respect to the ground. Additional panels were added to each side of the petal to create a strip line with a fixed gap between the petals. The entire antenna was then placed above a flat ground plane. We call this design a HIbiscus antenna, as shown in Figures \ref{Fig:HI_sim_top} and \ref{Fig:HI_sim_side}. 
 
 This HIbiscus design has a $\sim 55^\circ$ full width half-maximum (FWHM) and no sidelobes over a wide frequency band, as shown in Figures \ref{Fig:HIsym_beam} and \ref{Fig:HIsym_beam_2}. The beam is narrower along the active elements (E-plane) of the antenna. The impedance of the HIbiscus antenna is complex, but is centered around 50 $\Omega$ such that it has less than $-10 dB$ of reflectivity over 60 MHz. The simulated complex impedance is shown in Figure \ref{Fig:HIsim_S11_Smith}, and the simulated antenna reflectivity is shown in Figure \ref{Fig:HIsim_S11_dB}. 
 
@@ -294,13 +298,13 @@ This HIbiscus design has a $\sim 55^\circ$ full width half-maximum (FWHM) and no
 \end{figure}
 
 \subsubsection{Scale Model Testing}
-In order to test our simulation to see if it matched the real antenna performance, Jose-Miguel built a set of scaled HIbiscus designs tuned for higher frequencies around 400-500 MHz. This allowed us to use an antenna range to measure the antenna beam shape and S-parameters. 
+In order to test our simulation to see if it matched the real antenna performance, Jose-Miguel built a set of scaled HIbiscus designs tuned for higher frequencies around 400-500 MHz. This allowed us to use an antenna range to measure the antenna beam shape and impedance. 
 
 Jose-Miguel and I used the PREAL\footnote{http://www.preal.ece.cmu.edu/} (Project Remote Educational Antenna Laboratory) facility at Carnegie Mellon University to measure the antenna response of different scaled HIbiscus models. Figures \ref{Fig:hibiscus_scale_tabitha} and \ref{Fig:hibiscus_scale_jose} show one of the scale models being measured in the chamber.
 
 Measuring scale models gave us the antenna gain for two azimuthal planes of the antenna. One, the E-plane, is along the active petals of the antenna. The other, the H-plane, is perpendicular to the E-plane and lies along the passive petals of the antenna. Figures \ref{Fig:eplane_gain_sm} and \ref{Fig:hplane_gain_sm} show the measured antenna gain for the scale model shown in Figure \ref{Fig:hibiscus_scale_tabitha}. 
 
-At the same time, the reflectivity (S11) was also measured for the antenna, as shown in Figures \ref{Fig:HIS11_model_dB} and \ref{Fig:HIS11_model_Smith}
+At the same time, the reflectivity was also measured for the antenna, as shown in Figures \ref{Fig:HIS11_model_dB} and \ref{Fig:HIS11_model_Smith}
 
 \begin{figure}[htb]
 \centering
@@ -395,7 +399,7 @@ In order to keep the petal separation even and correct, lucite spacers were plac
 \end{minipage}
 \end{figure}
 
-Beyond the antenna structure, a ground plane was also required to avoid variation in the antenna pattern and impedance due to weather conditions. Like with the Trombone, we used a ground plane made out of chicken wire. Our simulations showed us that a $\sim 100 m^2$ square ground plane was sufficient. Compared to the Trombone antenna, the HIbiscus antenna beam was less dependent on the ground plane shape. 
+Beyond the antenna structure, a ground plane was also required to avoid variation in the antenna pattern and impedance due to weather conditions. Like with the Trombone, we used a ground plane made out of chicken wire. Our simulations had indicated that a $\sim 16$ $m^2$ square ground plane was sufficient. Compared to the Trombone antenna, the HIbiscus antenna beam was less dependent on the ground plane shape. 
 
 The entire system (antenna plus ground plane) was anchored to the ground to minimize the wind impact on the system. Each of the four support legs had an anchoring rope (see Figure \ref{Fig:hibiscus_gbt}), and the chicken wire was also anchored with many stakes to keep it flat. 
 
@@ -420,9 +424,9 @@ The entire system (antenna plus ground plane) was anchored to the ground to mini
 
 \subsubsection{S-parameters and Impedance}\label{Sec:HIbiscus_Imp}
 
-With the antenna constructed, we could test that it matched our scale model impedance (S11) measurements. To do this, I set up the antenna outdoors and made measurements with a portable Vector Network Analyzer (VNA). Measurements had to be made outdoors because the wavelengths corresponding to the SCI-HI frequencies ($40-130$ MHz) are $\sim$1-10 meters. Just as with the scale model measurements, reflections from the boundaries of a room can change antenna S-parameters. Figures \ref{Fig:hibiscus_first} and \ref{Fig:hibiscus_gbt} show examples of how I made this measurement at CMU and Green Bank with the help of Jose-Miguel and others.
+With the antenna constructed, we could test that it matched our scale model impedance measurements. To do this, I set up the antenna outdoors and made measurements with a portable Vector Network Analyzer (VNA). Measurements had to be made outdoors to avoid signal reflections from the walls of a room from interfering with the results. We saw this previously with the scale model testing, and the longer wavelengths ($\sim 1-10$ meters) of the SCI-HI band make the reflections an even larger problem in that band. Figures \ref{Fig:hibiscus_first} and \ref{Fig:hibiscus_gbt} show examples of how I made this measurement at CMU and Green Bank with the help of Jose-Miguel and others.
 
-The full size HIbiscus S11 measurement is shown in Figures \ref{Fig:HIS11_dB_70} and \ref{Fig:HIS11_Smith_70}. These figures use data collected on-site at Isla Guadalupe with the antenna ground plane in place. We can compare this measurement to the simulated S11 reflectivity shown in Figure \ref{Fig:HIsim_S11_dB}. The simulation successfully identified the antenna resonance between 50-60 MHz and the overall shape of the antenna reflectivity matches the simulation. Like in the scale model data, the minimum S11 reflectivity is much lower than is seen in the simulation. 
+The full size HIbiscus S11 measurement is shown in Figures \ref{Fig:HIS11_dB_70} and \ref{Fig:HIS11_Smith_70}. These figures use data collected on-site at Isla Guadalupe with the antenna ground plane in place. We can compare this measurement to the simulated reflectivity shown in Figure \ref{Fig:HIsim_S11_dB}. The simulation successfully identified the antenna resonance between 50-60 MHz and the overall shape of the antenna reflectivity matches the simulation. Like in the scale model data, the minimum reflectivity magnitude is much lower than is seen in the simulation. 
 
 \begin{figure}[htb]
 \centering
@@ -456,7 +460,7 @@ First, the entire antenna structure was made as lightweight as possible. This wa
 
 Second, the antenna was designed in segments so it could be assembled and disassembled and packed into small bags. Each petal separated out into three trapezoids that were screwed together for assembly, but could be packed as mostly flat sheets. The lucite spacers and mount were attached to the petals using screws and could be removed and packed for travel, as were the PVC pipe supports. 
 
-Third, the entire antenna stcuture could be packed up into three suitcases plus an extra bag for the ground plane chicken wire. These suitcases were small and light enough to be checked as regular baggage on commercial airlines. 
+Third, the entire antenna structure could be packed up into three suitcases plus an extra bag for the ground plane chicken wire. These suitcases were small and light enough to be checked as regular baggage on commercial airlines. 
 
 \begin{figure}[htb]
 \begin{center}
@@ -640,7 +644,7 @@ The presence of reflectivity means that not all of the signal sent down a circui
 If $Z_1 = Z^*_2$, then all of the signal is transmitted. Otherwise, some of the signal is reflected. The percentage of a signal that is transmitted is also called the transmission efficiency ($\eta$). Equation \ref{Eq:eta} gives the relationship between the impedances of two circuit elements and the percentage of signal which is transmitted. 
 
 \begin{equation} \label{Eq:eta}
-\eta (\nu) = \frac{\sqrt{4 |R_{1}*R_{2}|}}{(R_{1}+R_{2})^2+(X_{1}+X_{2})^2}
+\eta (\nu) = \sqrt{\frac{4 |R_{1}*R_{2}|}{(R_{1}+R_{2})^2+(X_{1}+X_{2})^2}}
 \end{equation}
 
 \paragraph{Cable Delay}
@@ -686,10 +690,22 @@ Therefore, I went hunting again for a packaged amplifier that fit my specific im
 
 Unlike the ZX60 amplifier, the WEA101 amplifier has an almost entirely real impedance, which is nearly constant over our frequency band. It also has a very low reflectivity. This makes the WEA101 amplifier an excellent choice as a first stage amplifier for the system since it adds very little structure into the signal. 
 
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=0.9\linewidth]{SCIHI_system/figures/antenna_rf_cable_reflections.png}
+\caption{Large scale oscillation in the short calibration data due to a cable between the first and second stage amplifiers. Blue is the data with the original 1 meter cable, green is the data with a 2 meter cable, and red is the data with the amplifiers right next to each other.}
+\label{Fig:amp_reflect}
+\end{center}
+\end{figure}
+
 \paragraph{Multi-stage Amplification}
 Because the $\sim 50-100 m$ signal cable will attenuate signals travelling down its length, a second stage amplifier was added to the system to increase the gain of the signal. To maintain transmission efficiency, the first and second stage amplifiers' impedence had to match well. This was accomplished by using the same amplifier type for both stages. 
 
-Initially the second stage amplifier was placed at the base of antenna (see Figure \ref{Fig:trombone_base}). However, this placement resulted in reflections in the signal whose period corresponded to the cable length between the two amplifiers. \textcolor{red}{May try to make a plot that shows this.} Therefore, the second stage amplifier was moved to a position immediately following the first stage amplifier (see Figure \ref{Fig:rf_ant_box}). This removed the cable reflections. The total gain of the amplifiers was $\sim 50$ dB over the entire frequency band. 
+Initially the second stage amplifier was placed at the base of antenna (see Figure \ref{Fig:trombone_base}). However, this placement resulted in reflections in the signal whose period corresponded to the cable length between the two amplifiers. This is shown in Figure \ref{Fig:amp_reflect}. 
+
+We confirmed that the cable between the amplifiers was the source of the oscillation by replacing the cable with one twice as long. When we did this the period of the oscillation was cut in half, as shown in Figure \ref{Fig:amp_reflect}. 
+
+Therefore, we moved the second stage amplifier to a position immediately following the first stage amplifier (see Figure \ref{Fig:rf_ant_box}). This removed the cable reflections, as shown in Figure \ref{Fig:amp_reflect}. The total gain of the amplifiers was $\sim 50$ dB over the entire frequency band. 
 
 Both amplifiers use DC power supplied by the same power cable as the switch. As different levels of DC power were needed for the varying electronic components, voltage regulation circuits were also included in the antenna electronics housing. 
 
@@ -873,8 +889,10 @@ Utilizing this power supply lowered our power consumption. However, we found tha
 \end{minipage}
 \end{figure}
 
-\subsection{System Noise Generation}
-Deployment to Isla Guadalupe in June 2013 indicated that our Faraday Cage design had insufficient attenuation of self-generated RFI from the data processing system. This problem was not identified until deployment at the site due to masking from external RFI at our testing sites. Self-generated RFI was particularly noticeable above 90 MHz, (see Figure \textcolor{red}{Add time average plot here})but may be present in the data in the lower frequencies as well. Our data indicated that the strength of the self-generated RFI was correlated with the voltage (or charge level) of the DC batteries (see Figure \textcolor{red}{Add waterfall plot here.}). 
+\subsection{System Noise Generation} \label{Sec:sys_noise}
+Deployment to Isla Guadalupe in June 2013 indicated that our Faraday Cage design had insufficient attenuation of self-generated RFI from the data processing system. This problem was not identified until deployment at the site due to masking from external RFI at our testing sites. 
+
+Self-generated RFI was particularly noticeable above 90 MHz, as can be seen in Figure \ref{Fig:raw_data}; but may be present in the data at lower frequencies as well. Our data indicated that the strength of the self-generated RFI was correlated with the voltage (or charge level) of the DC batteries. 
 
 In order to address this problem, I designed a more robust Faraday Cage for the SCI-HI system. This Faraday Cage is a double layer cage (see Figure \ref{Fig:new_comp}) with the data processing system placed inside a solid aluminum sealed box and a second Faraday cage with the rest of the electronics placed around the inner box. 
 
