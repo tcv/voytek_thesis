@@ -325,7 +325,7 @@ Now, for all of these Calibration Equations I've dropped the thermal noise term 
 
 Therefore, thermal noise can be lowered by averaging many calibration datasets (increasing $\Delta t$). Figure \ref{Fig:avg_cal} shows the averaged data for one full day. Once we've taken the averages, we can further lower the thermal noise contribution by fitting the averages to a simple polynomial in frequency over a large frequency band, increasing $\Delta \nu$. We used $P = b_0 + b_1 \nu +b_2 \nu^2$ for our fit, with the frequency band of $50 \leq \nu \leq 100$MHz. 
 
-Figure \ref{Fig:avg_cal_data} shows the average of the calibration datasets after Calibration Equation 1 is used to calculate $K_{JNC}$. Note that our assumption that $P_{Z50}=0$ is approximately, but not exactly, correct since the $T_{50 \Omega} \neq T_{100 \Omega}$. Figure \ref{Fig:avg_JNCcal_data} shows the calibrated average of one day of antenna data and the reference spectra used for that calibration. 
+Figure \ref{Fig:avg_cal_data} shows the average of the calibration datasets after Calibration Equation 1 is used to calculate $K_{JNC}$. Note that our assumption that $P_{Z50}=0$ is approximately, but not exactly, correct since $P_{50 \Omega} \neq P_{100 \Omega}$. Figure \ref{Fig:avg_JNCcal_data} shows the calibrated average of one day of antenna data and the reference spectra used for that calibration. 
 
 \begin{figure}[htb]
 \centering
