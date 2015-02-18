@@ -438,6 +438,7 @@ A n=2 polynomial captures the expected foreground brightness temperature at the 
 
 Some of the variance in the foreground fit parameters comes from the fact that the daily averages are calculated for different fractions of a full 24 period depending on the day selected. Additional variance is seen in the GSM calibration parameters due to the weakness of the calibration strategy when less tha a full day of data is observed. This was previously discussed in Section \ref{Sec:KGSM}.
 
+
 Once we subtract this polynomial, we are left with residuals:
 
 \begin{equation}
@@ -475,4 +476,20 @@ An important cross-check for any \cm measurement experiment is a simulation cali
 
 Because the \cm signal is constant with time with complex structure in frequency, there is minimal signal attenuation caused by the calibration strategy and foreground removal process. 
 
+\section{Ionospheric impacts}
+All of the data analysis above was done assuming no ionospheric impacts on the data. However, Figures \ref{Fig:day_TEC_NA} and \ref{Fig:night_TEC_NA} indicate that there should be some ionospheric impact on the data, particularly during the daytime hours. 
 
+\subsection{Refraction} 
+Since ionospheric refraction affects the direction of sky signals, refraction will lead to inaccuracies in $T_{GSM}$, particularly at large $\theta$. These inaccuracies will propogate into the $K_{\Delta GSM}$ calibration factor. 
+
+Refraction will also affect the signal regardless of calibration strategy. This is because the foreground subtraction strategy relies on frequency independent sky area coverage. Any variance in the sky area coverage at different frequencies will lead to structure in the spectrum. Since the HIbiscus sky coverage is designed to be constant in frequency with no ionospheric refraction, the refracted beam will not be constant with frequency. 
+
+
+\subsection{Absorption}
+Frequency dependent absorption can also introduce additional structure to the mean signal ($\langle T_{sky}(\nu,t) \rangle_{DAY}$). If $TEC$ is constant for the data, then the structure will simply add an additional term in $T_{GM}$. But if $TEC$ is variable, then the absorption structure can be quite complex. 
+
+
+\subsection{Ionospheric Structure}
+The residual levels shown in Figure \ref{Fig:resid} set a maximum level for the total ionospheric impact in the frequency band of ($\sim 60-85 MHz$) at $\sim 1-10 K$.  Ionospheric impact may be larger if the $a_2$ term defined in the $T_{GM}$ polynomial is caused by the ionosphere rather than Galactic structure. This can be quantified using the time dependence of $a_2$. If $a_2$ is from the ionosphere it should be $\propto TEC$. On the other hand, if $a_2$ is from Galactic structure then $a_2$ should depend on the part of the Milky Way Galaxy currently in the beam. 
+
+Self-generated noise and time gaps in the SCI-HI data from June 2013 make it difficult to run the ionospheric analysis, but data collected with an improved system may make this distinction possible. 
