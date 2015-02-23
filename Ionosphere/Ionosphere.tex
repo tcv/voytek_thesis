@@ -3,9 +3,9 @@
 
 \section{Overview}
 
-Beyond the effects of RFI, the Earth's atmosphere has additional impacts on low frequency radio signals from the universe. These impacts come from interactions between the incoming radio signals and the free electrons in the ionosphere. Impacts include refraction and absorption of radio frequency photons. 
+Beyond the effects of RFI, the Earth's atmosphere has additional impacts on low frequency radio signals from the universe. These impacts come from interactions between the incoming radio signals and free electrons in the ionosphere. Impacts include refraction and absorption of radio frequency photons. 
 
-Ionospheric impacts can mask the \cm signal by introducing additional frequency dependent structure into the sky signal. This frequency structure is proportional to $\nu_{-2}$, and is larger than the \cm structure for the SCI-HI frequency band. In addition, ionospheric structure is time and location dependant. Therefore, it is necessary to quantify and address ionospheric impacts in any \cm measurement. 
+Ionospheric impacts can mask the \cm signal by introducing additional frequency dependent structure into the sky signal. This frequency structure is proportional to $\nu^{-2}$, and may be larger than the \cm structure for the SCI-HI frequency band. In addition, ionospheric structure is time and location dependant. Therefore, it is necessary to quantify and address ionospheric impacts to any \cm measurement. 
 
 \begin{figure}[htb]
 \centering
@@ -36,7 +36,7 @@ topside & 600 - 1000+ \\
 \begin{minipage}[b]{0.48\textwidth}
 \centering
 \includegraphics[width=0.95\linewidth]{Ionosphere/figures/atmosphere_layers.jpg}
-\caption{Idealized free electron density distribution in Earth's atmosphere showing the ionosphere's layers during day and night. }
+\caption{Idealized average free electron density distribution in Earth's atmosphere. Layers are shwon during day and night. }
 \label{Fig:iono_layer}
 \end{minipage}
 \end{figure}
@@ -48,7 +48,7 @@ topside & 600 - 1000+ \\
 To understand ionospheric impacts on the \cm signal we need to understand the ionosphere. Earth's ionosphere is located $60 - 1000+$ $km$ above the surface of the Earth and is made up of free electrons and ionized atoms. Neutral atoms in Earth's atmosphere are photoionized by solar radiation, which leads to an altitude dependent distribution of free electrons and ions in the atmosphere.
 
 
-\subsection{Ionospheric Layers}
+\subsection{Ionosphere Layers}
 
 We can separate the ionosphere into altitude-dependent layers based on the distribution of free electrons. Each layer is defined by an altitude where the free electron distribution has a local maximum. The altitude corresponding to the local maximum is the center altitude of the layer. Depending on the time of day and geographic location, the number of layers present in the ionosphere will vary as shown in Figure \ref{Fig:iono_layer}. There are four layers defined using local maxima (D, E, F1 and F2), with average altitude ranges shown in Figure \ref{Tab:iono_layer}. A fifth topside layer is defined as the altitude above the F2 layer where the dominant ion in the ionosphere becomes $O^+$. The absolute maximum free electron density ($n_e$) is reached in the F2 layer and is $n_e \cong 10^5 cm^{-3}$ \cite{ionospheres}. 
 
@@ -65,25 +65,25 @@ Finally, solar activity levels have a regular cycle of $\sim 11$ years as tracke
 
 \subsubsection{Plasma Frequency}
 
-Free electrons in the ionosphere can be treated as a plasma with modified electromagnetic wave propogation. Change in propogation for a plasma is quantified using the plasma frequency ($\nu_p$), which has a value equal to:
+Free electrons in the ionosphere can be treated as a plasma with modified electromagnetic wave propogation. Change in propogation due to a plasma is quantified using the plasma frequency ($\nu_p$), which has a value equal to:
 
 \begin{equation}
 \nu_p = \frac{e}{2 \pi} \sqrt{\frac{n_e}{\varepsilon_0 m}} \cong 9 \sqrt{n_e} Hz
 \end{equation}
 
-where $n_e$ is in $m^{-3}$ \cite{thompson_2001}. This plasma frequency changes the index of refraction for the ionosphere compared to free space $n = \sqrt{1-\nu_p^2/\nu^2}$, where $\nu$ is the frequency of the radiation that is passing through the atmosphere. The plasma frequency is typically $\nu_p \leq 12 MHz$, below the SCI-HI frequency band \cite{thompson_2001}. 
+where $n_e$ is in $m^{-3}$ \cite{thompson_2001}. This plasma frequency changes the index of refraction for the ionosphere compared to free space ($n = \sqrt{1-\nu_p^2/\nu^2}$), where $\nu$ is the frequency of the radiation that is passing through the atmosphere. The plasma frequency is typically $\nu_p \leq 12 MHz$, below the SCI-HI frequency band \cite{thompson_2001}. 
 
 \subsubsection{Cyclotron Frequency}
 
-In addition to the plasma frequency due to free electrons, a static magnetic field in the ionsphere will lead to motion of the free electrons and further modification of radiation propogation. Free electron motion is quantified using a gyrofrequency similar to the plasma frequency. The magnitude of the gyrofrequency is ($\nu_B = eB/2 \pi m$), and has a typical magnitude of $\nu_B \cong 1.4 MHz$ \cite{thompson_2001}. 
+In addition to the plasma frequency due to free electrons, a static magnetic field in the ionsphere will lead to motion of the free electrons and further modification of radiation propogation. Free electron motion is quantified using a gyrofrequency, similar to a plasma frequency. The magnitude of the gyrofrequency is ($\nu_B = eB/2 \pi m$), and has a typical magnitude of $\nu_B \cong 1.4 MHz$ \cite{thompson_2001}. 
 
-When adding in the cyclotron frequency to the index of refraction, the direction of the magnetic field with respect to the incoming signal matters. This means that the impact of a static magnetic field will be polarized. This is the source of Faraday roation in Earth's atmosphere \cite{thompson_2001}. However, since the impact is proportional to $\nu_B/\nu$ and $\nu \gg \nu_B$ for the SCI-HI frequency band; we will neglect the impact from the Earth's magnetic field in the remainder of the thesis. 
+When adding in the cyclotron frequency to the index of refraction, the direction of the magnetic field with respect to the incoming signal matters. Therefore, the impact of a static magnetic field will be polarized. This is the source of Faraday rotation of signals from Earth's ionosphere \cite{thompson_2001}. However, since the impact is proportional to $\nu_B/\nu$ and $\nu \gg \nu_B$ for the SCI-HI frequency band we will neglect the impact from the Earth's magnetic field in the remainder of the thesis. 
 
 
 \begin{figure}[htb]
 \begin{center}
 \includegraphics[width=0.95\linewidth]{Ionosphere/figures/gps_sitemap.png}
-\caption{Global Map of GPS Network stations used for the quasi-real time maps of $TEC$ available online at (iono.jpl.nasa.gov)}
+\caption{Global Map of GPS Network stations used for the quasi-real time maps of $TEC$ available online at (Found at iono.jpl.nasa.gov)}
 \label{Fig:gps_stat}
 \end{center}
 \end{figure}
@@ -93,7 +93,7 @@ When adding in the cyclotron frequency to the index of refraction, the direction
 \begin{minipage}[b]{0.48\textwidth}
 \centering
 \includegraphics[width=0.95\linewidth]{Ionosphere/figures/TEC_map_20141013_18-40UT.png}
-\caption{$TEC$ map for October 13th, 2014 at 18:40 UTC. (iono.jpl.nasa.gov)  }
+\caption{$TEC$ map for October 13th, 2014 at 18:40 UTC. (Found at iono.jpl.nasa.gov)  }
 \label{Fig:fall_tec_global}
 \end{minipage}%
 \begin{minipage}[b]{0.02\textwidth}
@@ -102,7 +102,7 @@ When adding in the cyclotron frequency to the index of refraction, the direction
 \begin{minipage}[b]{0.48\textwidth}
 \centering
 \includegraphics[width=0.95\linewidth]{Ionosphere/figures/TEC_map_20150213_01-10UT.png}
-\caption{$TEC$ map for February 13th, 2015 at 01:10 UTC. (iono.jpl.nasa.gov)  }
+\caption{$TEC$ map for February 13th, 2015 at 01:10 UTC. (Found at iono.jpl.nasa.gov)  }
 \label{Fig:winter_tec_global}
 \end{minipage}
 \end{figure}
@@ -131,7 +131,7 @@ Example $TEC$ maps for two different times of day (and year) are shown in Figure
 \begin{minipage}[b]{0.48\textwidth}
 \centering
 \includegraphics[width=0.95\linewidth]{Ionosphere/figures/NA_TEC_day.png}
-\caption{North American TEC map for June 1st, 2013 at 21:00 UTC. (www.swpc.noaa.gov)   }
+\caption{North American TEC map for June 1st, 2013 at 21:00 UTC. (Found at www.swpc.noaa.gov)   }
 \label{Fig:day_TEC_NA}
 \end{minipage}%
 \begin{minipage}[b]{0.02\textwidth}
@@ -140,12 +140,12 @@ Example $TEC$ maps for two different times of day (and year) are shown in Figure
 \begin{minipage}[b]{0.48\textwidth}
 \centering
 \includegraphics[width=0.95\linewidth]{Ionosphere/figures/NA_TEC_night.png}
-\caption{North American TEC map for June 1st, 2013 at 12:15 UTC. (www.swpc.noaa.gov) }
+\caption{North American TEC map for June 1st, 2013 at 12:15 UTC. (Found at www.swpc.noaa.gov) }
 \label{Fig:night_TEC_NA}
 \end{minipage}
 \end{figure}
 
-$TEC$ maps are for North America are also generated by the Space Weather Prediction Center of the National Oceanic and Atmospheric Administration (NOAA)\footnote{\url{http://www.swpc.noaa.gov/products/us-total-electron-content}}. Beyond the regularly updated images, NOAA makes the most recent data ($\sim 24-72 hrs$) available for easy download. Plots of North American $TEC$ for the Isla Guadalupe deployment in June 2013 are shown in Figures \ref{Fig:day_TEC_NA} and \ref{Fig:night_TEC_NA}. 
+$TEC$ maps for North America are also generated by the Space Weather Prediction Center of the National Oceanic and Atmospheric Administration (NOAA)\footnote{\url{http://www.swpc.noaa.gov/products/us-total-electron-content}}. Beyond the regularly updated images, NOAA makes the most recent data ($\sim 24-72 hrs$) available for easy download. Plots of North American $TEC$ for the Isla Guadalupe deployment in June 2013 are shown in Figures \ref{Fig:day_TEC_NA} and \ref{Fig:night_TEC_NA}. 
 
 \begin{figure}[htb]
 \begin{center}
@@ -162,7 +162,7 @@ $TEC$ maps are for North America are also generated by the Space Weather Predict
 
 \subsection{Refraction}
 
-From basic optics, Snell's law tells us that light passing through an interface between materials having different indices of refraction will be bent. The magnitude of this bending depends only on the difference between the indices of the two materials and the incidence angle of the light ($n_0 sin \theta_0 = n_1 sin \theta_1$). If light passes through a flat plane of material with index $n_1$, having air ($n=1$) on either side, the angle of the light doesn't change. However, the ionosphere is a set of spherical layers rather than a flat plane \cite{thompson_2001}. 
+From basic optics, Snell's law tells us that light passing through an interface between materials having different indices of refraction will be bent. The magnitude of this bending depends only on the difference between the indices of the two materials and the incidence angle of the light ($n_0 sin \theta_0 = n_1 sin \theta_1$). If light passes through a flat plane of material with index $n_1$, having air ($n=1$) on either side, the angle of the light coming out the other side of the material is unchanged. However, the ionosphere is a set of spherical layers rather than a flat plane \cite{thompson_2001}. 
 
 Therefore, when light enters the ionosphere at some angle $\theta_0 \neq 0$, the light reaches the ground with an apparent incident angle that differs from its actual incident angle. This is shown in Figure \ref{Fig:iono_refrac}, where I've used a single ionospheric layer for simplicity. We can define the difference of angle $\delta \theta = \theta_{apparent}-\theta_{actual}$ \cite{thompson_2001}.
 
@@ -186,8 +186,8 @@ Radiation passing through Earth's ionosphere can also be absorbed due to collisi
 
 \section{Ionospheric Impacts on the SCI-HI system}
 
-Both refraction and absorption due to the ionosphere will affect the SCI-HI experiment. Refraction will appear as a change in antenna beam pattern compared to the simulation, while absorption will appear as additional frequency structure in the data. Further discussion of these impacts on the data analysis can be found in Chapter \ref{Ch:Data}. 
+Both refraction and absorption due to the ionosphere will affect the SCI-HI experiment. Refraction will appear as a change in antenna beam pattern compared to the expected beam pattern from simulation, while absorption will appear as a multiplicative factor that adds additional frequency structure to the data. 
 
-Mitigation of these impacts can be accomplished through two strategies. The first option is collection of supplemental data to quantify the expected ionospheric impact. If we have a highly reliable time dependent measurement of $TEC$ at the SCI-HI deployment site and a good model for absorption and refraction given $TEC$, then $\delta \theta$ and an absorption attenuation factor can be calculated for each dataset. 
+Mitigation of these impacts can be accomplished through two strategies. The first strategy is collection of supplemental data to quantify the expected ionospheric impact. If we have a highly reliable time dependent measurement of $TEC$ at the SCI-HI deployment site and a good model for absorption and refraction given $TEC$, then $\delta \theta$ and an absorption attenuation factor can be calculated for each dataset. 
 
-Option two is to minimize the ionospheric impact on the data to below \cm signal levels. Minimization requires data collected during low $TEC$ times and in low $TEC$ locations. Limiting analysis to data collected during the night will greatly decrease average $TEC$ and ionospheric impacts in the data. In addition, usage of a polar latitude site such as Marion Island, see Figure \ref{Fig:site_map_south}, will help to further decrease average $TEC$.
+The second strategy is to decrease the ionospheric impact on the data to below \cm signal levels. This decrease requires data that is collected during low $TEC$ times and in low $TEC$ locations. Limiting analysis to data collected during the night will greatly decrease average $TEC$ and ionospheric impacts in the data. In addition, usage of a polar latitude site such as Marion Island, see Figure \ref{Fig:site_map_south}, will help to further decrease average $TEC$.
