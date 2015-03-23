@@ -5,7 +5,7 @@
 
 Beyond the effects of RFI, the Earth's atmosphere has additional impacts on low frequency radio signals from the universe. These impacts come from interactions between the incoming radio signals and free electrons in the ionosphere. Impacts include refraction and absorption at radio frequencies. 
 
-Ionospheric impacts can mask the \cm signal by introducing additional frequency dependent structure into the sky signal. This frequency structure is proportional to $\nu^{-2}$, as explained below, and may be larger than the \cm structure for the SCI-HI frequency band. In addition, ionospheric structure is time and latitude dependant. Therefore, it is necessary to quantify and address ionospheric impacts to any \cm measurement. 
+Ionospheric impacts can mask the \cm signal by introducing additional frequency dependent structure into the sky signal. This frequency structure is proportional to $\nu^{-2}$, as explained below, and may be larger than the \cm structure for the SCI-HI frequency band. In addition, ionospheric structure is time and latitude dependent. Therefore, it is necessary to quantify and address ionospheric impacts to any \cm measurement. 
 
 \begin{figure}[htb]
 \centering
@@ -65,17 +65,17 @@ Third, solar radiation levels have a periodic cycle of $\sim 11$ years as tracke
 
 \subsubsection{Plasma Frequency}
 
-Free electrons in the ionosphere can be treated as a plasma which modifies electromagnetic wave propogation. Change in propogation due to a plasma is quantified using the plasma frequency ($\nu_p$), which has a value given in Equation \ref{Eq:nu_p}, where $n_e$ is in $m^{-3}$ \cite{thompson_2001}. 
+Free electrons in the ionosphere can be treated as a plasma which modifies electromagnetic wave propagation. Change in propagation due to a plasma is quantified using the plasma frequency ($\nu_p$), which has a value given in Equation \ref{Eq:nu_p}, where $n_e$ is in $m^{-3}$ \cite{thompson_2001}. 
 
 \begin{equation} \label{Eq:nu_p}
 \nu_p = \frac{e}{2 \pi} \sqrt{\frac{n_e}{\varepsilon_0 m}} \cong 9 \sqrt{n_e} Hz
 \end{equation}
 
-This plasma frequency changes the index of refraction for the ionosphere compared to free space ($n = \sqrt{1-\nu_p^2/\nu^2}$), where $\nu$ is the frequency of the radiation that is passing through the atmosphere. The plasma frequency is typically $\nu_p \leq 12 MHz$, below the SCI-HI frequency band. Above the plasma rfrequency, electromagnetic waves are refracted by the ionosphere. Meanwhile, below the plasma frequency the ionosphere reflects electromagnetic waves, preventing transmission of signals from the sky \cite{thompson_2001}. 
+This plasma frequency changes the index of refraction for the ionosphere compared to free space ($n = \sqrt{1-\nu_p^2/\nu^2}$), where $\nu$ is the frequency of the radiation that is passing through the atmosphere. The plasma frequency is typically $\nu_p \leq 12 MHz$, below the SCI-HI frequency band. Above the plasma frequency, electromagnetic waves are refracted by the ionosphere. Meanwhile, below the plasma frequency the ionosphere reflects electromagnetic waves, preventing transmission of signals from the sky \cite{thompson_2001}. 
 
 \subsubsection{Cyclotron Frequency}
 
-In addition to the plasma frequency due to free electrons, the Earth's magnetic field leads to cyclotron motion of free electrons and further modification of radiation propogation. Free electron motion is quantified using a cyclotron frequency, also called a gyrofrequency. The magnitude of the gyrofrequency is ($\nu_B = eB/2 \pi m$), and has a typical magnitude of $\nu_B \cong 1.4 MHz$, lower than the plasma frequency. \cite{thompson_2001}. 
+In addition to the plasma frequency due to free electrons, the Earth's magnetic field leads to cyclotron motion of free electrons and further modification of radiation propagation. Free electron motion is quantified using a cyclotron frequency, also called a gyrofrequency. The magnitude of the gyrofrequency is ($\nu_B = eB/2 \pi m$), and has a typical magnitude of $\nu_B \cong 1.4 MHz$, lower than the plasma frequency. \cite{thompson_2001}. 
 
  This is the source of Faraday rotation of signals due to Earth's ionosphere \cite{thompson_2001}. However, since the impact is proportional to $\nu_B/\nu$ and $\nu \gg \nu_B$ for the SCI-HI frequency band we will neglect the impact from the Earth's magnetic field in the remainder of the thesis. 
 
@@ -187,6 +187,6 @@ Radiation passing through Earth's ionosphere can also be absorbed due to collisi
 
 Both refraction and absorption due to the ionosphere have the potential to affect the SCI-HI experiment. Refraction will appear as a change in antenna beam pattern compared to the ionosphere-free pattern, while absorption will appear as a multiplicative loss factor that adds additional frequency structure to the data. 
 
-Ionospheric impacts can be assessed and mitigated through two strategies. The first strategy is collection of supplemental data to quantify the expected ionospheric impact. The strategy uses a time dependent estimate of $TEC$ at the SCI-HI deployment site and a good model for absorption and refraction given $TEC$. This allows calculation of $\delta \theta$ and an absorption attenuation factor. $TEC$ estimates can be sourced from publically available data such as the NASA JPL and NOAA libraries. 
+Ionospheric impacts can be assessed and mitigated through two strategies. The first strategy is collection of supplemental data to quantify the expected ionospheric impact. The strategy uses a time dependent estimate of $TEC$ at the SCI-HI deployment site and a good model for absorption and refraction given $TEC$. This allows calculation of $\delta \theta$ and an absorption attenuation factor. $TEC$ estimates can be sourced from publicly available data such as the NASA JPL and NOAA libraries. 
 
 The second strategy is to decrease the ionospheric impact on the data to below \cm signal levels. This decrease requires data that is collected during low $TEC$ times and in low $TEC$ locations. Limiting analysis to data collected during the night will greatly decrease average $TEC$ and ionospheric impacts in the data. In addition, usage of a polar latitude site such as Marion Island, see Figure \ref{Fig:site_map_south}, will help to further decrease average $TEC$.

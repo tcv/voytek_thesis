@@ -56,7 +56,7 @@ In order to convert the data to flux density (S in $dB \; W/m^2Hz$), Equation \r
 S \Bigg( \frac{dB \; W}{m^2 Hz} \Bigg) = P_{meas} (dBm) - 30 \Bigg( \frac{dB \; W}{dB \;m} \Bigg) - G - 10log_{10} [BW] - G_{ant}
 \end{equation}
 
-Amplifier gain ($G$) was measured in the lab using a noise figure meter and antenna gain ($G_{ant}$) can be calulated using Equation \ref{eq:gant}, where $\nu$ is the frequency in $Hz$, and $A_g$ is the isotropic antenna gain in $m^2$. We used a value for $A_g$ corresponding to the typical value for our antenna, which is $1 dB \;i$ or $10^{1dB \;i/10} m^2$. 
+Amplifier gain ($G$) was measured in the lab using a noise figure meter and antenna gain ($G_{ant}$) can be calculated using Equation \ref{eq:gant}, where $\nu$ is the frequency in $Hz$, and $A_g$ is the isotropic antenna gain in $m^2$. We used a value for $A_g$ corresponding to the typical value for our antenna, which is $1 dB \;i$ or $10^{1dB \;i/10} m^2$. 
 
 \begin{equation}\label{eq:gant}
 G_{ant}= 10 log_{10} \Bigg[ \Bigg(\frac{c}{\nu} \Bigg)^2 \Bigg( \frac{A_g}{4 \pi} \Bigg) \Bigg]
@@ -124,7 +124,7 @@ To try and lower the RFI levels to measurable levels, we removed one stage of am
 \begin{figure}[htb]
 \begin{center}
 \includegraphics[width=0.9\linewidth]{RFI_testing/figures/GBT_bands.png}
-\caption{RFI measurement at the NRAO Green Bank site collected on May 18th, 2010. In the plot, colored boxes indicate bands of well known RFI sources. Red is the FM band, Purple is the Orbcom satellite band, and Cyan is the military satellite band. Additional spikes in the data come from RFI sources not in the indicated bands. Large scale sinusoidal variation (or ringing) in the spectrum is caused by cable reflections in the system and is common to all data collected with the site testing kit. }
+\caption{RFI measurement at the NRAO Green Bank site collected on May 18th, 2010. In the plot, colored boxes indicate bands of well known RFI sources. Red is the FM band, Purple is the Orbcomm satellite band, and Cyan is the military satellite band. Additional spikes in the data come from RFI sources not in the indicated bands. Large scale sinusoidal variation (or ringing) in the spectrum is caused by cable reflections in the system and is common to all data collected with the site testing kit. }
 \label{Fig:gbtrfi}
 \end{center}
 \end{figure}
@@ -132,11 +132,11 @@ To try and lower the RFI levels to measurable levels, we removed one stage of am
 
 \subsection{National Radio Astronomy Observatory (NRAO) Green Bank}
 
-The National Radio Astronomy Observatory (NRAO) is a research center funded by the U.S. National Science Foundation (NSF). It maintains several telesopes in radio quiet locations. One of these locations is in Green Bank, West Virginia inside the U.S. National Radio Quiet Zone in Virginia and West Virginia (see Figure \ref{Fig:nrqz}). Within this zone, radio broadcasts at all frequencies are minimized by law. This provides a relatively quiet RFI environment. 
+The National Radio Astronomy Observatory (NRAO) is a research center funded by the U.S. National Science Foundation (NSF). It maintains several telescopes in radio quiet locations. One of these locations is in Green Bank, West Virginia inside the U.S. National Radio Quiet Zone in Virginia and West Virginia (see Figure \ref{Fig:nrqz}). Within this zone, radio broadcasts at all frequencies are minimized by law. This provides a relatively quiet RFI environment. 
 
 The Green Bank site ($38^\circ 25' 59''$ N, $79^\circ 50' 23''$ W) hosts a number of radio telescopes including the $100 \; m$ Robert C. Byrd Green Bank Radio Telescope (see Figure \ref{Fig:gbt}). As an NRAO facility, the site has a full staff and facilities including housing, power, and other amenities. Located off a local highway, the site is a 4-5 hour drive from Pittsburgh. 
 
-Looking at the data from the site testing kit, we find that the size of the radio quiet zone (about 34,000 $km^2$) is sufficient for higher frequencies but is too small at lower frequencies. As you can see in Figure \ref{Fig:gbtrfi}, there are specific bands of frequencies below $600 MHz$ where there is still a great deal of RFI. Some of these bands are indicated with colored boxes (red is the FM band, magenta is an orbcom satellite band and cyan is a military satellite band). 
+Looking at the data from the site testing kit, we find that the size of the radio quiet zone (about 34,000 $km^2$) is sufficient for higher frequencies but is too small at lower frequencies. As you can see in Figure \ref{Fig:gbtrfi}, there are specific bands of frequencies below $600 MHz$ where there is still a great deal of RFI. Some of these bands are indicated with colored boxes (red is the FM band, magenta is an Orbcomm satellite band and cyan is a military satellite band). 
 
 Beyond the RFI, one of the other features of the site test data is a large scale sinusoidal variation (or ringing) in frequency. This variation is caused by reflections in the $50 \; cm$ cable between the antenna and first stage amplifier. One of the useful things about this ringing is that it provides a check that the system is working, because if one or more of the amplifiers has blown there is no ringing present in the data. Such a cross check is particularly useful in radio quiet areas, where there may not be much of a difference in the spectrum if the amplifier is malfunctioning. 
 
@@ -151,7 +151,7 @@ Beyond the RFI, one of the other features of the site test data is a large scale
 \begin{figure}[htb]
 \begin{center}
 \includegraphics[width=0.9\linewidth]{RFI_testing/figures/DRAO_bands.png}
-\caption{RFI measurement at the DRAO Penticton site collected on December 14th, 2009. DRAO has excessive RFI in the entire spectrum below $400 MHz$ and is generally noisier than Green Bank. Because some of these signals (particularly the FM band) are above the inter-modulation cutoff, some of the smaller spikes in known clear bands are believed to be caused by inter-modulation. In the plot, colored boxes again indicate bands of well known RFI sources (Red= FM band, Purple = Orbcom satellite band, and Cyan = military satellite band).   }
+\caption{RFI measurement at the DRAO Penticton site collected on December 14th, 2009. DRAO has excessive RFI in the entire spectrum below $400 MHz$ and is generally noisier than Green Bank. Because some of these signals (particularly the FM band) are above the inter-modulation cutoff, some of the smaller spikes in known clear bands are believed to be caused by inter-modulation. In the plot, colored boxes again indicate bands of well known RFI sources (Red= FM band, Purple = Orbcomm satellite band, and Cyan = military satellite band).   }
 \label{Fig:draorfi}
 \end{center}
 \end{figure}
@@ -159,7 +159,7 @@ Beyond the RFI, one of the other features of the site test data is a large scale
 \begin{figure}[tb]
 \begin{center}
 \includegraphics[width=0.9\linewidth]{RFI_testing/figures/ALG_bands.png}
-\caption{RFI measurement at the ARO Algonquin site collected on September 12th, 2012. Like the GBT site, the ARO site is quiet at high frequencies compared to DRAO or Pittsburgh. However, significant RFI is still present below $300 MHz$. In the plot, colored boxes again indicate bands of well known RFI sources (Red= FM band, Purple = Orbcom satellite band, and Cyan = military satellite band).}
+\caption{RFI measurement at the ARO Algonquin site collected on September 12th, 2012. Like the GBT site, the ARO site is quiet at high frequencies compared to DRAO or Pittsburgh. However, significant RFI is still present below $300 MHz$. In the plot, colored boxes again indicate bands of well known RFI sources (Red= FM band, Purple = Orbcomm satellite band, and Cyan = military satellite band).}
 \label{Fig:arorfi}
 %\end{minipage}
 \end{center}
@@ -193,7 +193,7 @@ Although the site has excellent radio quiet properties at higher frequencies, it
 \begin{figure}[htb]
 \begin{center}
 \includegraphics[width=0.9\linewidth]{RFI_testing/figures/ZdS_halfway_in_bands.png}
-\caption{RFI measurement near the ecologist's camp in the Zona del Silencio, collected on May 5th, 2010. The Zona del Silencio site has even less RFI than the previous sites at low freuqencies, although some RFI spikes are still present. In the plot, colored boxes again indicate bands of well known RFI sources (Red= FM band, Purple = Orbcom satellite band, and Cyan = military satellite band).}
+\caption{RFI measurement near the ecologist's camp in the Zona del Silencio, collected on May 5th, 2010. The Zona del Silencio site has even less RFI than the previous sites at low frequencies, although some RFI spikes are still present. In the plot, colored boxes again indicate bands of well known RFI sources (Red= FM band, Purple = Orbcomm satellite band, and Cyan = military satellite band).}
 \label{Fig:zdsendrfi}
 \end{center}
 \end{figure}
@@ -207,7 +207,7 @@ Evaluation of these existing radio quiet sites demonstrated a clear need for sit
 
 \subsection{La Zona del Silencio}
 
-$''$Zona del Silencio$''$ ($26^\circ 41' 10.3''$ N, $103^\circ 44' 50.9''$ W) is a radio quiet region in the Mapimi part of the Chihuahuan desert in Northern Mexico. It has a reputation as a mysterious radio quiet zone due to historic events similar to the Bermuda Triangle, but in a desert setting. Some of its radio quiet status may be due to the local geography as the desert is a flat plateau, but there are mountains between it and any significant civilization. The closest major metropolitan area is Torre\'{o}n, over $150 km$ south of the zone center. The zone is also a protected biosphere reserve maintained by Mexcio's $''$Comisi\'{o}n Nacional de \'{A}reas Naturales Protegidas$''$ (CONANP). 
+$''$Zona del Silencio$''$ ($26^\circ 41' 10.3''$ N, $103^\circ 44' 50.9''$ W) is a radio quiet region in the Mapimi part of the Chihuahuan desert in Northern Mexico. It has a reputation as a mysterious radio quiet zone due to historic events similar to the Bermuda Triangle, but in a desert setting. Some of its radio quiet status may be due to the local geography as the desert is a flat plateau, but there are mountains between it and any significant civilization. The closest major metropolitan area is Torre\'{o}n, over $150 km$ south of the zone center. The zone is also a protected biosphere reserve maintained by Mexico's $''$Comisi\'{o}n Nacional de \'{A}reas Naturales Protegidas$''$ (CONANP). 
 
 \subsubsection{Logistics and Current Infrastructure}
 
@@ -225,18 +225,16 @@ Another potential challenge is the temperature variation associated with the cli
 
 \subsubsection{Measurements}
 
-On this first site test, we chose to measure the site quality at a specific location near the center of the zone where RFI was expected to be at a miniumum. Setting up near the ecology camp but far enough away to prevent contamination by the local electronics, we measured extremely low RFI levels as is shown in Figure \ref{Fig:zdsendrfi}.
+On this first site test, we chose to measure the site quality at a specific location near the center of the zone where RFI was expected to be at a minimum. Setting up near the ecology camp but far enough away to prevent contamination by the local electronics, we measured extremely low RFI levels as is shown in Figure \ref{Fig:zdsendrfi}.
 
-There is still some noise at lower frequencies, but the FM band is considerably quieter than at any of the existing radio quiet sites that we had tested. 
-
-Further testing at this site should include a survey of a wide range of locations within the $''$Zona del Silencio$''$ to map out the region's radio quiet properties. 
+There is still some noise at lower frequencies, but the FM band is considerably quieter than at any of the existing radio quiet sites that we had tested. Further testing at this site should include a survey of a wide range of locations within the $''$Zona del Silencio$''$ to map out the region's radio quiet properties. 
 
 \begin{figure}[htb]
 \centering
 \begin{minipage}[b]{0.47\textwidth}
 \centering
-\includegraphics[width=0.95\linewidth]{RFI_testing/figures/isla_guadalupe_site_map.jpg}
-\caption{Map of Isla Guadalupe with the sites of interest indicated.}
+\includegraphics[width=0.93\linewidth]{RFI_testing/figures/isla_guadalupe_site_map.jpg}
+\caption{Map of Isla Guadalupe showing the sites of interest, made using Google Maps. }
 \label{Fig:guadmap}
 \end{minipage}%
 \begin{minipage}[b]{0.02\textwidth}
@@ -251,7 +249,7 @@ Further testing at this site should include a survey of a wide range of location
 \end{figure}
 
 
-\begin{figure}[tb]
+\begin{figure}[htb]
 \centering
 \begin{minipage}[b]{0.455\textwidth}
 \centering
@@ -289,7 +287,7 @@ Isla Guadalupe ($29^\circ 1' 51''$ N, $118^\circ 16' 48''$ W) is a small volcani
 \begin{minipage}[b]{0.51\textwidth}
 \centering
 \includegraphics[width=0.95\linewidth]{RFI_testing/figures/mex_navy_onboard.jpg}
-\caption{View from onboard the Mexican naval vessel during the trip back to the Port of Ensenada.}
+\caption{View from on board the Mexican naval vessel during the trip back to the Port of Ensenada.}
 \label{Fig:guadonboard}
 \end{minipage}
 \end{figure}
@@ -313,14 +311,14 @@ Like the ecology camp, the military (naval) base is extremely minimal in scope. 
 \begin{figure}[tb]
 \begin{center}
 \includegraphics[width=0.9\linewidth]{RFI_testing/figures/GI_3__bands.png}
-\caption{RFI measurement from the ecology camp at the summit of Isla Guadalupe collected on November 1st, 2012. At this site, the elevation means that the line of sight is longer and RFI can be seen from further distances than at lower elevations. Despite this fact, the spectrum is mostly free from RFI above $300 MHz$. In the plot, colored boxes again indicate bands of well known RFI sources (Red= FM band, Purple = Orbcom satellite band, and Cyan = military satellite band).}
+\caption{RFI measurement from the ecology camp at the summit of Isla Guadalupe collected on November 1st, 2012. At this site, the elevation means that the line of sight is longer and RFI can be seen from further distances than at lower elevations. Despite this fact, the spectrum is mostly free from RFI above $300 MHz$. In the plot, colored boxes again indicate bands of well known RFI sources (Red= FM band, Purple = Orbcomm satellite band, and Cyan = military satellite band).}
 \label{Fig:guadsummit}
 \end{center}
 \end{figure}
 
 \subsubsection{Environmental Impacts}
 
-Located in the Pacific Ocean, in the midst of the California current, Isla Guadalupe is quite temperate for its latitude. The high elevation of its peaks (nearly $1300 \; m$) means that there are two distinct microclimates (one near sea level and one at high elevations). One reason for this contrast is that the island's peaks sit above the low cloud layer, making the higher altitudes warmer and generally clearer. Additional impacts include flash flooding in the lower areas of the island during the wet season and wind and dust interfering with system at any time. 
+Located in the Pacific Ocean, in the midst of the California current, Isla Guadalupe is quite temperate for its latitude. The high elevation of its peaks (nearly $1300 \; m$) means that there are two distinct micro-climates (one near sea level and one at high elevations). One reason for this contrast is that the island's peaks sit above the low cloud layer, making the higher altitudes warmer and generally clearer. Additional impacts include flash flooding in the lower areas of the island during the wet season and wind and dust interfering with system at any time. 
 
 Guadalupe's location puts it north of the main Pacific hurricane impact zone, but during the hurricane season storms pass over the island. In addition, the naval supply vessel often has its schedule changed during this season due rough seas from the storms. As an example, we had to change our deployment strategy from boat transit to plane in October 2012 due to Hurricane Paul, which hit the island as a weak tropical depression. This means that the optimal time to visit Isla Guadalupe is during the hurricane off-season (November to June). 
 
@@ -328,7 +326,7 @@ Guadalupe's location puts it north of the main Pacific hurricane impact zone, bu
 \begin{figure}[htb]
 \begin{center}
 \includegraphics[width=0.9\linewidth]{RFI_testing/figures/GI_2__bands.png}
-\caption{RFI measurement from the lava flow near the fishing village at Isla Guadalupe collected on November 1st, 2012. At this site, the lower elevation and the mountain between the lava flow and the mainland act as an RFI shield. This means that even the lowest frequency bands are relatively clear of RFI. In the plot, colored boxes again indicate bands of well known RFI sources (Red= FM band, Purple = Orbcom satellite band, and Cyan = military satellite band).}
+\caption{RFI measurement from the lava flow near the fishing village at Isla Guadalupe collected on November 1st, 2012. At this site, the lower elevation and the mountain between the lava flow and the mainland act as an RFI shield. This means that even the lowest frequency bands are relatively clear of RFI. In the plot, colored boxes again indicate bands of well known RFI sources (Red= FM band, Purple = Orbcomm satellite band, and Cyan = military satellite band).}
 \label{Fig:guadlow}
 \end{center}
 \end{figure}
@@ -343,7 +341,7 @@ In contrast, Figure \ref{Fig:guadlow} shows the RFI signals from site 2 near the
 
 \begin{figure}[htb]
 \begin{center}
-\includegraphics[width=0.8\linewidth]{RFI_testing/figures/site_testing_south.jpg}
+\includegraphics[width=0.7\linewidth]{RFI_testing/figures/site_testing_south_wdesert.jpg}
 \caption{Potential future site testing locations in the Southern Hemisphere. Image made using Google Maps.}
 \label{Fig:site_map_south}
 \end{center}
@@ -380,5 +378,7 @@ Meanwhile, Marion Island ($46^\circ 52' 34''$ S, $37^\circ 51' 32''$ E) is a sma
 
 Access to the island is provided by the South African National Antarctic Programme (SANAP), which oversees research done on Marion and other islands. Most of the research on the island is focused on the native species and climate. Travel to the island happens once a year, with most of the research occurring over the $\sim$1 month deployment. A small crew remains on the island over the rest of the year ($\sim$11 months). 
 
-Professor Jonathan Sievers at the University of Kwa-Zulu Natal in South Africa was recently awarded a grant through SANAP to investigate and use Marion Island as a site for radio astronomy. As a part of this grant, I will be travelling to Marion Island on the 2015 SANAP trip, which takes place from April to May 2015. During this trip, I will make measurements around the island. These measurements will be used to evaluate the overall RFI environment and identify the best location to place an experiment. I will also deploy the SCI-HI experiment at the location I identify during my evaluation. 
+Professor Jonathan Sievers at the University of Kwa-Zulu Natal in South Africa was recently awarded a grant through SANAP to investigate and use Marion Island as a site for radio astronomy. As a part of this grant, I will be traveling to Marion Island on the 2016 SANAP trip, which takes place from April to May 2016. During this trip, I will make measurements around the island. These measurements will be used to evaluate the overall RFI environment and identify the best location to place an experiment. I will also deploy the SCI-HI experiment at the location I identify during my evaluation. 
+
+Since this trip is over a year away, we will deploy the SCI-HI instrument to the Karoo desert in South Africa in April 2015. The Karoo desert site is the future location for the Square Kilometer Array \cite{ska} in South Africa, and as such is a protected radio quiet site. The Karoo site is not expected to be as quiet in the FM band as Marion island, but is much more readily accessible.  
 
